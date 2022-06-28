@@ -1,0 +1,120 @@
+wordpress:
+  name: Wordpress
+  description: I can set up, configure an deploy a Wordpress website in no time.
+python:
+  name: Python
+  description: I've used Python for several personal and profesional projects, ranging from web development with Flask, to data scraping and analysis.
+flask:
+  name: Flask
+  description: Flask was the first web micro-framework I started to work with, which learnt me more about routing, and the model-view-controller pattern.
+pandas:
+  name: pandas
+  description: I've a standard understanding of the pandas library, and can take up projects where it's being used.
+jupyter-notebook:
+  name: Jupyter Notebook
+  description: Jupyter is a tool I've used regularly when I worked at eBay.fr, for data scraping, parsing and analysis.
+sql:
+  name: SQL
+  description: I've a large understanding of SQL and will build complex queries to make sense of your data.
+ruby:
+  name: Ruby
+  description: I started learning Ruby during Le Wagon Paris bootcamp, where we got to see all aspects of it, including the OOP logic used in Rails.
+ruby-on-rails:
+  name: Ruby on Rails
+  description: I've made several projects in Rails during, and after, Le Wagon Paris bootcamp; allowing me to become proficient with the model-view-controller pattern.
+postgre-sql:
+  name: PostgreSQL
+  description:
+sqlite3:
+  name: SQLite3
+  description:
+my-sql:
+  name: MySQL
+  description:
+ngrok:
+  name: ngrok
+  description: The ngrok tools allows to quickly forward a live URL to localhost, useful for mobile testing for instance.
+sidekiq:
+  name: Sidekiq
+  description: I've used the Sidekiq background job tool for a data-intensive Rails project, allowing us to live-refresh our production database without much effort.
+html:
+  name: HTML5
+  description:
+css:
+  name: CSS3
+  description:
+sass-scss:
+  name: SASS / SCSS
+  description: I can write in SASS or SCSS for better code readability and maintainability.
+bootstrap:
+  name: Bootstrap
+  description:
+tailwind-css:
+  name: TailwindCSS
+  description:
+bootstrap:
+  name: Bootstrap
+  description:
+javascript:
+  name: JavaScript
+  description:
+stimulus-js:
+  name: Stimulus.js
+  description: Stimulus comes hand in hand with Rails projects, so let's add it to your project.
+api:
+  name: API
+  description:
+git:
+  name: Git
+  description:
+github:
+  name: GitHub
+  description: I've used GitHub extensively over the past years, for solo or team projects.
+heroku:
+  name: Heroku
+  description:
+aws:
+  name: AWS
+  description:
+netlify:
+  name: Netlify
+  description:
+cloudinary:
+  name: Cloudinary
+  description:
+figma:
+  name: Figma
+  description: Using Figma, I can build complex prototypes, from UI system and wireframing to fully functional designs.
+sketch:
+  name: Sketch
+  description: With the help of Sketch, I can build working prototypes.
+ux-ui:
+  name: UX / UI
+  description:
+photography:
+  name: Photography
+  description:
+videography:
+  name: Videography
+  description:
+video-editing:
+  name: Video editing
+  description:
+graphic-design:
+  name: Graphic design
+  description:
+adobe-photoshop:
+  name: Adobe Photoshop
+  description:
+adobe-illustrator:
+  name: Adobe Illustrator
+  description:
+adobe-lightroom:
+  name: Adobe Lightroom
+  description:
+adobe-after-effects:
+  name: Adobe After Effects
+  description:
+adobe-premiere-pro:
+  name: Adobe Premiere Pro
+  description:
