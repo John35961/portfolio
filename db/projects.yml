@@ -1,0 +1,85 @@
+personal-website:
+  name: Personal photo and graphic design portfolio
+  description: Website showcasing my personal photography, graphic design and 3D modeling works.
+  project_url: https://jeanguillet.photo/
+  github_url:
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1656424218/portfolio/personal-website_uauv5d.png
+  skills:
+    - wordpress
+    - my-sql
+vanos:
+  name: Vanos
+  description: Vans far all your needs! Vanos is an app where van owners and riders connect. Owners can publish listings of their vans, while riders can browse through offers and find a dream ride for their next trip. Vanos is a team project designed and coded in a week, during Le Wagon's bootcamp, when we were asked to re-create 'Airbnb-like' marketplaces.
+  project_url: https://lwg-vanos-prod.herokuapp.com/
+  github_url: https://github.com/edouardfeyrau/vanos
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1656424218/portfolio/vanos_jmjqha.png
+  skills:
+    - ruby
+    - ruby-on-rails
+    - postgre-sql
+    - bootstrap
+    - sass-scss
+    - stimulus-js
+    - git
+    - github
+    - figma
+    - heroku
+mygrowbox:
+  name: Mygrowbox
+  description: Your plants like you've never seen them! Mygrowbox is an IOT solution bringing you clever insights on your plants health. Relying on ambiant sensors, the solution provides a clear dashboard where you can monitor your plants and act instantly if needed, by watering them or provide nutriments. This was our final product coded at Le Wagon, a complete projects as it not only addressed back and frontend issues, but also live data storage, networking and IOT questions.
+  project_url: https://www.mygrowbox.fr/
+  github_url: https://github.com/besbar/GROWBOX
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1656424218/portfolio/mygrowbox_h456jj.png
+  skills:
+    - ruby
+    - ruby-on-rails
+    - postgre-sql
+    - bootstrap
+    - sass-scss
+    - stimulus-js
+    - git
+    - github
+    - figma
+    - ngrok
+    - sidekiq
+    - heroku
+resume-website:
+  name: Profesional résumé website
+  description: Static website built with Python, to showcase my résumé in an original and friendly way.
+  project_url: https://jeanguillet.pro/
+  github_url: https://github.com/John35961/website-pro
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1656424218/portfolio/resume-website_n9qjam.png
+  skills:
+    - python
+    - flask
+    - bootstrap
+    - netlify
+yaws:
+  name: YAWS
+  description: Web application relying on 4 RESTful APIs to pull weather data for a given location, coded while following the "Cloud Computing Architecture" (McGill Fall 2019 - Montreal) course. The app was deployed on AWS using Elastic Beanstalk, allowing us to focus on code while becoming familiar with the cloud's possibilities (load balancing, auto scaling, security groups…).
+  project_url:
+  github_url: https://github.com/John35961/yaws
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1656424218/portfolio/resume-website_n9qjam.png
+  skills:
+    - python
+    - flask
+    - bootstrap
+    - api
+    - aws
+tidi:
+  name: Tidi
+  description: Tidi is a minimalist task manager, designed to help you focus on most important tasks. It was first intented as a Rails project coded during Le Wagon bootcamp, which I attented in spring 2022, and is now a side-project I'm actively working on.
+  project_url: http://www.mytidi.xyz/
+  github_url: https://github.com/John35961/yaws
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1656424217/portfolio/tidi_bjuzje.png
+  skills:
+    - ruby
+    - ruby-on-rails
+    - postgre-sql
+    - bootstrap
+    - sass-scss
+    - stimulus-js
+    - git
+    - github
+    - figma
+    - heroku
