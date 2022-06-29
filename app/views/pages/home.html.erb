@@ -10,11 +10,9 @@
   </div>
 </div>
 <div class="m-5">
-  <div class="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
     <% @skills.each do |skill| %>
-      <div class="text-center bg-slate-50">
-        <small class="inline-block p-5 text-blue-500"><%= skill.name %></small>
-      </div>
+      <%= render 'partials/minicard', skill: skill %>
     <% end %>
   </div>
 </div>
