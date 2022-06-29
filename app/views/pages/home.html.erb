@@ -1,6 +1,13 @@
-<div class="min-h-[50%] lg:min-h-[75%] grow flex flex-col justify-center items-center">
-  <h1 class="text-5xl">Hi there! I'm <span class="text-blue-500">Jean</span></h1>
-  <p>I'm a Rails developer, but not only...</p>
+<div class="min-h-[50%] lg:min-h-[50%] grow flex flex-col lg:flex-row justify-center items-center">
+  <div class="relative">
+    <%= image_tag 'home/profile_lg_shape_front.svg', class:"infinite-up-and-down absolute w-1/4 bottom-40 left-0" %>
+    <%= image_tag 'home/profile_lg.png' %>
+    <%= image_tag 'home/profile_lg_shape_back.svg', class:"absolute top-0 left-0 -z-50" %>
+  </div>
+  <div>
+    <h1 class="text-5xl">Hi there! I'm <span class="text-blue-500">Jean</span></h1>
+    <p>I'm a Rails developer, but not only...</p>
+  </div>
 </div>
 <div class="m-5">
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
