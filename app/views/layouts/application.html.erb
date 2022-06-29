@@ -11,8 +11,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="h-screen flex border-8 border-blue-500">
-    <main class="container grow flex justify-center items-center">
+  <body class="h-screen flex flex-col border-8 border-blue-500">
+    <%= render 'shared/navbar' %>
+    <main class="container mx-auto flex grow">
       <%= yield %>
     </main>
   </body>

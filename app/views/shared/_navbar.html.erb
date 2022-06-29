@@ -1,0 +1,26 @@
+<div class="flex justify-between px-10 pt-8">
+  <span class="text-2xl text-blue-500">JG</span>
+  <div class="flex items-center mt-1">
+    <span class="flex flex-col items-center mx-3 lg:mx-8
+               hover:text-blue-500 hover:scale-95
+                 <%= 'text-blue-500' if current_page?('/')%>
+                 transition-all">
+      <%= link_to 'Home', root_path  %>
+      <span class="<%= current_page?('/') ? 'visible' : 'invisible' %>">•</span>
+    </span>
+    <span class="flex flex-col items-center mx-3 lg:mx-8
+               hover:text-blue-500 hover:scale-95
+                 <%= 'text-blue-500' if current_page?('/about')%>
+                 transition-all ">
+      <%= link_to 'About me', about_path  %>
+      <span class="<%= current_page?('/about') ? 'visible' : 'invisible' %>">•</span>
+    </span>
+    <span class="flex flex-col items-center mx-3 lg:ml-8
+               hover:text-blue-500 hover:scale-95
+               <%= 'text-blue-500' if current_page?('/projects')%>
+               transition-all">
+      <%= link_to 'Projects', projects_path  %>
+      <span class="<%= current_page?('/projects') ? 'visible' : 'invisible' %>">•</span>
+    </span>
+  </div>
+</div>
