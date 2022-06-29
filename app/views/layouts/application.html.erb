@@ -11,8 +11,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
+  <body class="h-screen flex flex-col">
+  <div class="z-10 border-4 fixed w-full top-0 border-blue-500"></div>
+  <div class="z-10 border-4 fixed h-full right-0 border-blue-500"></div>
+  <div class="z-10 border-4 fixed w-full bottom-0  border-blue-500"></div>
+  <div class="z-10 border-4 fixed h-full left-0 border-blue-500"></div>
+    <%= render 'shared/navbar' %>
+    <main class="container mx-auto flex flex-col grow">
       <%= yield %>
     </main>
   </body>

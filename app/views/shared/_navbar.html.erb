@@ -1,0 +1,32 @@
+<div class="flex justify-between sticky top-0 px-10 pt-8">
+  <span class="text-2xl text-blue-500">JG</span>
+  <div class="flex items-center mt-1">
+    <div class="flex flex-col items-center mx-3 lg:mx-8
+               hover:text-blue-500
+                 <%= 'text-blue-500' if current_page?('/')%>
+                 transition-all">
+      <span class="hover:scale-95 transition-transform">
+        <%= link_to 'Home', root_path  %>
+      </span>
+      <span class="<%= current_page?('/') ? 'visible' : 'invisible' %>">•</span>
+    </div>
+    <div class="flex flex-col items-center mx-3 lg:mx-8
+               hover:text-blue-500
+                 <%= 'text-blue-500' if current_page?('/about')%>
+                 transition-all ">
+      <span class="hover:scale-95 transition-transform">
+        <%= link_to 'About me', about_path  %>
+      </span>
+      <span class="<%= current_page?('/about') ? 'visible' : 'invisible' %>">•</span>
+    </div>
+    <div class="flex flex-col items-center mx-3 lg:ml-8
+               hover:text-blue-500
+               <%= 'text-blue-500' if current_page?('/projects')%>
+               transition-all">
+      <span class="hover:scale-95 transition-transform">
+        <%= link_to 'Projects', projects_path  %>
+      </span>
+      <span class="<%= current_page?('/projects') ? 'visible' : 'invisible' %>">•</span>
+    </div>
+  </div>
+</div>
