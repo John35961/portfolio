@@ -1,8 +1,11 @@
 <div class="grow flex flex-col lg:flex-row justify-center items-center">
-  <div class="m-16 relative">
+  <div class="hidden lg:block m-16 relative">
     <%= image_tag 'home/profile_lg_shape_front.svg', class:"absolute w-1/4 bottom-40 left-0" %>
     <%= image_tag 'home/profile_lg.png' %>
     <%= image_tag 'home/profile_lg_shape_back.svg', class:"absolute top-0 left-0 -z-50" %>
+  </div>
+  <div class="block lg:hidden m-16">
+    <%= image_tag 'home/profile.png' %>
   </div>
   <div>
     <h1 class="text-5xl">Hi there! I'm <span class="text-blue-500">Jean</span></h1>
