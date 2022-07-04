@@ -23,17 +23,17 @@
   <%= render 'partials/separator',
       title:"<span class='opacity-50'>past</span> <span class='mx-1 text-3xl font-heading font-semibold text-blue-500'>projects</span>" %>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-    <% @projects.each do |project| %>
-      <%= render 'partials/card', project: project %>
+    <% @projects.each_with_index do |project, idx| %>
+      <%= render 'partials/card', project: project, delay: (idx + 1) * 100 %>
     <% end %>
   </div>
 </div>
 <div class="m-5">
   <%= render 'partials/separator',
       title:"<span class='opacity-50'>my</span> <span class='mx-1 text-3xl font-heading font-semibold text-blue-500'>skills</span>" %>
-  <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-    <% @skills.each do |skill| %>
-      <%= render 'partials/minicard', skill: skill %>
+  <div data-aos="fade" data-aos-duration="800" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+    <% @skills.each_with_index do |skill, idx| %>
+      <%= render 'partials/minicard', skill: skill, delay: (idx + 1) * 50 %>
     <% end %>
   </div>
 </div>

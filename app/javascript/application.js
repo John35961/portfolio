@@ -5,5 +5,6 @@ import "controllers"
 import AOS from 'aos';
 
 AOS.init({
-  once: true
+  once: true,
+  offset: 50
 })
