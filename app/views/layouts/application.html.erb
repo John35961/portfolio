@@ -10,15 +10,12 @@
     <%= stylesheet_link_tag "https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body class="flex flex-col">
-  <div class="z-20 border-4 fixed w-full top-0 border-blue-500"></div>
-  <div class="z-20 border-4 fixed h-full right-0 border-blue-500"></div>
-  <div class="z-20 border-4 fixed w-full bottom-0  border-blue-500"></div>
-  <div class="z-20 border-4 fixed h-full left-0 border-blue-500"></div>
+    <div class="z-20 border-4 fixed w-full top-0 border-blue-500"></div>
+    <div class="z-20 border-4 fixed h-full right-0 border-blue-500"></div>
+    <div class="z-20 border-4 fixed w-full bottom-0  border-blue-500"></div>
+    <div class="z-20 border-4 fixed h-full left-0 border-blue-500"></div>
     <%= render 'shared/navbar' %>
-    <main class="container mx-auto flex flex-col grow">
-      <%= yield %>
-    </main>
+    <%= yield %>
   </body>
 </html>
