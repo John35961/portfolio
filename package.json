@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "git@github.com:John35961/portfolio.git",
   "author": "Jean Guillet <jean.guillet1@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "aos": "^3.0.0-beta.6"
+  }
 }
