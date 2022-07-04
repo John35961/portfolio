@@ -1,4 +1,4 @@
-<div class="my-10 lg:-mt-10 lg:m-0 grow flex flex-col lg:flex-row justify-center items-center">
+<div class="my-10 lg:-mt-14 lg:m-0 grow flex flex-col lg:flex-row justify-center items-center">
   <div class="hidden lg:block m-16 relative">
     <%= image_tag 'home/profile_lg_shape_front.svg', class:"absolute w-1/4 bottom-40 left-0" %>
     <%= image_tag 'home/profile_lg.png' %>
@@ -8,14 +8,20 @@
     <%= image_tag 'home/profile.png' %>
   </div>
   <div class="text-center lg:text-left">
-    <p class="text-2xl lg:text-3xl">Hi there!</p>
-    <h1 class="my-2 lg:my-3 text-5xl lg:text-6xl">I'm <span class="font-semibold text-blue-500">Jean</span></h1>
-    <p>A <span class="lg:text-2xl font-semibold text-blue-500">creative</span> mind with <span class="lg:text-2xl font-semibold text-blue-500">technical</span> skills</p>
+    <p class="opacity-50 inline mr-2">Hi! My name's</p>
+    <h1 class="inline my-2 lg:my-3 text-5xl lg:text-6xl"><span class="font-heading text-blue-800">Jean</span></h1>
+    <p>
+      <span class="opacity-50">A</span>
+      <span class="text-2xl lg:text-3xl lg:mx-1 font-heading text-blue-500">creative</span>
+      <span class="opacity-50">mind with</span>
+      <span class="text-2xl lg:text-3xl lg:mx-1 font-heading text-blue-500">technical</span>
+      <span class="opacity-50">skills</span>
+    </p>
   </div>
 </div>
 <div class="m-5">
   <%= render 'partials/separator',
-      title:"past <span class='font-semibold text-blue-500'>projects</span>" %>
+      title:"<span class='opacity-50'>past</span> <span class='mx-1 text-3xl font-heading font-semibold text-blue-500'>projects</span>" %>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
     <% @projects.each do |project| %>
       <%= render 'partials/card', project: project %>
@@ -24,7 +30,7 @@
 </div>
 <div class="m-5">
   <%= render 'partials/separator',
-      title:"my <span class='font-semibold text-blue-500'>skills</span>" %>
+      title:"<span class='opacity-50'>my</span> <span class='mx-1 text-3xl font-heading font-semibold text-blue-500'>skills</span>" %>
   <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
     <% @skills.each do |skill| %>
       <%= render 'partials/minicard', skill: skill %>
