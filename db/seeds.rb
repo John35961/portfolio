@@ -7,7 +7,6 @@ Skill.destroy_all
 projects_source = YAML.safe_load(File.read('db/projects.yml'))
 skills_source = YAML.safe_load(File.read('db/skills.yml'))
 
-projects = {}
 skills = {}
 
 skills_source.each do |key, val|
@@ -18,7 +17,7 @@ end
 
 puts 'Created skills!'
 
-projects_source.each do |key, val|
+projects_source.each do |val|
   project = Project.create!(name: val['name'],
                             description: val['description'],
                             project_url: val['project_url'],
