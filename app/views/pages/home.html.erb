@@ -11,16 +11,32 @@
       <div data-aos="fade">
         <p class="text-2xl opacity-50 inline mr-2">Hey! I'm</p>
       </div>
-      <h1 class="my-3 text-5xl lg:text-8xl font-heading font-black rounded-lg text-center text-blue-500 bg-blue-50 p-5">Jean</h1>
+      <h1 class="my-3 text-5xl lg:text-8xl
+                 font-heading font-black rounded-lg text-center
+               text-blue-500 bg-blue-50 p-5">Jean</h1>
       <div class="my-3 flex items-center">
         <span class="text-2xl opacity-50">A</span>
-        <span class="grow text-2xl lg:text-5xl mx-3 text-center font-heading font-bold rounded-lg text-blue-500 bg-blue-50 p-3">creative &#8595;</span>
+        <span class="grow text-2xl lg:text-5xl mx-3 text-center
+                   font-heading font-bold rounded-lg
+                 text-blue-500 bg-blue-50 p-3">creative &#8595;</span>
         <span class="text-2xl opacity-50">guy with</span>
       </div>
-      <span class="my-3 text-2xl lg:text-5xl lg:mx-1 font-heading font-bold rounded-lg text-center text-blue-500 bg-blue-50 p-3">&#8594; technical</span>
+      <span class="my-3 text-2xl lg:text-5xl lg:mx-1
+                 font-heading font-bold rounded-lg text-center
+               text-blue-500 bg-blue-50 p-3">&#8594; technical</span>
       <div class="my-3 flex items-center">
         <span class="mr-3 text-2xl opacity-50">skills from</span>
-        <span class="grow text-2xl lg:text-5xl lg:mx-1 font-heading font-bold rounded-lg text-center text-blue-500 bg-blue-50 p-3">France &#8592;</span>
+        <span class="grow text-2xl lg:text-5xl lg:mx-1
+                     font-heading font-bold rounded-lg text-center
+                   text-blue-500 bg-blue-50 p-3">France &#8592;</span>
+      </div>
+      <div class="flex justify-between my-5">
+        <% @socials.each do |key, val| %>
+          <%= link_to val['name'],
+              val['url'],
+              target:"blank",
+              class:"text-sm text-blue-500 decoration-dotted underline underline-offset-8" %>
+        <% end %>
       </div>
     </div>
   </div>
