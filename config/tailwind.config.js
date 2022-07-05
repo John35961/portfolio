@@ -11,7 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-        heading: ['DM Serif Display', 'serif']
+        heading: ['Syne', 'sans-serif']
       },
     },
   },

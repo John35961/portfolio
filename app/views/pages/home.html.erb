@@ -1,41 +1,76 @@
-<main class="container mx-auto flex flex-col grow">
-  <div class="my-10 lg:-mt-14 lg:m-0 grow flex flex-col lg:flex-row justify-center items-center">
-    <div class="hidden lg:block m-16 relative">
-      <%= image_tag 'home/profile_lg_shape_front.svg', class:"absolute w-1/4 bottom-40 left-0" %>
-      <%= image_tag 'home/profile_lg.png' %>
-      <%= image_tag 'home/profile_lg_shape_back.svg', class:"absolute top-0 left-0 -z-50" %>
-    </div>
-    <div class="block lg:hidden m-8 relative">
-      <%= image_tag 'home/profile.png' %>
-    </div>
-    <div class="text-center lg:text-left">
-      <p class="opacity-50 inline mr-2">Hi! My name's</p>
-      <h1 class="inline my-2 lg:my-3 text-5xl lg:text-6xl"><span class="font-heading text-blue-800">Jean</span></h1>
-      <p>
-        <span class="opacity-50">A</span>
-        <span class="text-2xl lg:text-3xl lg:mx-1 font-heading text-blue-500">creative</span>
-        <span class="opacity-50">mind with</span>
-        <span class="text-2xl lg:text-3xl lg:mx-1 font-heading text-blue-500">technical</span>
-        <span class="opacity-50">skills</span>
-      </p>
+<div data-aos="fade" class="container h-screen lg:-mt-24 mx-auto grow flex flex-col justify-evenly lg:flex-row items-center">
+  <div class="hidden lg:block relative">
+    <%= image_tag 'home/profile_lg.png' %>
+    <%= image_tag 'home/profile_lg_shape_back.svg', class:"absolute top-0 left-0 -z-50" %>
+  </div>
+  <div class="block lg:hidden m-8 relative">
+    <%= image_tag 'home/profile.png' %>
+  </div>
+  <div class="text-center lg:text-left">
+    <div class="flex flex-col">
+      <div data-aos="fade">
+        <p class="text-2xl opacity-50 inline mr-2">Hey! I'm</p>
+      </div>
+      <h1 class="my-3 text-5xl lg:text-8xl
+                 font-heading font-black rounded-lg text-center
+               text-blue-500 bg-blue-50 p-5">Jean</h1>
+      <div class="my-3 flex items-center">
+        <span class="text-2xl opacity-50">A</span>
+        <span class="grow text-2xl lg:text-5xl mx-3 text-center
+                   font-heading font-bold rounded-lg
+                 text-blue-500 bg-blue-50 p-3">creative &#8595;</span>
+        <span class="text-2xl opacity-50">guy with</span>
+      </div>
+      <span class="my-3 text-2xl lg:text-5xl lg:mx-1
+                 font-heading font-bold rounded-lg text-center
+               text-blue-500 bg-blue-50 p-3">&#8594; technical</span>
+      <div class="my-3 flex items-center">
+        <span class="mr-3 text-2xl opacity-50">skills from</span>
+        <span class="grow text-2xl lg:text-5xl lg:mx-1
+                     font-heading font-bold rounded-lg text-center
+                   text-blue-500 bg-blue-50 p-3">France &#8592;</span>
+      </div>
+      <div class="flex justify-between my-5">
+        <% @socials.each do |key, val| %>
+          <%= link_to val['name'],
+              val['url'],
+              target:"blank",
+              class:"text-sm text-blue-500 decoration-dotted underline underline-offset-8" %>
+        <% end %>
+      </div>
     </div>
   </div>
-  <div class="m-5">
-    <%= render 'partials/separator',
-        title:"<span class='opacity-50'>past</span> <span class='mx-1 text-3xl font-heading font-semibold text-blue-500'>projects</span>" %>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <% @projects.each_with_index do |project, idx| %>
+</div>
+<div class="container mx-auto flex flex-col p-5 my-20">
+  <%= render 'partials/separator',
+      title:"<span class='mx-1 text-3xl font-heading font-black text-blue-500'>projects</span>
+             <div class='inline-block rotate-45 opacity-50 text-blue-500'>&#8594;</div>",
+      direction: "right" %>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <% @projects.each_with_index do |project, idx| %>
+      <%= link_to project_path(project) do %>
         <%= render 'partials/card', project: project, delay: (idx + 1) * 100 %>
       <% end %>
-    </div>
+    <% end %>
   </div>
-  <div class="m-5">
-    <%= render 'partials/separator',
-        title:"<span class='opacity-50'>my</span> <span class='mx-1 text-3xl font-heading font-semibold text-blue-500'>skills</span>" %>
-    <div data-aos="fade" data-aos-duration="800" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
-      <% @skills.each_with_index do |skill, idx| %>
-        <%= render 'partials/minicard', skill: skill, delay: (idx + 1) * 50 %>
-      <% end %>
-    </div>
+  <div class="mt-10 mx-auto">
+    <%= render 'partials/minibutton',
+        title: 'See all',
+        path: projects_path,
+        color: 'text-blue-500',
+        hover_color: 'text-blue-800' %>
   </div>
-</main>
+</div>
+<div class="rounded-t-[35px] lg:rounded-t-[50px] bg-blue-500">
+  <div class="container mx-auto p-5">
+      <%= render 'partials/separator',
+          title:"<div class='inline-block rotate-[135deg] text-blue-100'>&#8594;</div>
+                 <span class='mx-1 text-3xl font-heading font-black text-white'>skills</span>",
+          direction: "left" %>
+      <div data-aos="fade" data-aos-duration="800" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        <% @skills.each_with_index do |skill, idx| %>
+          <%= render 'partials/minicard', skill: skill, delay: (idx + 1) * 50 %>
+        <% end %>
+      </div>
+  </div>
+</div>

@@ -1,13 +1,17 @@
-<div data-aos="fade" data-aos-duration="800" data-aos-delay=<%= delay %>
-     class="border border-blue-50 rounded bg-slate-50
-            hover:-translate-y-1 hover:shadow-2xl
-          hover:shadow-blue-100 hover:cursor-pointer
-            transition-all">
-  <div class="h-40 rounded-t bg-cover bg-center" style="background-image:url('<%= project.banner_url %>')"></div>
-  <div class="p-5">
-    <h3 class="font-medium"><%= project.name %></h3>
-    <% project.skills.each do |skill| %>
-      <small class="inline-block my-1 p-1 rounded text-blue-500 bg-blue-100"><%= skill.name %></small>
-    <% end %>
+<div data-aos="fade" data-aos-duration="800" data-aos-delay=<%= delay %>>
+  <div class="group border border-blue-50 rounded-lg
+              hover:-translate-y-1 hover:border-blue-500
+              hover:cursor-pointer
+              transition-transform">
+    <div class="h-48 md:h-80 lg:h-96 bg-center bg-cover rounded-lg" style="background-image:url(<%= project.banner_url %>)">
+      <div class="flex flex-col justify-center items-center w-full h-full rounded-lg opacity-0 group-hover:opacity-100 bg-slate-50 transition-all">
+        <h2 class="group-hover:translate-y-0 font-heading font-bold text-2xl md:text-3xl lg:text-5xl text-blue-500 transition-all"><%= project.name %></h2>
+        <div class="my-3 lg:my-5">
+          <% project.skills.first(5).each do |skill| %>
+            <small class="inline-block p-1 rounded text-blue-500 bg-blue-100"><%= skill.name %></small>
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
