@@ -1,9 +1,3 @@
-<div class="my-12 flex items-center">
-  <% if direction == 'left' %>
-    <div class="grow mr-3 lg:mr-7 border-t border-blue-100"></div>
-  <% end %>
+<div class="my-12 flex <%= justify_content(direction) %>">
   <h3 class="text-center text-2xl"><%= sanitize title %></h3>
-  <% if direction == 'right' %>
-    <div class="grow ml-3 lg:ml-7 border-t border-blue-100"></div>
-  <% end %>
 </div>

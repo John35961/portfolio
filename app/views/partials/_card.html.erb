@@ -1,10 +1,19 @@
 <div data-aos="fade" data-aos-duration="800" data-aos-delay=<%= delay %>>
-  <div class="group border border-blue-50 rounded-lg
-              hover:-translate-y-1 hover:border-blue-500
+  <h2 class="block lg:hidden my-3 text-2xl <%= 'text-end' if idx.even? %> font-heading font-bold text-blue-500">
+    <% if idx.even? %>
+      <div class="inline-block mx-2 rotate-90 opacity-50 scale-75">&#8627;</div>
+    <% end %>
+    <%= project.name %>
+    <% if idx.odd? %>
+      <div class="inline-block mx-2 rotate-90 opacity-50 scale-x-75 -scale-y-75">&#8627;</div>
+    <% end %>
+  </h2>
+  <div class="group rounded-lg
+              hover:-translate-y-1 border border-transparent hover:border-blue-500
               hover:cursor-pointer
               transition-transform">
     <div class="h-48 md:h-80 lg:h-96 bg-center bg-cover rounded-lg" style="background-image:url(<%= project.banner_url %>)">
-      <div class="flex flex-col justify-center items-center w-full h-full rounded-lg opacity-0 group-hover:opacity-100 bg-slate-50 transition-all">
+      <div class="flex flex-col justify-center items-center w-full h-full rounded-lg opacity-0 group-hover:lg:opacity-100 bg-blue-50 transition-all">
         <h2 class="group-hover:translate-y-0 font-heading font-bold text-2xl md:text-3xl lg:text-5xl text-blue-500 transition-all"><%= project.name %></h2>
         <div class="my-3 lg:my-5">
           <% project.skills.first(5).each do |skill| %>
