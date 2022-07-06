@@ -17,9 +17,8 @@ end
 
 puts 'Created skills!'
 
-projects_source.each do |val|
+projects_source.each do |key, val|
   project = Project.create!(name: val['name'],
-                            description: val['description'],
                             project_url: val['project_url'],
                             github_url: val['github_url'],
                             banner_url: val['banner_url'])
