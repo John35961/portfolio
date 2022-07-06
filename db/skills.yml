@@ -1,3 +1,9 @@
+jira:
+  name: JIRA
+  description:
+trello:
+  name: Trello
+  description:
 wordpress:
   name: Wordpress
   description: I can set up, configure an deploy a Wordpress website in no time.
@@ -60,7 +66,10 @@ javascript:
   description:
 stimulus-js:
   name: Stimulus.js
-  description: Stimulus comes hand in hand with Rails projects, so let's add it to your project.
+  description:
+chart-js:
+  name: Chart.js
+  description:
 api:
   name: API
   description:
@@ -104,17 +113,17 @@ graphic-design:
   name: Graphic design
   description:
 adobe-photoshop:
-  name: Adobe Photoshop
+  name: Photoshop
   description:
 adobe-illustrator:
-  name: Adobe Illustrator
+  name: Illustrator
   description:
 adobe-lightroom:
-  name: Adobe Lightroom
+  name: Lightroom
   description:
 adobe-after-effects:
-  name: Adobe After Effects
+  name: After Effects
   description:
 adobe-premiere-pro:
-  name: Adobe Premiere Pro
+  name: Premiere Pro
   description:
