@@ -45,7 +45,7 @@
   <%= render 'partials/separator',
       title:"<span class='mx-1 text-3xl font-heading font-black text-blue-500'>projects</span>
              <div class='inline-block rotate-45 opacity-50 text-blue-500'>&#8594;</div>",
-      direction: "right" %>
+      direction: "left" %>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
     <% @projects.each_with_index do |project, idx| %>
       <%= link_to project_path(project) do %>
@@ -66,7 +66,7 @@
       <%= render 'partials/separator',
           title:"<div class='inline-block rotate-[135deg] text-blue-100'>&#8594;</div>
                  <span class='mx-1 text-3xl font-heading font-black text-white'>skills</span>",
-          direction: "left" %>
+          direction: "right" %>
       <div data-aos="fade" data-aos-duration="800" class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4">
         <% @skills.each_with_index do |skill, idx| %>
           <%= render 'partials/minicard', skill: skill, delay: (idx + 1) * 50 %>
