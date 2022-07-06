@@ -46,7 +46,7 @@
       title:"<span class='mx-1 text-3xl font-heading font-black text-blue-500'>projects</span>
              <div class='inline-block rotate-45 opacity-50 text-blue-500'>&#8594;</div>",
       direction: "left" %>
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-10">
     <% @projects.each_with_index do |project, idx| %>
       <%= link_to project_path(project) do %>
         <%= render 'partials/card', project: project, delay: (idx + 1) * 100 %>
