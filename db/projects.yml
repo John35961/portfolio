@@ -1,18 +1,47 @@
+sumol-festival:
+  name: Sumol Festival
+  project_url:
+  github_url:
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657117271/portfolio/banner_sumolfestival_b84yak.jpg
+  skills:
+    - adobe-photoshop
+    - adobe-illustrator
+    - adobe-premiere-pro
+    - trello
+now-energy-drink:
+  name: Now! Energy drink
+  project_url:
+  github_url:
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657117282/portfolio/banner_now_jnpqdf.jpg
+  skills:
+    - adobe-photoshop
+gastronhome:
+  name: Gastron'Home
+  project_url:
+  github_url:
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657117274/portfolio/banner_gastronhome_xcfuaf.jpg
+  skills:
+    - adobe-photoshop
+ischool-first:
+  name: First
+  project_url:
+  github_url:
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657117348/portfolio/banner_ischool_vfyb0l.jpg
+  skills:
+    - adobe-photoshop
 personal-website:
-  name: Personal photo and graphic design portfolio
-  description: Website showcasing my personal photography, graphic design and 3D modeling works.
+  name: jeanguillet.photo
   project_url: https://jeanguillet.photo/
   github_url:
-  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1656424218/portfolio/personal-website_uauv5d.png
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657102805/portfolio/banner_personal_website_ayu3mc.jpg
   skills:
     - wordpress
     - my-sql
 vanos:
   name: Vanos
-  description: Vans far all your needs! Vanos is an app where van owners and riders connect. Owners can publish listings of their vans, while riders can browse through offers and find a dream ride for their next trip. Vanos is a team project designed and coded in a week, during Le Wagon's bootcamp, when we were asked to re-create 'Airbnb-like' marketplaces.
   project_url: https://lwg-vanos-prod.herokuapp.com/
   github_url: https://github.com/edouardfeyrau/vanos
-  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1656424218/portfolio/vanos_jmjqha.png
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657100552/portfolio/banner_vanos_p16dkp.jpg
   skills:
     - ruby
     - ruby-on-rails
@@ -23,13 +52,13 @@ vanos:
     - git
     - github
     - figma
+    - trello
     - heroku
 mygrowbox:
-  name: Mygrowbox
-  description: Your plants like you've never seen them! Mygrowbox is an IOT solution bringing you clever insights on your plants health. Relying on ambiant sensors, the solution provides a clear dashboard where you can monitor your plants and act instantly if needed, by watering them or provide nutriments. This was our final product coded at Le Wagon, a complete projects as it not only addressed back and frontend issues, but also live data storage, networking and IOT questions.
+  name: mygrowbox.fr
   project_url: https://www.mygrowbox.fr/
   github_url: https://github.com/besbar/GROWBOX
-  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1656424218/portfolio/mygrowbox_h456jj.png
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657104510/portfolio/banner_mygrowbox_wjjpeg.jpg
   skills:
     - ruby
     - ruby-on-rails
@@ -39,16 +68,16 @@ mygrowbox:
     - stimulus-js
     - git
     - github
+    - trello
     - figma
     - ngrok
     - sidekiq
     - heroku
 resume-website:
-  name: Profesional résumé website
-  description: Static website built with Python, to showcase my résumé in an original and friendly way.
+  name: jeanguillet.pro
   project_url: https://jeanguillet.pro/
   github_url: https://github.com/John35961/website-pro
-  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1656424218/portfolio/resume-website_n9qjam.png
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657109128/portfolio/banner_resume_website_yygphe.jpg
   skills:
     - python
     - flask
@@ -56,22 +85,21 @@ resume-website:
     - netlify
 yaws:
   name: YAWS
-  description: Web application relying on 4 RESTful APIs to pull weather data for a given location, coded while following the "Cloud Computing Architecture" (McGill Fall 2019 - Montreal) course. The app was deployed on AWS using Elastic Beanstalk, allowing us to focus on code while becoming familiar with the cloud's possibilities (load balancing, auto scaling, security groups…).
   project_url:
   github_url: https://github.com/John35961/yaws
-  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1656424218/portfolio/resume-website_n9qjam.png
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657112240/portfolio/banner_yaws_afssjw.jpg
   skills:
     - python
     - flask
     - bootstrap
+    - chart-js
     - api
     - aws
 tidi:
-  name: Tidi
-  description: Tidi is a minimalist task manager, designed to help you focus on most important tasks. It was first intented as a Rails project coded during Le Wagon bootcamp, which I attented in spring 2022, and is now a side-project I'm actively working on.
+  name: mytidi.xyz
   project_url: http://www.mytidi.xyz/
   github_url: https://github.com/John35961/yaws
-  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1656424217/portfolio/tidi_bjuzje.png
+  banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657108148/portfolio/banner_tidi_l77l01.jpg
   skills:
     - ruby
     - ruby-on-rails
