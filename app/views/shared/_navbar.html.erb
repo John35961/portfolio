@@ -1,6 +1,8 @@
-<div class="flex justify-between items-center sticky top-0 p-7 md:px-10 md:pt-10 z-10 backdrop-blur bg-blue-500/5 md:backdrop-blur-0 md:bg-transparent">
-  <span class="mx-5 text-2xl text-blue-500">JG</span>
-  <div class="flex grow mx-5 lg:mx-0 md:grow-0 justify-between md:justify-end">
+<div class="sticky top-0 z-10 flex items-center justify-between p-7 md:px-10 md:pt-10 backdrop-blur bg-blue-500/5 md:backdrop-blur-0 md:bg-transparent">
+  <%= link_to root_path do %>
+    <span class="mx-5 text-2xl font-bold text-blue-500 font-heading">JG</span>
+  <% end %>
+  <div class="flex justify-between mx-5 grow lg:mx-0 md:grow-0 md:justify-end">
     <div class="flex flex-col items-center mx-0 md:mx-5 lg:mx-8
                  opacity-50
                hover:text-blue-500
