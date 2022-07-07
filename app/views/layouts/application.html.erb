@@ -11,11 +11,14 @@
     <%= javascript_importmap_tags %>
   </head>
   <body class="flex flex-col">
-    <div class="fixed top-0 z-20 w-full border-4 border-blue-500"></div>
-    <div class="fixed right-0 z-20 h-full border-4 border-blue-500"></div>
-    <div class="fixed bottom-0 z-20 w-full border-4 border-blue-500"></div>
-    <div class="fixed left-0 z-20 h-full border-4 border-blue-500"></div>
+    <div class="fixed top-0 z-20 w-full border-2 border-blue-500 lg:border-4"></div>
+    <div class="fixed right-0 z-20 h-full border-2 border-blue-500 lg:border-4"></div>
+    <div class="fixed bottom-0 z-20 w-full border-[15px] lg:border-[25px] border-blue-500"></div>
+    <div class="fixed left-0 z-20 h-full border-2 border-blue-500 lg:border-4"></div>
     <%= render 'shared/navbar' %>
-    <%= yield %>
+    <main>
+      <%= yield %>
+    </main>
+    <%= render 'shared/footer' %>
   </body>
 </html>
