@@ -8,7 +8,3 @@ AOS.init({
   once: true,
   offset: 50
 })
-
-// import Swup from 'swup';
-
-const swup = new Swup();
