@@ -1,4 +1,4 @@
-<div data-aos="fade" class="sticky top-0 flex flex-col items-center h-screen mx-auto -z-10 -container lg:-mt-28 grow justify-evenly lg:flex-row">
+<div data-aos="fade" class="container sticky top-0 flex flex-col items-center h-screen mx-auto -z-10 lg:-mt-28 grow justify-evenly lg:flex-row">
   <div class="relative hidden lg:block">
     <%= image_tag 'home/profile_lg.png' %>
     <%= image_tag 'home/profile_lg_shape_back.svg', class:"absolute top-0 left-0 -z-50" %>
@@ -22,13 +22,6 @@
         <span class="mr-3 text-2xl opacity-50">skills from</span>
         <span class="p-3 text-2xl font-bold text-center text-blue-500 rounded-lg grow lg:text-5xl lg:mx-1 font-heading bg-blue-50">France &#8592;</span>
       </div>
-      <div class="flex justify-between my-5">
-        <% @socials.each do |key, val| %>
-          <%= link_to val['name'],
-              val['url'],
-              target:"blank",
-              class:"text-sm text-blue-500 decoration-dotted underline underline-offset-8" %>
-        <% end %>
       </div>
     </div>
   </div>
