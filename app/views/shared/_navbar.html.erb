@@ -15,7 +15,7 @@
       </span>
       <span class="-mt-1 lg:-mt-0 <%= current_page?('/about') ? 'hidden md:block' : 'hidden' %>">•</span>
     </div>
-    <div class="flex flex-col items-center mx-0 md:mx-5 lg:ml-8 opacity-50hover:text-blue-500 hover:opacity-100 <%= 'text-blue-500 opacity-100' if current_page?('/projects') %> transition-all">
+    <div class="flex flex-col items-center mx-0 md:mx-5 lg:ml-8 opacity-50 hover:text-blue-500 hover:opacity-100 <%= 'text-blue-500 opacity-100' if current_page?('/projects') %> transition-all">
       <span class="hover:scale-95 transition-transform <%= 'underline md:no-underline underline-offset-8' if current_page?('/projects') %>">
         <%= link_to 'Projects', projects_path, class:"text-sm" %>
       </span>
