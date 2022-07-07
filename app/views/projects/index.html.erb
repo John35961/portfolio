@@ -1,0 +1,11 @@
+<div class="container flex flex-col p-5 mx-auto">
+  <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
+    <% @projects.each_with_index do |project, idx| %>
+      <%= link_to project_path(project) do %>
+        <%= render 'partials/card', project: project,
+                                    idx: idx,
+                                    delay: (idx + 1) * 100 %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
