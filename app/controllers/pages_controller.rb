@@ -4,5 +4,5 @@ class PagesController < ApplicationController
     @skills = Skill.all.sample(15).shuffle
   end
 
-  def about; end
+  def contact; end
 end
