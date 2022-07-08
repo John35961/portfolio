@@ -1,4 +1,4 @@
-<div class="z-10 p-7 md:pt-10">
+<div data-controller="navbar" data-action="scroll@window->navbar#updateNavbarPadding" class="sticky top-0 z-10 px-5 pt-5 pb-3 transition-all lg:pt-10">
   <div class="flex items-center justify-between mx-auto lg:w-1/4 lg:justify-evenly">
     <div class="py-2 px-3 h-full mx-0 md:mx-5 lg:mx-8 <%= 'text-gray-500' unless current_pages?(controller: 'projects', actions: ['show', 'index']) %> <%= 'rounded-lg bg-blue-50 text-blue-600 opacity-100' if current_pages?(controller: 'projects', actions: ['show', 'index']) %> rounded-lg hover:bg-blue-50 hover:text-blue-600  transition-all text-sm">
       <%= link_to 'Projects', projects_path %>
