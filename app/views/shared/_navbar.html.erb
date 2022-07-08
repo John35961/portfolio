@@ -1,19 +1,13 @@
-<div class="sticky top-0 z-10 flex items-center justify-between p-7 md:px-10 md:pt-10 backdrop-blur bg-blue-500/5 md:backdrop-blur-0 md:bg-transparent">
-  <%= link_to root_path do %>
-    <span class="mx-5 text-2xl font-bold text-blue-500 font-heading">JG</span>
-  <% end %>
-  <div class="flex justify-between mx-5 grow lg:mx-0 md:grow-0 md:justify-end">
-    <div class="flex flex-col items-center mx-0 md:mx-5 lg:ml-8 opacity-50 hover:text-blue-500 hover:opacity-100 <%= 'text-blue-500 opacity-100' if current_pages?(controller:'projects', actions:['show', 'index']) %> transition-all">
-      <span class="hover:scale-95 transition-transform <%= 'underline md:no-underline underline-offset-8' if current_pages?(controller:'projects', actions:['show', 'index']) %>">
-        <%= link_to 'Projects', projects_path, class:"text-sm" %>
-      </span>
-      <span class="-mt-1 lg:-mt-0 <%= current_pages?(controller:'projects', actions:['show', 'index']) ? 'hidden md:block' : 'hidden' %>">•</span>
+<div class="z-10 p-7 md:pt-10">
+  <div class="flex items-center w-1/2 mx-auto lg:w-1/4 justify-evenly">
+    <div class="py-2 px-3 h-full mx-0 md:mx-5 lg:mx-8 <%= 'text-gray-500' unless current_pages?(controller: 'projects', actions: ['show', 'index']) %> <%= 'rounded-lg bg-blue-50 text-blue-600 opacity-100' if current_pages?(controller: 'projects', actions: ['show', 'index']) %> rounded-lg hover:bg-blue-50 hover:text-blue-600  transition-all text-sm">
+      <%= link_to 'Projects', projects_path %>
     </div>
-    <div class="flex flex-col items-center mx-0 md:mx-5 lg:mx-8 opacity-50 hover:text-blue-500 hover:opacity-100 <%= 'text-blue-500 opacity-100' if current_page?(controller: 'pages', action: 'contact') %> transition-all ">
-      <span class="hover:scale-95 transition-transform <%= 'underline md:no-underline underline-offset-8' if current_page?(controller: 'pages', action: 'contact') %>">
-        <%= link_to 'Contact', contact_path, class:"text-sm" %>
-      </span>
-      <span class="-mt-1 lg:-mt-0 <%= current_page?(controller: 'pages', action: 'contact') ? 'hidden md:block' : 'hidden' %>">•</span>
+    <%= link_to root_path do %>
+      <span class="mx-5 text-2xl font-bold text-blue-500 font-heading">JG</span>
+    <% end %>
+    <div class="py-2 px-3 h-full mx-0 md:mx-5 lg:mx-8 <%= 'text-gray-500' unless current_page?(controller: 'pages', action: 'contact') %> <%= 'rounded-lg bg-blue-50 text-blue-600 opacity-100' if current_page?(controller: 'pages', action: 'contact') %> rounded-lg hover:bg-blue-50 hover:text-blue-600  transition-all text-sm">
+      <%= link_to 'Contact', contact_path %>
     </div>
   </div>
 </div>
