@@ -1,4 +1,4 @@
-<div data-aos="fade" class="container flex flex-col items-center h-screen mx-auto lg:-mt-24 grow justify-evenly lg:flex-row">
+<div data-aos="fade" class="container sticky top-0 flex flex-col items-center h-screen mx-auto -z-10 lg:-mt-28 grow justify-evenly lg:flex-row">
   <div class="relative hidden lg:block">
     <%= image_tag 'home/profile_lg.png' %>
     <%= image_tag 'home/profile_lg_shape_back.svg', class:"absolute top-0 left-0 -z-50" %>
@@ -22,44 +22,40 @@
         <span class="mr-3 text-2xl opacity-50">skills from</span>
         <span class="p-3 text-2xl font-bold text-center text-blue-500 rounded-lg grow lg:text-5xl lg:mx-1 font-heading bg-blue-50">France &#8592;</span>
       </div>
-      <div class="flex justify-between my-5">
-        <% @socials.each do |key, val| %>
-          <%= link_to val['name'],
-              val['url'],
-              target:"blank",
-              class:"text-sm text-blue-500 decoration-dotted underline underline-offset-8" %>
-        <% end %>
       </div>
     </div>
   </div>
 </div>
-<div class="container flex flex-col p-5 mx-auto my-20">
-  <%= render 'partials/separator',
-      title:"<span class='mx-1 text-3xl font-black text-blue-500 font-heading'>projects</span>
-             <div class='inline-block text-blue-500 rotate-45 opacity-50'>&#8594;</div>",
-      direction: "left" %>
-  <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
-    <% @projects.each_with_index do |project, idx| %>
-      <%= link_to project_path(project) do %>
-        <%= render 'partials/card', project: project,
-                                    idx: idx,
-                                    delay: (idx + 1) * 100 %>
+<div class="rounded-[35px] lg:rounded-[50px] bg-blue-50">
+  <div class="container flex flex-col p-5 mx-auto">
+    <%= render 'partials/separator',
+        title:"<span class='mx-1 text-3xl font-black text-blue-500 font-heading'>projects</span>
+              <div class='inline-block text-blue-500 rotate-45 opacity-50'>&#8594;</div>",
+        direction: "left" %>
+    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
+      <% @projects.each_with_index do |project, idx| %>
+        <%= link_to project_path(project) do %>
+          <div data-aos="fade" data-aos-duration="800" data-aos-delay=<%= (idx + 1) * 100 %>>
+            <%= render 'partials/card', project: project,
+                                        idx: idx %>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-  <div class="mx-auto mt-10">
-    <%= render 'partials/minibutton',
-        title: 'See all',
-        path: projects_path,
-        color: 'text-blue-500',
-        hover_color: 'text-blue-800' %>
+    </div>
+    <div class="mx-auto mt-10">
+      <%= render 'partials/minibutton',
+          title: 'See all',
+          path: projects_path,
+          color: 'text-blue-500',
+          hover_color: 'text-blue-800' %>
+    </div>
   </div>
 </div>
-<div class="rounded-t-[35px] lg:rounded-t-[50px] bg-blue-500">
+<div class="h-screen rounded-t-[35px] lg:rounded-t-[50px] bg-blue-500">
   <div class="container p-5 mx-auto">
       <%= render 'partials/separator',
           title:"<div class='inline-block rotate-[135deg] text-blue-100'>&#8594;</div>
-                 <span class='mx-1 text-3xl font-black text-white font-heading'>skills</span>",
+                <span class='mx-1 text-3xl font-black text-white font-heading'>skills</span>",
           direction: "right" %>
       <div data-aos="fade" data-aos-duration="800" class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
         <% @skills.each_with_index do |skill, idx| %>

@@ -1,7 +1,15 @@
 class ProjectsController < ApplicationController
-  def show; end
+  def show
+    set_project
+  end
 
   def index
     @projects = Project.all
+  end
+
+  private
+
+  def set_project
+    @project = Project.find(params[:id])
   end
 end
