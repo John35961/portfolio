@@ -1,4 +1,4 @@
-<div data-controller="navbar" data-action="scroll@window->navbar#updateNavbarPadding" class="sticky top-0 z-10 px-5 pt-5 pb-3 transition-all lg:pt-10">
+<nav data-controller="navbar" data-action="scroll@window->navbar#updateNavbarPadding" class="sticky top-0 z-10 px-5 pt-5 pb-3 transition-all lg:pt-10">
   <div class="flex items-center mx-auto justify-evenly lg:w-1/4">
     <div class="py-2 px-3 h-full mx-0 md:mx-5 lg:mx-8 <%= 'text-gray-500' unless current_pages?(controller: 'projects', actions: ['show', 'index']) %> <%= 'rounded-lg bg-blue-50 text-slate-800 opacity-100' if current_pages?(controller: 'projects', actions: ['show', 'index']) %> rounded-lg hover:bg-blue-50 hover:text-slate-800  transition-all text-sm">
       <%= link_to 'Projects', projects_path %>
@@ -10,4 +10,4 @@
       <%= link_to 'Contact', contact_path %>
     </div>
   </div>
-</div>
+</nav>
