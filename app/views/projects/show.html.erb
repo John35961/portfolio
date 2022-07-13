@@ -1,16 +1,13 @@
 <div class="container flex items-center lg:h-[90vh] mx-auto">
   <div class="p-5 row">
-    <div>
-      <div class="lg:flex lg:justify-center">
-        <h1 class="relative -top-1 lg:mx-3 p-3 text-2xl lg:text-5xl font-black text-center bg-slate-800 rounded-tl-[35px] rounded-tr-[35px] lg:rounded-lg text-blue-50 lg:w-fit font-heading"><%= @project.name %></h1>
-        <% if @project.project_url %>
-          <%= link_to @project.project_url, class:"hidden lg:block relative -top-2 left-1", target:"_blank" do %>
-            <%= image_tag 'icons/up-right-from-square-solid.svg', class:"text-slate-800 w-6" %>
-          <% end %>
+    <div class="lg:flex lg:justify-center">
+      <h1 class="relative -top-1 lg:mx-3 p-3 text-2xl lg:text-5xl font-black text-center bg-slate-800 rounded-tl-[35px] rounded-tr-[35px] lg:rounded-lg text-blue-50 lg:w-fit font-heading"><%= @project.name %></h1>
+      <% if @project.project_url %>
+        <%= link_to @project.project_url, class:"hidden lg:block relative -top-2 left-1", target:"_blank" do %>
+          <%= image_tag 'icons/up-right-from-square-solid.svg', class:"text-slate-800 w-6" %>
         <% end %>
-      </div>
-      <%= image_tag @project.banner_url, class:"relative -top-10 m-auto rounded-lg lg:rounded-[35px] lg:w-3/4 -z-10" %>
+      <% end %>
     </div>
-    </div>
+    <%= image_tag @project.banner_url, class:"relative -top-10 m-auto rounded-lg lg:rounded-[35px] lg:w-3/4 -z-10" %>
   </div>
 </div>
