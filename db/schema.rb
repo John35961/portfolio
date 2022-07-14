@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_14_125603) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_14_130744) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,6 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_14_125603) do
     t.text "short_description"
     t.text "long_description"
     t.string "banner_url_alt_text"
+    t.boolean "is_active"
   end
 
   create_table "skills", force: :cascade do |t|
