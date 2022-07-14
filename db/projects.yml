@@ -1,8 +1,15 @@
 sumol-festival:
   name: Sumol Festival
-  project_url:
+  release_date_year: 2019
+  release_date_month: 07
+  release_date_day: 01
+  short_description: Gestion de la production et publication des actifs graphiques (web, print, physiques...), puis mise en œuvre de la stratégie médias sociaux.
+  long_description: Micro festival privé du sud de la France, le Sumol est dédié à la musique électronique et aux bons amis. Depuis plus de 4 ans, je gère la production des actifs graphiques et la stratégie des médias sociaux. Cela implique de trouver la thématique annuelle, puis de travailler avec de nombreux types d'actifs (web, print, vêtements...) pour tout expédier avant la fin août, date à laquelle le festival a lieu.
+  project_url: https://www.instagram.com/sumol_festival/
   github_url:
   banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657117271/portfolio/banner_sumolfestival_b84yak.jpg
+  banner_url_alt_text: Bannière Sumol Festival
+  is_active: true
   skills:
     - adobe-photoshop
     - adobe-illustrator
@@ -10,38 +17,75 @@ sumol-festival:
     - trello
 now-energy-drink:
   name: Now! Energy drink
+  release_date_year: 2018
+  release_date_month: 04
+  release_date_day: 25
+  short_description: Création d'un plan de campagne print fictif pour un projet d'école, avec travail sur le packaging et production des mises en situations pour présentation finale.
+  long_description: Now! est une une boisson énergétique imaginaire, dont le concept a été imaginé pour un projet d'école. Il s'agissait de créer de toutes pièces un concept et une identitée de marque, dont le lancement serait accompagné par une campagne de publicité print et TV.
   project_url:
   github_url:
   banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657117282/portfolio/banner_now_jnpqdf.jpg
+  banner_url_alt_text: Bannière Now! Energy drink
+  is_active: false
   skills:
     - adobe-photoshop
 gastronhome:
   name: Gastron'Home
+  release_date_year: 2017
+  release_date_month: 04
+  release_date_day: 01
+  short_description: Création d'un concept de marque pour un projet d'école, impliquant la production d'actifs graphiques, de mockups d'application native, et d'un site Wordpress vitrine.
+  long_description: Gastron'Home est un concept fictif proposant à tout un chacun de faire venir un grand chef pour leure prochaine réception à domicile. Afin d'être expliqué et défendu, le projet a nécessité la création de nombreux support de communication, ainsi que la production des mockups de l'application native du projet. J'étais aussi en charge du déploiement du site Wordpress vitrine présentant le concept.
   project_url:
   github_url:
   banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657117274/portfolio/banner_gastronhome_xcfuaf.jpg
+  banner_url_alt_text: Bannière Gastron'Home
+  is_active: false
   skills:
     - adobe-photoshop
+    - wordpress
 ischool-first:
   name: First
+  release_date_year: 2015
+  release_date_month: 09
+  release_date_day: 01
+  short_description: Production de mockups d'application native et de mises en situation, à l'aide de Photoshop, pour un projet d'intranet scolaire.
+  long_description: First / iSchool est un projet d'intranet scolaire ayant pour but de simplifier la vie des lycéens en centralisant tous leurs échanges scolaires sur une seule application. J'étais en charge de la réalisation des mockups des différentes vues de l'application native, présentées par les porteurs de projet aux potentiels partenaires.
   project_url:
   github_url:
   banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657117348/portfolio/banner_ischool_vfyb0l.jpg
+  banner_url_alt_text: Bannière First / iSchool
+  is_active: false
   skills:
     - adobe-photoshop
 personal-website:
   name: jeanguillet.photo
+  release_date_year: 2015
+  release_date_month: 07
+  release_date_day: 01
+  short_description: Conception en local via MAMP, puis déploiement, d'un site portfolio Wordpress orienté photo et design graphique.
+  long_description: Ce projet débuté à l'été 2017 résulte de ma volonté de centraliser sur Internet mes travaux en photographie et design graphique, résultant de plusieurs années de pratique. Le site est toujours alimenté, à mesure que je travaille sur de nouveaux projets.
   project_url: https://jeanguillet.photo/
   github_url:
   banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657102805/portfolio/banner_personal_website_ayu3mc.jpg
+  banner_url_alt_text: Bannière jeanguillet.photo
+  is_active: true
   skills:
     - wordpress
+    - mamp
     - my-sql
 vanos:
   name: Vanos
+  release_date_year: 2022
+  release_date_month: 05
+  release_date_day: 23
+  short_description: Conception d'un schéma de base de données, du maquettage sur Figma puis développement d'une application Ruby on Rails, en équipe de 4.
+  long_description: Des vans pour tous vos besoins ! Vanos est une application qui met en relation les propriétaires de vans et les locataires. Les propriétaires peuvent publier les annonces de leurs vans, tandis que les futurs voyageurs peuvent parcourir les offres et trouver le véhicule de leurs rêves pour leur prochain voyage. Vanos est un projet d'équipe conçu et codé en une semaine, pendant le bootcamp du Wagon, où l'on nous a demandé de recréer des places de marché semblables à Airbnb.
   project_url: https://lwg-vanos-prod.herokuapp.com/
   github_url: https://github.com/edouardfeyrau/vanos
   banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657100552/portfolio/banner_vanos_p16dkp.jpg
+  banner_url_alt_text: Bannière Vanos
+  is_active: false
   skills:
     - ruby
     - ruby-on-rails
@@ -56,9 +100,16 @@ vanos:
     - heroku
 mygrowbox:
   name: mygrowbox.fr
+  release_date_year: 2022
+  release_date_month: 05
+  release_date_day: 30
+  short_description: Conception et développement d'une application Ruby on Rails, en équipe de 4, impliquant le traitement de données capteur à l'aide du protocole MQTT.
+  long_description: Vos plantes comme vous ne les avez jamais vues ! Mygrowbox est une solution IOT qui vous apporte des informations intelligentes sur la santé de vos plantes. S'appuyant sur des capteurs ambiants, la solution fournit un tableau de bord clair où vous pouvez surveiller vos plantes et agir instantanément si nécessaire, en les arrosant ou en leur fournissant des nutriments. C'était notre produit final codé au Wagon, un projet complet puisqu'il n'a pas seulement abordé les questions de back et frontend, mais aussi le stockage de données en direct, le réseau et les questions IOT.
   project_url: https://www.mygrowbox.fr/
   github_url: https://github.com/besbar/GROWBOX
   banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657104510/portfolio/banner_mygrowbox_wjjpeg.jpg
+  banner_url_alt_text: Bannière mygrowbox.fr
+  is_active: true
   skills:
     - ruby
     - ruby-on-rails
@@ -75,9 +126,16 @@ mygrowbox:
     - heroku
 resume-website:
   name: jeanguillet.pro
+  release_date_year: 2019
+  release_date_month: 09
+  release_date_day: 01
+  short_description: Développement d'un site statique développé avec le framework Flask, rendu statique à l'aide de Frozen-Flask.
+  long_description: J'avais envie de mettre en avant mon CV d'une manière originale, j'ai donc décidé de créer ce site statique à l'aide de Flask, ensuite déployé sur Netlify. Réflexion faite, l'utilisation de Flask pour faire du statique paraît surdimensionné au vu de la taille du projet, mais c'était le framework que j'utilisais à l'époque.
   project_url: https://jeanguillet.pro/
   github_url: https://github.com/John35961/website-pro
   banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657109128/portfolio/banner_resume_website_yygphe.jpg
+  banner_url_alt_text: Bannière jeanguillet.pro
+  is_active: false
   skills:
     - python
     - flask
@@ -85,9 +143,16 @@ resume-website:
     - netlify
 yaws:
   name: YAWS
+  release_date_year: 2019
+  release_date_month: 09
+  release_date_day: 10
+  short_description: Création d'une application Flask reposant sur 4 APIs REST afin de récupérer des données météorologiques pour un lieu donné, ensuite déployée sur AWS.
+  long_description: Ce projet m'a permis de découvrir l'intégration de données provenant d'APIs au sein du application Flask. Réalisée dans le cadre d'un cours sur le cloud computing, l'application a ensuite été déployée sur des serveurs AWS, à l'aide d'Elastic Beanstalk.
   project_url:
   github_url: https://github.com/John35961/yaws
   banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657112240/portfolio/banner_yaws_afssjw.jpg
+  banner_url_alt_text: Bannière YAWS
+  is_active: true
   skills:
     - python
     - flask
@@ -97,9 +162,16 @@ yaws:
     - aws
 tidi:
   name: mytidi.xyz
+  release_date_year: 2022
+  release_date_month: 05
+  release_date_day: 15
+  short_description: Conception, développement en Ruby on Rails, puis déploiement sur Heroku, d'un gestionnaire de tâche avec une interface orientée mobile-first.
+  long_description: Tidi is a minimalist task manager, designed to help you focus on most important tasks. It was first intented as a Rails project coded during Le Wagon bootcamp, which I attented in spring 2022, and is now a side-project I'm is_actively working on.
   project_url: http://www.mytidi.xyz/
-  github_url: https://github.com/John35961/yaws
+  github_url: https://github.com/John35961/tidi
   banner_url: https://res.cloudinary.com/dnhzivd3u/image/upload/v1657108148/portfolio/banner_tidi_l77l01.jpg
+  banner_url_alt_text: Bannière mytidi.xyz
+  is_active: true
   skills:
     - ruby
     - ruby-on-rails

@@ -7,6 +7,9 @@ trello:
 wordpress:
   name: Wordpress
   description: I can set up, configure an deploy a Wordpress website in no time.
+mamp:
+  name: MAMP
+  description: I can work with the macOS-Apache-MySQL-PHP stack tool to develop Wordpress websites locally, before deploying in production
 python:
   name: Python
   description: I've used Python for several personal and profesional projects, ranging from web development with Flask, to data scraping and analysis.
