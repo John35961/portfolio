@@ -27,7 +27,7 @@ projects_source.each do |key, val|
                             project_url: val['project_url'],
                             github_url: val['github_url'],
                             banner_url: val['banner_url'],
-                            banner_url_alt_text: val['long_description'],
+                            banner_url_alt_text: val['banner_url_alt_text'],
                             is_active: val['is_active'])
   val['skills'].each do |skill|
     ProjectSkill.create!(project: project,
