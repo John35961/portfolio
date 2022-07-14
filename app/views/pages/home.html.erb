@@ -45,14 +45,14 @@
 </div>
 <div class="relative -top-10 lg:h-screen rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
   <div class="container p-5 mx-auto">
-      <%= render 'partials/separator',
-          title:"<div class='inline-block rotate-[135deg] text-blue-100/50'>&#8594;</div>
-                <span class='mx-1 text-3xl font-black text-blue-100 font-heading'>skills</span>",
-          direction: "right" %>
-      <div data-aos="fade" data-aos-duration="800" class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
-        <% @skills.each_with_index do |skill, idx| %>
-          <%= render 'partials/minicard', skill: skill, delay: (idx + 1) * 50 %>
-        <% end %>
-      </div>
+    <%= render 'partials/separator',
+        title:"<div class='inline-block rotate-[135deg] text-blue-100/50'>&#8594;</div>
+              <span class='mx-1 text-3xl font-black text-blue-100 font-heading'>skills</span>",
+        direction: "right" %>
+    <div data-aos="fade" data-aos-duration="800" class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
+      <% @skills.each_with_index do |skill, idx| %>
+        <%= render 'partials/minicard', skill: skill, delay: (idx + 1) * 50 %>
+      <% end %>
+    </div>
   </div>
 </div>

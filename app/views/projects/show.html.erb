@@ -1,31 +1,45 @@
-<div class="container flex items-center lg:h-[90vh] mx-auto">
-  <div class="flex items-center p-5 row">
-    <%= link_to project_path(Project.previous(@project)), class:"hidden lg:block" do %>
-      <p class="text-3xl transition-transform hover:-translate-x-3 text-slate-400">←</p>
-    <% end %>
+<div data-aos="fade" class="-z-10 container lg:sticky lg:top-24 flex flex-col lg:flex-row items-center h-screen lg:h-[90vh] mx-auto">
+  <div class="flex items-center px-5 pt-5 lg:p-5 row lg:w-[70vw]">
     <div>
       <div class="lg:flex lg:justify-center">
-        <div class="relative lg:-top-1 lg:mx-3 p-3 lg:text-5xl font-black text-center bg-slate-800 rounded-t-[15px] lg:rounded-lg text-blue-50 lg:w-fit font-heading">
-          <h1><%= @project.name %></h1>
-        </div>
-        <% if @project.project_url %>
-          <%= link_to @project.project_url, class:"hidden lg:block relative -top-2 left-1", target:"_blank" do %>
-            <%= image_tag 'icons/up-right-from-square-solid.svg', class:"text-slate-800 w-6" %>
+        <div class="flex justify-center relative lg:-top-1 lg:mx-3 p-3 lg:text-5xl font-black text-center bg-slate-800 rounded-t-[15px] lg:rounded-lg text-blue-50 lg:w-fit font-heading">
+          <% if @project.project_url %>
+            <%= link_to @project.project_url, target:"_blank" do %>
+              <div class="flex items-center">
+                <h1><%= @project.name %></h1>
+                <%= image_tag 'icons/link-solid.svg', class:'ml-3 h-[15px] lg:h-[20px]' %>
+              </div>
+            <% end %>
+          <% else %>
+            <h1><%= @project.name %></h1>
           <% end %>
-        <% end %>
+        </div>
       </div>
-      <%= image_tag @project.banner_url, class:"relative lg:-top-10 m-auto lg:rounded-[35px] lg:w-3/4 -z-10" %>
-      <div class="flex lg:hidden justify-between bg-slate-800 rounded-b-[15px] lg:rounded-lg text-blue-50">
+      <%= image_tag @project.banner_url, class:"mb-3 relative lg:-top-10 m-auto rounded-b-[15px] lg:rounded-[35px] lg:w-3/4 -z-10" %>
+      <div class="flex justify-between">
         <%= link_to project_path(Project.previous(@project)) do %>
-          <p class="text-3xl transition-transform ml-7 text-slate-400">←</p>
+          <p class="text-2xl transition-transform ml-7 text-slate-400">←</p>
         <% end %>
         <%= link_to project_path(Project.next(@project)) do %>
-          <p class="text-3xl transition-transform mr-7 text-slate-400">→</p>
+          <p class="text-2xl transition-transform mr-7 text-slate-400">→</p>
         <% end %>
       </div>
     </div>
-    <%= link_to project_path(Project.next(@project)), class:"hidden lg:block" do %>
-      <p class="text-3xl transition-transform hover:translate-x-3 text-slate-400">→</p>
-    <% end %>
+  </div>
+  <div class="flex flex-col-reverse lg:flex-col px-5 pt-5 lg:p-5 lg:w-[30vw]">
+    <p class="mb-3 text-2xl font-bold lg:text-3xl font-heading text-slate-800"><%= @project.short_description %></p>
+    <div class="flex items-center justify-between mb-3 lg:mb-0">
+      <small class="font-body text-slate-400"><%= @project.release_date.year %></small>
+      <% if @project.github_url %>
+        <%= link_to @project.github_url, target:'_blank', class:'font-body text-slate-400' do %>
+          <span class="mr-2"><%= fa_icon 'github' %></span>
+          <small><%= /(https:\/\/github\.com\/)(.+)/.match(@project.github_url)[2] %></small>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<div class="h-screen rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
+  <div class="container p-5 mx-auto">
   </div>
 </div>
