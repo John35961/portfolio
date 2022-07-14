@@ -1,15 +1,18 @@
 github:
   name: GitHub
+  icon:
   fa-icon: github
   url: https://github.com/John35961
   target: _blank
 linkedin:
   name: LinkedIn
+  icon:
   fa-icon: linkedin
   url: https://www.linkedin.com/in/jean-guillet-4053a411b/
   target: _blank
-email:
-  name: Contact
-  fa-icon: at
-  url: mailto:jeanguillet1@gmail.com?subject=Hello%20Jean!
-  target: _self
+malt:
+  name: Malt
+  icon: 'icons/malt.svg'
+  fa-icon:
+  url: https://www.malt.fr/profile/jeanguillet
+  target: _blank
