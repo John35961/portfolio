@@ -1,6 +1,10 @@
 class Project < ApplicationRecord
+  extend FriendlyId
+
   has_many :project_skills
   has_many :skills, through: :project_skills
+
+  friendly_id :name, use: :slugged
 
   def self.previous(record)
     Project.where('projects.id < ?', record.id).order('created_at ASC').last || Project.last
