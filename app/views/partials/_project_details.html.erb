@@ -1,0 +1,10 @@
+<p class="mb-3 text-2xl font-bold lg:text-3xl font-heading <%= "text-slate-#{tint}" %>"><%= project.short_description %></p>
+<div class="flex items-center justify-between mb-3 lg:mb-0">
+  <small class="font-body text-slate-400"><%= "#{'Depuis ' if @project.is_active} #{project.release_date.year}" %></small>
+  <% if project.github_url %>
+    <%= link_to project.github_url, target:'_blank', class:'z-10 font-body text-slate-400' do %>
+      <span class="mr-2"><%= fa_icon 'github' %></span>
+      <small><%= /(https:\/\/github\.com\/)(.+)/.match(project.github_url)[2] %></small>
+    <% end %>
+  <% end %>
+</div>
