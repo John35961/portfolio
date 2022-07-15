@@ -2,7 +2,7 @@
   <div class="flex items-center px-5 pt-5 lg:p-5 row lg:w-[70vw]">
     <div>
       <div class="lg:flex lg:justify-center">
-        <div class="flex justify-center relative lg:-top-14 p-3 lg:text-5xl font-black text-center bg-slate-800 rounded-t-[15px] lg:rounded-lg text-blue-50 lg:w-fit font-heading">
+        <div class="flex justify-center relative lg:-top-14 p-3 lg:text-3xl xl:text-5xl font-black text-center bg-slate-800 rounded-t-[15px] lg:rounded-lg text-blue-50 lg:w-fit font-heading">
           <% if @project.project_url %>
             <%= link_to @project.project_url, target:"_blank" do %>
               <div class="flex items-center">
@@ -17,7 +17,7 @@
       </div>
       <%= image_tag @project.banner_url, class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10" %>
       <div class="flex justify-between lg:hidden">
-        <%= render 'partials/project_pagination', margin:'7' %>
+        <%= render 'partials/project_pagination' %>
       </div>
     </div>
   </div>
@@ -27,11 +27,11 @@
 </div>
 <div class="relative z-10 h-screen rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
   <div class="container lg:top-24 flex flex-col lg:flex-row items-center h-full lg:h-[90vh] mx-auto">
-    <div class="hidden lg:flex mix-blend-screen fixed lg:top-[30vh] xl:top-[40vh] right-[4vw] flex-col-reverse lg:flex-col px-5 pt-5 lg:p-5 lg:w-[30vw] mb-5 lg:mb-0">
+    <div class="hidden lg:flex mix-blend-screen fixed xl:-translate-y-1/3 lg:top-[30vh] xl:top-[50vh] right-[4vw] flex-col-reverse lg:flex-col px-5 pt-5 lg:p-5 lg:w-[30vw] mb-5 lg:mb-0">
       <%= render 'partials/project_details', project: @project, tint:'400' %>
     </div>
   </div>
 </div>
 <div class="sticky z-20 justify-between hidden lg:flex bottom-14">
-  <%= render 'partials/project_pagination', margin:'14' %>
+  <%= render 'partials/project_pagination' %>
 </div>
