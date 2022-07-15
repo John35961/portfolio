@@ -1,4 +1,4 @@
-<p class="mb-3 text-2xl font-bold lg:text-3xl font-heading text-slate-400"><%= project.short_description %></p>
+<p class="mb-3 text-2xl font-bold lg:text-3xl font-heading <%= "text-slate-#{tint}" %>"><%= project.short_description %></p>
 <div class="flex items-center justify-between mb-3 lg:mb-0">
   <small class="font-body text-slate-400"><%= "#{'Depuis ' if @project.is_active} #{project.release_date.year}" %></small>
   <% if project.github_url %>
