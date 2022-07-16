@@ -1,7 +1,37 @@
-<div class="container relative flex items-center mx-auto lg:h-[73vh]">
-  <div class="p-5 grow">
-    <h1 class="relative p-3 text-2xl lg:text-5xl font-black text-center bg-blue-500 rounded-tl-[35px] rounded-tr-[35px] lg:rounded-lg text-blue-50 lg:w-fit lg:-left-10 top-10 font-heading"><%= @project.name %></h1>
-    <div class="w-full mx-auto bg-center bg-cover rounded-[35px] lg:rounded-lg h-[300px] lg:h-[65vh]" style="background-image:url(<%= @project.banner_url %>)">
+<div class="container flex flex-col lg:flex-row items-center h-full lg:h-[90vh] mx-auto">
+  <div class="flex items-center px-5 pt-5 lg:p-5 row lg:w-[70vw]">
+    <div>
+      <div class="lg:flex lg:justify-center">
+        <div class="flex justify-center relative lg:-top-14 p-3 lg:text-3xl xl:text-5xl font-black text-center bg-slate-800 rounded-t-[15px] lg:rounded-lg text-blue-50 lg:w-fit font-heading">
+          <% if @project.project_url %>
+            <%= link_to @project.project_url, target:"_blank" do %>
+              <div class="flex items-center">
+                <h1><%= @project.name %></h1>
+                <%= image_tag 'icons/link-solid.svg', class:'ml-3 h-[15px] lg:h-[20px]' %>
+              </div>
+            <% end %>
+          <% else %>
+            <h1><%= @project.name %></h1>
+          <% end %>
+        </div>
+      </div>
+      <%= image_tag @project.banner_url, class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10" %>
+      <div class="flex justify-between lg:hidden">
+        <%= render 'partials/project_pagination' %>
+      </div>
     </div>
   </div>
+  <div class="flex lg:invisible flex-col-reverse px-5 pt-5 lg:p-5 lg:w-[30vw] mb-5 lg:mb-0">
+    <%= render 'partials/project_details', project: @project, tint:'800' %>
+  </div>
+</div>
+<div class="relative z-10 h-screen rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
+  <div class="container lg:top-24 flex flex-col lg:flex-row items-center h-full lg:h-[90vh] mx-auto">
+    <div class="hidden lg:flex mix-blend-screen fixed xl:-translate-y-1/3 lg:top-[30vh] xl:top-[50vh] right-[4vw] flex-col-reverse lg:flex-col px-5 pt-5 lg:p-5 lg:w-[30vw] mb-5 lg:mb-0">
+      <%= render 'partials/project_details', project: @project, tint:'400' %>
+    </div>
+  </div>
+</div>
+<div class="sticky z-20 justify-between hidden lg:flex bottom-14">
+  <%= render 'partials/project_pagination' %>
 </div>

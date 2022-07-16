@@ -19,12 +19,19 @@ puts 'Created skills!'
 
 projects_source.each do |key, val|
   project = Project.create!(name: val['name'],
+                            release_date: Date.new(val['release_date_year'].to_i,
+                                           val['release_date_month'].to_i,
+                                           val['release_date_day'].to_i),
+                            short_description: val['short_description'],
+                            long_description: val['long_description'],
                             project_url: val['project_url'],
                             github_url: val['github_url'],
-                            banner_url: val['banner_url'])
+                            banner_url: val['banner_url'],
+                            banner_url_alt_text: val['banner_url_alt_text'],
+                            is_active: val['is_active'])
   val['skills'].each do |skill|
-    p = ProjectSkill.create!(project: project,
-                             skill: skills[skill])
+    ProjectSkill.create!(project: project,
+                         skill: skills[skill])
   end
 end
 

@@ -1,36 +1,29 @@
-<div data-aos="fade" class="container sticky top-0 flex flex-col items-center h-screen mx-auto -z-10 lg:-mt-28 grow justify-evenly lg:flex-row">
-  <div class="relative hidden lg:block">
+<div data-aos="fade" class="container sticky top-0 flex items-center h-screen mx-auto -z-10 -mt-14 lg:-mt-28 grow justify-evenly lg:flex-row">
+  <div class="relative hidden lg:scale-105 lg:block">
     <%= image_tag 'home/profile_lg.png' %>
-    <%= image_tag 'home/profile_lg_shape_back.svg', class:"absolute top-0 left-0 -z-50" %>
-  </div>
-  <div class="relative block m-8 lg:hidden">
-    <%= image_tag 'home/profile.png' %>
+    <%= image_tag 'home/profile_shape.svg', class:"top-0 left-0 absolute -z-20" %>
   </div>
   <div class="text-center lg:text-left">
     <div class="flex flex-col">
-      <div data-aos="fade">
-        <p class="inline mr-2 text-2xl opacity-50">Hey! I'm</p>
-      </div>
-      <h1 class="p-5 my-3 text-5xl font-black text-center text-blue-500 rounded-lg lg:text-8xl font-heading bg-blue-50">Jean</h1>
-      <div class="flex items-center my-3">
-        <span class="text-2xl opacity-50">A</span>
-        <span class="p-3 mx-3 text-2xl font-bold text-center text-blue-500 rounded-lg grow lg:text-5xl font-heading bg-blue-50">creative &#8595;</span>
+      <p class="inline mr-2 text-2xl opacity-50">Hey! I'm</p>
+      <h1 class="p-5 my-1 text-5xl font-black text-center rounded-lg lg:my-3 text-slate-800 lg:text-8xl font-heading bg-blue-50">Jean</h1>
+      <div class="flex items-center my-1 lg:my-3">
+        <span class="text-2xl opacity-50">I'm a</span>
+        <span class="p-3 mx-3 text-2xl font-bold text-center rounded-lg text-slate-800 grow lg:text-5xl font-heading bg-blue-50">creative &#8592;</span>
         <span class="text-2xl opacity-50">guy with</span>
       </div>
-      <span class="p-3 my-3 text-2xl font-bold text-center text-blue-500 rounded-lg lg:text-5xl lg:mx-1 font-heading bg-blue-50">&#8594; technical</span>
-      <div class="flex items-center my-3">
-        <span class="mr-3 text-2xl opacity-50">skills from</span>
-        <span class="p-3 text-2xl font-bold text-center text-blue-500 rounded-lg grow lg:text-5xl lg:mx-1 font-heading bg-blue-50">France &#8592;</span>
-      </div>
+      <div class="flex items-center my-1 lg:my-3">
+        <span class="p-3 mx-3 text-2xl font-bold text-center rounded-lg text-slate-800 grow lg:text-5xl font-heading bg-blue-50">&#8594; technical</span>
+        <span class="text-2xl opacity-50">skills</span>
       </div>
     </div>
   </div>
 </div>
-<div class="rounded-[35px] lg:rounded-[50px] bg-blue-50">
+<div class="rounded-t-[35px] lg:rounded-t-[50px] bg-blue-50">
   <div class="container flex flex-col p-5 mx-auto">
     <%= render 'partials/separator',
-        title:"<span class='mx-1 text-3xl font-black text-blue-500 font-heading'>projects</span>
-              <div class='inline-block text-blue-500 rotate-45 opacity-50'>&#8594;</div>",
+        title:"<span class='mx-1 text-3xl font-black text-slate-800 font-heading'>projects</span>
+               <div class='inline-block rotate-45 text-slate-800/50'>&#8594;</div>",
         direction: "left" %>
     <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
       <% @projects.each_with_index do |project, idx| %>
@@ -42,25 +35,24 @@
         <% end %>
       <% end %>
     </div>
-    <div class="mx-auto mt-10">
+    <div class="mx-auto mt-16 mb-20">
       <%= render 'partials/minibutton',
           title: 'See all',
           path: projects_path,
-          color: 'text-blue-500',
-          hover_color: 'text-blue-800' %>
+          color: 'text-slate-800' %>
     </div>
   </div>
 </div>
-<div class="h-screen rounded-t-[35px] lg:rounded-t-[50px] bg-blue-500">
+<div class="relative -top-10 lg:h-screen rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
   <div class="container p-5 mx-auto">
-      <%= render 'partials/separator',
-          title:"<div class='inline-block rotate-[135deg] text-blue-100'>&#8594;</div>
-                <span class='mx-1 text-3xl font-black text-white font-heading'>skills</span>",
-          direction: "right" %>
-      <div data-aos="fade" data-aos-duration="800" class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
-        <% @skills.each_with_index do |skill, idx| %>
-          <%= render 'partials/minicard', skill: skill, delay: (idx + 1) * 50 %>
-        <% end %>
-      </div>
+    <%= render 'partials/separator',
+        title:"<div class='inline-block rotate-[135deg] text-blue-100/50'>&#8594;</div>
+              <span class='mx-1 text-3xl font-black text-blue-100 font-heading'>skills</span>",
+        direction: "right" %>
+    <div data-aos="fade" data-aos-duration="800" class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
+      <% @skills.each_with_index do |skill, idx| %>
+        <%= render 'partials/minicard', skill: skill, delay: (idx + 1) * 50 %>
+      <% end %>
+    </div>
   </div>
 </div>

@@ -95,6 +95,8 @@ GEM
     erubi (1.10.0)
     font-awesome-rails (4.7.0.8)
       railties (>= 3.2, < 8.0)
+    friendly_id (5.4.2)
+      activerecord (>= 4.0.0)
     globalid (1.0.0)
       activesupport (>= 5.0)
     i18n (1.10.0)
@@ -135,6 +137,8 @@ GEM
       timeout
     nio4r (2.5.8)
     nokogiri (1.13.6-x86_64-darwin)
+      racc (~> 1.4)
+    nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.1)
     public_suffix (4.0.7)
@@ -194,6 +198,8 @@ GEM
     strscan (3.0.3)
     tailwindcss-rails (2.0.10-x86_64-darwin)
       railties (>= 6.0.0)
+    tailwindcss-rails (2.0.10-x86_64-linux)
+      railties (>= 6.0.0)
     thor (1.2.1)
     timeout (0.3.0)
     turbo-rails (1.1.1)
@@ -221,6 +227,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -228,6 +235,7 @@ DEPENDENCIES
   debug
   dotenv-rails
   font-awesome-rails
+  friendly_id (~> 5.4.0)
   importmap-rails
   jbuilder
   pg

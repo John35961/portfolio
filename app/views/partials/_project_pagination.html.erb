@@ -1,0 +1,6 @@
+<%= link_to project_path(Project.previous(@project)) do %>
+  <p class="text-2xl pl-7 lg:pl-12 text-slate-400">←</p>
+<% end %>
+<%= link_to project_path(Project.next(@project)) do %>
+  <p class="text-2xl pr-7 lg:pr-12 text-slate-400">→</p>
+<% end %>
