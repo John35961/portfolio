@@ -1,6 +1,6 @@
 <div class="container flex flex-col lg:flex-row items-center h-full lg:h-[90vh] mx-auto">
-  <div class="flex items-center px-5 pt-5 lg:p-5 row lg:w-[70vw]">
-    <div>
+  <div data-controller="parallax" class="flex items-center px-5 pt-5 lg:p-5 row lg:w-[70vw]">
+    <div data-parallax-target="hero">
       <div class="lg:flex lg:justify-center">
         <div class="flex justify-center relative lg:-top-14 p-3 lg:text-3xl xl:text-5xl font-black text-center bg-slate-800 rounded-t-[15px] lg:rounded-lg text-blue-50 lg:w-fit font-heading">
           <% if @project.project_url %>
