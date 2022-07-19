@@ -1,0 +1,51 @@
+<%= form_for(project) do |f| %>
+    <div class="flex justify-end">
+      <% if project.persisted? %>
+        <%= f.submit 'Update', class:"font-heading font-bold rounded-lg p-3 bg-yellow-50 text-yellow-500" %>
+      <% else %>
+        <%= f.submit 'Create', class:"font-heading font-bold rounded-lg p-3 bg-emerald-50 text-emerald-500" %>
+      <% end %>
+    </div>
+    <div class="flex flex-col my-3">
+      <%= f.label :name %>
+      <%= f.text_field :name, class:"rounded" %>
+    </div>
+    <div class="flex flex-col my-3">
+      <%= f.label :project_url %>
+      <%= f.text_field :project_url, class:"rounded" %>
+    </div>
+    <div class="flex flex-col my-3">
+      <%= f.label :github_url %>
+      <%= f.text_field :github_url, class:"rounded" %>
+    </div>
+    <div class="flex flex-col lg:flex-row">
+      <div class="flex flex-col w-full my-3 mr-3">
+        <%= f.label :banner_url %>
+        <%= f.text_field :banner_url, class:"rounded" %>
+      </div>
+      <div class="flex flex-col w-full my-3">
+        <%= f.label :banner_url_alt_text %>
+        <%= f.text_field :banner_url_alt_text, class:"rounded" %>
+      </div>
+    </div>
+    <div class="flex flex-col my-3">
+      <%= f.label :release_date %>
+      <%= f.date_field :release_date, class:"rounded" %>
+    </div>
+    <div class="flex flex-col my-3">
+      <%= f.label :long_description %>
+      <%= f.text_area :long_description, class:"rounded" %>
+    </div>
+    <div class="flex flex-col my-3">
+      <%= f.label :short_description %>
+      <%= f.text_area :short_description, class:"rounded" %>
+    </div>
+    <div class="flex items-center my-3">
+      <%= f.check_box :is_active, class:"rounded mr-2" %>
+      <%= f.label 'Active project' %>
+    </div>
+    <div class="flex flex-col my-3">
+      <%= f.label 'URL slug' %>
+      <%= f.text_field :slug, class:"rounded" %>
+    </div>
+  <% end %>
