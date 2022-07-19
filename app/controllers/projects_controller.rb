@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: %i[show edit update]
+  before_action :set_project, only: %i[show edit update destroy]
   skip_before_action :authenticate_admin!, only: %i[index show]
   layout 'admin', only: %i[new edit]
 
@@ -20,6 +20,11 @@ class ProjectsController < ApplicationController
 
   def index
     @projects = Project.all
+  end
+
+  def destroy
+    @project.destroy
+    redirect_to dashboard_path
   end
 
   private
