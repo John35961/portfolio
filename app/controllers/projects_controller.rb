@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  skip_before_action :authenticate_admin!, only: %i[index show]
+
   def show
     set_project
   end
