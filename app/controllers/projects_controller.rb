@@ -1,6 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: %i[show edit update]
   skip_before_action :authenticate_admin!, only: %i[index show]
+  layout 'admin', only: %i[new edit]
 
   def show; end
 
