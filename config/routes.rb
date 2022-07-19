@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+  devise_for :admins
+
   root to: 'pages#home'
 
-  get '/contact', to: 'pages#contact', as: 'contact'
+  get '/contact', to: 'pages#contact'
+  get '/dashboard', to: 'pages#dashboard'
 
-  resources :projects, only: %i[index show]
+  resources :projects
 end

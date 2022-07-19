@@ -1,0 +1,19 @@
+<div class="container flex flex-col w-full p-5 mx-auto my-5 lg:w-1/2">
+  <h1 class="my-3 text-3xl font-heading"><%= pluralize(@projects.size, 'post') %></h1>
+  <ul>
+    <% @projects.each do |project| %>
+      <li class="pb-3 mt-3 border-b">
+        <div class="flex items-center justify-between">
+          <div class="flex flex-col">
+            <%= link_to project.name, project_path(project), target:'_blank', class:'underline underline-offset-1' %>
+            <%= render 'partials/project_history', project: project %>
+          </div>
+          <div>
+            <span class="mx-3 text-yellow-500"><%= link_to 'Edit', edit_project_path(project) %></span>
+            <span class="mx-3 text-red-500"><%= link_to 'Delete', project_path(project), data: { turbo_method: :delete, turbo_confirm: 'Aroe you sure?'} %></span>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>

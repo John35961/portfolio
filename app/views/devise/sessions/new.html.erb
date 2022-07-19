@@ -1,0 +1,27 @@
+<div class="container flex flex-col w-full p-5 mx-auto my-5 lg:w-1/4">
+  <%= link_to '← Back to site', root_path, class:"text-slate-800 my-3" %>
+  <div class="flex items-center justify-between">
+    <%= image_tag 'apple-touch-icon-76x76.png', class:"mr-2 rounded w-12" %>
+    <h1 class="text-3xl font-bold font-heading text-slate-800">Admin</h1>
+  </div>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="flex flex-col my-3 field">
+      <%= f.label :email, class:"text-slate-800 mr-2" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"rounded" %>
+    </div>
+    <div class="flex flex-col my-3 field">
+      <%= f.label :password, class:"text-slate-800 mr-2" %>
+      <%= f.password_field :password, autocomplete: "current-password", class:"rounded" %>
+    </div>
+    <% if devise_mapping.rememberable? %>
+      <div class="flex items-center my-3 field">
+        <%= f.check_box :remember_me, class:"rounded mr-2" %>
+        <%= f.label :remember_me, class:"text-slate-800" %>
+      </div>
+    <% end %>
+    <div class="flex text-slate-800 group actions">
+      <%= f.submit "Log in" %>
+      <p class="ml-2 transition-transform group-hover:translate-x-3">→</p>
+    </div>
+  <% end %>
+</div>
