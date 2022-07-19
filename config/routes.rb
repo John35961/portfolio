@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   get '/contact', to: 'pages#contact'
-  get '/dashboard', to: 'pages#dashboard'
+  get '/dashboard', to: 'admin#dashboard'
 
   resources :projects
 end

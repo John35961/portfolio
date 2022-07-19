@@ -1,9 +1,9 @@
 <%= form_for(project) do |f| %>
     <div class="flex justify-end">
       <% if project.persisted? %>
-        <%= f.submit 'Update', class:"font-heading font-bold rounded-lg p-3 bg-yellow-50 text-yellow-500" %>
+        <%= f.submit 'Update', class:"hover:cursor-pointer font-heading font-bold rounded-lg p-3 bg-yellow-50 text-yellow-500" %>
       <% else %>
-        <%= f.submit 'Create', class:"font-heading font-bold rounded-lg p-3 bg-emerald-50 text-emerald-500" %>
+        <%= f.submit 'Create', class:"hover:cursor-pointer font-heading font-bold rounded-lg p-3 bg-emerald-50 text-emerald-500" %>
       <% end %>
     </div>
     <div class="flex flex-col my-3">

@@ -1,0 +1,7 @@
+<% content_for :meta_title, "Admin - New project" %>
+
+<div class="container flex flex-col w-full p-5 mx-auto my-5 lg:w-1/2">
+  <%= link_to '← Dashboard', dashboard_path %>
+  <h1 class="my-3 text-3xl font-heading">New project</h1>
+  <%= render 'partials/project_form', project: @project %>
+</div>
