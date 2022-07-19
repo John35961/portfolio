@@ -1,28 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= meta_title %></title>
-    <meta name="description" content="<%= meta_description %>">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= stylesheet_link_tag "https://unpkg.com/aos@3.0.0-beta.6/dist/aos.css" %>
-    <%= javascript_importmap_tags %>
-    <%= render 'partials/favicon' %>
-    <!-- Facebook Open Graph data -->
-    <meta property="og:title" content="<%= meta_title %>" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="<%= request.original_url %>" />
-    <meta property="og:image" content="<%= meta_image %>" />
-    <meta property="og:description" content="<%= meta_description %>" />
-    <meta property="og:site_name" content="<%= meta_title %>" />
+    <%= render 'shared/head_tags' %>
   </head>
   <body class="flex flex-col bg-gray-50">
-    <% if devise_controller? \
-       || current_page?(controller:'pages', action:'dashboard') \
-       || current_pages?(controller:'projects', actions: ['new', 'edit']) %>
+    <% if devise_controller? %>
       <%= yield %>
     <% else %>
       <div class="fixed top-0 z-40 w-full border-2 border-slate-900 lg:border-4"></div>
