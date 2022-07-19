@@ -5,4 +5,8 @@ class PagesController < ApplicationController
   end
 
   def contact; end
+
+  def dashboard
+    @projects = Project.all
+  end
 end
