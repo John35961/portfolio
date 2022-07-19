@@ -9,8 +9,8 @@
             <%= render 'partials/project_history', project: project %>
           </div>
           <div>
-            <span class="mx-3 text-yellow-500"><%= link_to 'Edit', edit_project_path(project) %></span>
-            <span class="mx-3 text-red-500"><%= link_to 'Delete', project_path(project), data: { turbo_method: :delete, turbo_confirm: 'Aroe you sure?'} %></span>
+            <span class="px-3 py-2 mx-3 text-xs text-yellow-500 rounded-lg bg-yellow-50"><%= link_to 'Edit', edit_project_path(project) %></span>
+            <span class="px-3 py-2 mx-3 text-xs text-red-500 rounded-lg bg-red-50"><%= link_to 'Delete', project_path(project), data: { turbo_method: :delete, turbo_confirm: 'Aroe you sure?'} %></span>
           </div>
         </div>
       </li>
