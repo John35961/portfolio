@@ -1,6 +1,6 @@
 <% content_for :meta_title, "Jean Guillet - Projet #{@project.name}" %>
 <% content_for :meta_description, @project.short_description %>
-<% content_for :meta_image, @project.banner_url %>
+<% content_for :meta_image, @project.banner.attached? ? @project.banner.url : @project.banner_remote_url %>
 
 <div class="container flex flex-col lg:flex-row items-center h-full lg:h-[90vh] mx-auto">
   <div data-controller="parallax" class="flex items-center px-5 pt-5 lg:p-5 row lg:w-[70vw]">
@@ -22,7 +22,7 @@
       <% if @project.banner.attached? %>
         <%= cl_image_tag @project.banner.key, class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10" %>
       <% else %>
-        <%= image_tag @project.banner_url, class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10" %>
+        <%= image_tag @project.banner_remote_url, class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10" %>
       <% end %>
       <div class="flex justify-between lg:hidden">
         <%= render 'partials/project_pagination' %>
