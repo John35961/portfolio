@@ -32,7 +32,7 @@
 <div class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
   <div class="hidden lg:block absolute w-full bg-gradient-to-b from-slate-800 to-transparent h-[150px] rounded-t-[35px] lg:rounded-t-[50px] z-10"></div>
   <div class="container flex flex-col items-center h-auto min-h-screen mx-auto lg:top-24 lg:flex-row">
-    <div class="relative w-screen left-[2vw] lg:w-[65.5%]">
+    <div class="relative w-screen lg:left-[2vw] lg:w-[65.5%]">
       <div class="grid w-full grid-cols-1 p-5 my-5 gap-7 lg:my-20 sm:grid-cols-2">
         <% @project.gallery.each_with_index do |image, idx| %>
           <div oncontextmenu="return false;" data-aos="fade" data-aos-duration="800" data-aos-delay=<%= (idx + 1) * 100%>>
