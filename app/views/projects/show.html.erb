@@ -3,7 +3,7 @@
 <% content_for :meta_image, @project.banner.attached? ? @project.banner.url : @project.banner_remote_url %>
 
 <div class="container flex flex-col lg:flex-row items-center h-full lg:h-[90vh] mx-auto">
-  <div data-controller="parallax" class="flex items-center px-5 pt-5 lg:p-5 row lg:w-[70vw]">
+  <div data-controller="parallax" data-parallax-amplitude-value="75" class="flex items-center px-5 pt-5 lg:p-5 row lg:w-[70vw]">
     <div data-parallax-target="hero">
       <div class="lg:flex lg:justify-center">
         <div class="flex justify-center relative lg:-top-14 p-3 lg:text-3xl xl:text-5xl font-black text-center bg-slate-800 rounded-t-[15px] lg:rounded-lg text-blue-50 lg:w-fit font-heading">
@@ -19,11 +19,7 @@
           <% end %>
         </div>
       </div>
-      <% if @project.banner.attached? %>
-        <%= cl_image_tag @project.banner.key, class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10" %>
-      <% else %>
-        <%= image_tag @project.banner_remote_url, class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10" %>
-      <% end %>
+      <%= image_tag define_banner(@project), class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10" %>
       <div class="flex justify-between lg:hidden">
         <%= render 'partials/project_pagination' %>
       </div>
@@ -33,8 +29,22 @@
     <%= render 'partials/project_details', project: @project, tint:'800' %>
   </div>
 </div>
-<div class="relative z-10 h-screen rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
-  <div class="container lg:top-24 flex flex-col lg:flex-row items-center h-full lg:h-[90vh] mx-auto">
+<div class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
+  <div class="hidden lg:block absolute w-full bg-gradient-to-b from-slate-800 to-transparent h-[150px] rounded-t-[35px] lg:rounded-t-[50px] z-10"></div>
+  <div class="container flex flex-col items-center h-auto min-h-screen mx-auto lg:top-24 lg:flex-row">
+    <div class="w-screen lg:w-[70%]">
+      <div class="grid w-full grid-cols-1 p-5 my-5 gap-7 lg:my-20 sm:grid-cols-2">
+        <% @project.gallery.each_with_index do |image, idx| %>
+          <div oncontextmenu="return false;" data-aos="fade" data-aos-duration="800" data-aos-delay=<%= (idx + 1) * 100%>>
+            <div data-controller="parallax" data-parallax-amplitude-value=<%= idx.odd? ? '0' : '-10' %>>
+              <div data-parallax-target="hero">
+                <%= image_tag image, draggable: false, class:"shadow-xl rounded-lg" %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
     <div class="hidden lg:flex mix-blend-screen fixed xl:-translate-y-1/3 lg:top-[30vh] xl:top-[50vh] right-[4vw] flex-col-reverse lg:flex-col px-5 pt-5 lg:p-5 lg:w-[30vw] mb-5 lg:mb-0">
       <%= render 'partials/project_details', project: @project, tint:'400' %>
     </div>

@@ -48,6 +48,6 @@ class ProjectsController < ApplicationController
     params.require(:project).permit(:name, :project_url, :github_url, :banner,
                                     :banner_remote_url, :release_date, :short_description,
                                     :long_description, :banner_alt_text,
-                                    :is_active, :slug, skill_ids: [])
+                                    :is_active, :slug, skill_ids: [], gallery: [])
   end
 end

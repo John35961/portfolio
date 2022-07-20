@@ -1,10 +1,10 @@
 class Project < ApplicationRecord
-  has_one_attached :banner
+  extend FriendlyId
 
   has_many :project_skills, dependent: :destroy
   has_many :skills, through: :project_skills
-
-  extend FriendlyId
+  has_one_attached :banner
+  has_many_attached :gallery
 
   validates :name, :release_date, :long_description, :short_description, presence: true
 
