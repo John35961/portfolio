@@ -1,12 +1,12 @@
-<h2 class="block lg:hidden my-3 text-2xl <%= 'text-end' if idx.even? %> font-heading font-bold text-slate-800">
+<div class="flex items-center lg:hidden my-3 text-2xl <%= 'justify-end' if idx.even? %>">
   <% if idx.even? %>
-    <div class="inline-block mx-2 scale-75 rotate-90 text-slate-800/50">&#8627;</div>
+    <small class="text-sm text-slate-400"><%= project.release_date.year %></small>
   <% end %>
-  <%= project.name %>
+  <h2 class="mx-3 font-bold font-heading text-slate-800"><%= project.name %></h2>
   <% if idx.odd? %>
-    <div class="inline-block mx-2 scale-x-75 rotate-90 text-slate-800/50 -scale-y-75">&#8627;</div>
+    <small class="text-sm text-slate-400"><%= project.release_date.year %></small>
   <% end %>
-</h2>
+</div>
 <div class="transition-transform border border-transparent rounded-lg group hover:-translate-y-1 hover:cursor-pointer">
   <div class="h-48 bg-center bg-cover rounded-lg md:h-80 lg:h-96" style="background-image:url(<%= project.banner.attached? ? project.banner.url : project.banner_url %>)">
     <div class="flex flex-col items-center justify-center w-full h-full transition-all rounded-lg opacity-0 bg-slate-800/95 backdrop-blur group-hover:lg:opacity-100">
