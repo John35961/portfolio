@@ -1,8 +1,11 @@
 class Project < ApplicationRecord
-  has_many :project_skills
+  has_many :project_skills, dependent: :destroy
   has_many :skills, through: :project_skills
 
   extend FriendlyId
+
+  validates :name, :banner_url, :banner_url_alt_text,
+            :release_date, :long_description, :short_description, presence: true
 
   before_save :nil_if_blank
 
@@ -13,7 +16,7 @@ class Project < ApplicationRecord
   end
 
   def self.next(record)
-    Project.where('projects.id > ?', record.id).order('created_at ASC').first  || Project.first
+    Project.where('projects.id > ?', record.id).order('created_at ASC').first || Project.first
   end
 
   private

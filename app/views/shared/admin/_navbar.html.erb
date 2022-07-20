@@ -1,9 +1,13 @@
 <nav class="sticky top-0 z-10 px-5 pt-3 pb-3 lg:pt-5 bg-blue-50">
   <div class="flex items-center justify-between">
-    <span class="mx-5 text-2xl font-black text-slate-800 font-heading"><%= link_to 'Admin', dashboard_path %></span>
+    <div class="flex items-center">
+      <span class="mx-5 text-2xl font-black text-slate-800 font-heading"><%= link_to 'Admin', dashboard_path %></span>
+      <small class="text-slate-800"><%= link_to 'Visit site →', root_path, target:'_blank' %></small>
+    </div>
     <%= link_to destroy_admin_session_path, data: {turbo_method: :delete} do %>
-      <div class="flex items-center text-xs">
-        <%= image_tag 'icons/arrow-right-from-bracket-solid.svg', class:"h-[20px]" %>
+      <div class="flex items-center group">
+        <small class="mr-2 transition-opacity opacity-0 group-hover:opacity-100 text-slate-800">Log out</small>
+        <%= image_tag 'icons/arrow-right-from-bracket-solid.svg', class:"opacity-25 group-hover:opacity-100 h-[20px] transition-opacity" %>
       </div>
     <% end %>
   </div>
