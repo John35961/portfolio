@@ -6,8 +6,7 @@ class Project < ApplicationRecord
 
   extend FriendlyId
 
-  validates :name, :banner_url, :banner_url_alt_text,
-            :release_date, :long_description, :short_description, presence: true
+  validates :name, :release_date, :long_description, :short_description, presence: true
 
   before_save :nil_if_blank
 

@@ -20,19 +20,25 @@
       <%= f.input :github_url, wrapper_html: { class: 'flex flex-col' },
                                input_html: { class: 'rounded' } %>
     </div>
+    <div class="flex flex-col w-full my-3 mr-3">
+      <%= f.input :banner, as: :file,
+                           label: 'Banner - upload from computer',
+                           hint: 'Favor 16:9 ratio and 1920x1080 size',
+                           hint_html: { class:'mt-2 text-xs opacity-50' },
+                           wrapper_html: { class: 'flex flex-col' },
+                           input_html: { class: 'rounded' } %>
+    </div>
     <div class="flex flex-col lg:flex-row">
-      <div class="flex flex-col w-full my-3 mr-3">
-        <%= f.input :banner, as: :file,
-                             wrapper_html: { class: 'flex flex-col' },
-                             input_html: { class: 'rounded' },
-                             error: 'Can\'t be blank!',
-                             error_html: { class: 'mt-2 text-red-500' } %>
+      <div class="flex flex-col w-full my-3">
+        <%= f.input :banner_remote_url, label: 'Banner - pull from remote URL',
+                                        hint: 'Favor 16:9 ratio and 1920x1080 size',
+                                        hint_html: { class:'mt-2 text-xs opacity-50' },
+                                        wrapper_html: { class: 'flex flex-col mr-3' },
+                                        input_html: { class: 'rounded' } %>
       </div>
       <div class="flex flex-col w-full my-3">
-        <%= f.input :banner_url_alt_text, wrapper_html: { class: 'flex flex-col' },
-                                          input_html: { class: 'rounded' },
-                                          error: 'Can\'t be blank!',
-                                          error_html: { class: 'mt-2 text-red-500' } %>
+        <%= f.input :banner_alt_text, wrapper_html: { class: 'flex flex-col' },
+                                      input_html: { class: 'rounded' } %>
       </div>
     </div>
     <div class="flex flex-col my-3">
