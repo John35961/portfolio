@@ -19,7 +19,11 @@
           <% end %>
         </div>
       </div>
-      <%= image_tag @project.banner_url, class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10" %>
+      <% if @project.banner.attached? %>
+        <%= cl_image_tag @project.banner.key, class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10" %>
+      <% else %>
+        <%= image_tag @project.banner_url, class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10" %>
+      <% end %>
       <div class="flex justify-between lg:hidden">
         <%= render 'partials/project_pagination' %>
       </div>
