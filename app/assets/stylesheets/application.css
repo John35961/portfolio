@@ -14,3 +14,12 @@
  *= require_self
  *= require font-awesome
  */
+
+.field_with_errors input {
+  border-color: red;
+}
+
+#project_release_date_3i,
+#project_release_date_2i {
+  margin-right: 0.75em;
+}
