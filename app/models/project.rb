@@ -1,4 +1,6 @@
 class Project < ApplicationRecord
+  has_one_attached :banner
+
   has_many :project_skills, dependent: :destroy
   has_many :skills, through: :project_skills
 
