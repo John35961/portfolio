@@ -2,7 +2,7 @@
 <% content_for :meta_description, @project.short_description %>
 <% content_for :meta_image, @project.banner.attached? ? @project.banner.url : @project.banner_remote_url %>
 
-<div class="container flex flex-col lg:flex-row items-center h-full lg:h-[90vh] mx-auto">
+<section class="container flex flex-col lg:flex-row items-center lg:h-[90vh] mx-auto">
   <div data-controller="parallax" data-parallax-amplitude-value="75" class="flex items-center px-5 pt-5 lg:p-5 row lg:w-[70vw]">
     <div data-parallax-target="hero">
       <div class="lg:flex lg:justify-center">
@@ -28,8 +28,8 @@
   <div class="flex lg:invisible flex-col-reverse px-5 pt-5 lg:p-5 lg:w-[30vw] mb-5 lg:mb-0">
     <%= render 'partials/project_details', project: @project, tint:'800' %>
   </div>
-</div>
-<div class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
+</section>
+<section class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
   <div class="hidden lg:block absolute w-full bg-gradient-to-b from-slate-800 to-transparent h-[150px] rounded-t-[35px] lg:rounded-t-[50px] z-10"></div>
   <div class="container flex flex-col items-center h-auto min-h-screen mx-auto lg:top-24 lg:flex-row">
     <div class="relative w-screen lg:left-[2vw] lg:w-[65.5%]">
@@ -49,7 +49,7 @@
       <%= render 'partials/project_details', project: @project, tint:'400' %>
     </div>
   </div>
-</div>
-<div class="sticky z-20 justify-between hidden lg:flex bottom-14">
+</section>
+<section class="sticky z-20 justify-between hidden lg:flex bottom-14">
   <%= render 'partials/project_pagination' %>
-</div>
+</section>
