@@ -38,7 +38,7 @@
           <div oncontextmenu="return false;" data-aos="fade" data-aos-duration="800" data-aos-delay=<%= (idx + 1) * 100%>>
             <div data-controller="parallax" data-parallax-amplitude-value=<%= idx.odd? ? '0' : '-10' %>>
               <div data-parallax-target="hero">
-                <%= image_tag image, draggable: false, class:"shadow-xl rounded-lg" %>
+                <%= image_tag image, draggable: false, class:"shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all" %>
               </div>
             </div>
           </div>
