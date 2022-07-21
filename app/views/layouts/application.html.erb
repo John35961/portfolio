@@ -4,13 +4,10 @@
     <%= render 'shared/head_tags' %>
   </head>
   <body class="flex flex-col min-h-screen bg-gray-50">
+    <%= render 'shared/public/border' %>
     <% if devise_controller? %>
       <%= yield %>
     <% else %>
-      <div class="fixed top-0 z-40 w-full border-2 border-slate-900 lg:border-4"></div>
-      <div class="fixed right-0 z-40 h-full border-2 border-slate-900 lg:border-4"></div>
-      <div class="fixed bottom-0 z-40 w-full border-2 lg:border-[20px] border-slate-900"></div>
-      <div class="fixed left-0 z-40 h-full border-2 border-slate-900 lg:border-4"></div>
       <%= render 'shared/public/navbar' %>
       <main class="flex-grow">
         <%= yield %>
