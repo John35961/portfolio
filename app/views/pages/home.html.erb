@@ -1,9 +1,9 @@
 <section data-aos="fade" class="container sticky flex items-center h-[85vh] mx-auto -z-10 justify-evenly lg:flex-row">
-  <div class="relative hidden lg:scale-105 lg:block">
+  <section class="relative hidden lg:scale-105 lg:block">
     <%= image_tag 'home/profile_lg.png' %>
     <%= image_tag 'home/profile_shape.svg', class:"top-0 left-0 absolute -z-20" %>
-  </div>
-  <div class="text-center lg:text-left">
+  </section>
+  <section class="text-center lg:text-left">
     <div class="flex flex-col">
       <p class="inline mr-2 text-2xl opacity-50">Hey! I'm</p>
       <h1 class="p-5 my-1 text-5xl font-black text-center rounded-lg lg:my-3 text-slate-800 lg:text-8xl font-heading bg-blue-50">Jean</h1>
@@ -17,10 +17,10 @@
         <span class="text-2xl opacity-50">skills</span>
       </div>
     </div>
-  </div>
+  </section>
 </section>
 <section class="relative top-10 rounded-t-[35px] lg:rounded-t-[50px] bg-blue-50">
-  <div class="container flex flex-col p-5 mx-auto">
+  <section class="container flex flex-col p-5 mx-auto">
     <%= render 'partials/separator',
         title:"<span class='mx-1 text-3xl font-black text-slate-800 font-heading'>projects</span>
                <div class='inline-block rotate-45 text-slate-800/50'>&#8594;</div>",
@@ -41,10 +41,10 @@
           path: projects_path,
           color: 'text-slate-800' %>
     </div>
-  </div>
+  </section>
 </section>
 <section class="lg:h-screen z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
-  <div class="container p-5 mx-auto">
+  <section class="container p-5 mx-auto">
     <%= render 'partials/separator',
         title:"<div class='inline-block rotate-[135deg] text-blue-100/50'>&#8594;</div>
               <span class='mx-1 text-3xl font-black text-blue-100 font-heading'>skills</span>",
@@ -54,5 +54,5 @@
         <%= render 'partials/minicard', skill: skill, delay: (idx + 1) * 50 %>
       <% end %>
     </div>
-  </div>
+  </section>
 </section>
