@@ -1,4 +1,4 @@
-<div data-aos="fade" class="container sticky top-0 flex items-center h-screen mx-auto -z-10 -mt-14 lg:-mt-28 grow justify-evenly lg:flex-row">
+<section data-aos="fade" class="container sticky top-0 flex items-center h-screen mx-auto -z-10 -mt-14 lg:-mt-28 grow justify-evenly lg:flex-row">
   <div class="relative hidden lg:scale-105 lg:block">
     <%= image_tag 'home/profile_lg.png' %>
     <%= image_tag 'home/profile_shape.svg', class:"top-0 left-0 absolute -z-20" %>
@@ -18,8 +18,8 @@
       </div>
     </div>
   </div>
-</div>
-<div class="relative top-10 rounded-t-[35px] lg:rounded-t-[50px] bg-blue-50">
+</section>
+<section class="relative top-10 rounded-t-[35px] lg:rounded-t-[50px] bg-blue-50">
   <div class="container flex flex-col p-5 mx-auto">
     <%= render 'partials/separator',
         title:"<span class='mx-1 text-3xl font-black text-slate-800 font-heading'>projects</span>
@@ -42,8 +42,8 @@
           color: 'text-slate-800' %>
     </div>
   </div>
-</div>
-<div class="lg:h-screen z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
+</section>
+<section class="lg:h-screen z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
   <div class="container p-5 mx-auto">
     <%= render 'partials/separator',
         title:"<div class='inline-block rotate-[135deg] text-blue-100/50'>&#8594;</div>
@@ -55,4 +55,4 @@
       <% end %>
     </div>
   </div>
-</div>
+</section>
