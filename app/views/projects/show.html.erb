@@ -19,7 +19,7 @@
           <% end %>
         </div>
       </div>
-      <%= image_tag define_banner(@project), class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10" %>
+      <%= image_tag define_banner(@project), class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10", alt:@project.banner_alt_text %>
       <div class="flex justify-between lg:hidden">
         <%= render 'partials/project_pagination' %>
       </div>
