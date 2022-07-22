@@ -15,6 +15,11 @@
  *= require font-awesome
  */
 
+::selection {
+  color: rgb(161, 161, 161);
+  background-color: rgba(206, 230, 238, 0.25);
+}
+
 .field_with_errors input {
   border-color: red;
 }
