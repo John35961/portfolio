@@ -20,6 +20,10 @@
   background-color: rgba(206, 230, 238, 0.25);
 }
 
+img::selection {
+  background-color: transparent;
+}
+
 .field_with_errors input {
   border-color: red;
 }
