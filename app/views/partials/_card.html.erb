@@ -9,7 +9,7 @@
 </div>
 <div class="transition-transform border border-transparent rounded-lg group hover:-translate-y-1 hover:cursor-pointer">
   <div class="h-48 bg-center bg-cover rounded-lg md:h-80 lg:h-96" style="background-image:url(<%= define_banner(project) %>)">
-    <div class="flex flex-col items-center justify-center w-full h-full transition-all rounded-lg opacity-0 bg-slate-800/95 backdrop-blur group-hover:lg:opacity-100">
+    <div class="flex flex-col items-center justify-center w-full h-full text-center transition-all rounded-lg opacity-0 bg-slate-800/95 backdrop-blur group-hover:lg:opacity-100">
       <h2 class="text-2xl font-bold transition-all text-blue-50 group-hover:translate-y-0 font-heading md:text-3xl lg:text-5xl"><%= project.name %></h2>
       <div class="my-3 lg:my-5">
         <% project.skills.first(5).each do |skill| %>
