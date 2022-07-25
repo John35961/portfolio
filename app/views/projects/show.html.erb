@@ -36,7 +36,7 @@
       <% if @project.youtube_url %>
         <div class="pt-5 pl-5 pr-5 mt-5 -mb-3 lg:p-5 lg:mb-28">
           <div class="video-container">
-            <iframe width="100%" src="<%= @project.youtube_url %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" class="relative z-10 rounded-lg" allowfullscreen></iframe>
+            <iframe src="<%= @project.youtube_url %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" class="relative z-10 rounded-lg" allowfullscreen></iframe>
           </div>
         </div>
       <% end %>
