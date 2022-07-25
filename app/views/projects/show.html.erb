@@ -31,8 +31,13 @@
 </section>
 <section class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
   <div class="hidden lg:block absolute w-full bg-gradient-to-b from-slate-800 to-transparent h-[150px] rounded-t-[35px] lg:rounded-t-[50px] z-10"></div>
-  <div class="container flex flex-col items-center h-auto min-h-screen mx-auto lg:top-24 lg:flex-row">
+  <div class="container flex flex-col items-center h-auto min-h-screen mx-auto lg:flex-row">
     <div class="relative w-screen lg:left-[2vw] lg:w-[65.5%]">
+      <div class="pt-5 pl-5 pr-5 mt-5 -mb-3 lg:p-5 lg:mb-28">
+        <div class="video-container">
+          <iframe width="100%" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" class="relative z-10 rounded-lg" allowfullscreen></iframe>
+        </div>
+      </div>
       <div class="grid w-full grid-cols-1 p-5 my-5 gap-7 lg:my-20 sm:grid-cols-2">
         <% @project.gallery.each_with_index do |image, idx| %>
           <div oncontextmenu="return false;" data-aos="fade" data-aos-duration="800" data-aos-delay=<%= (idx + 1) * 100%>>
