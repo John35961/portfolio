@@ -8,4 +8,13 @@
   html {
     font-family: 'Manrope', sans-serif;
   }
+
+  ::selection {
+    color: rgb(161, 161, 161);
+    background-color: rgba(206, 230, 238, 0.25);
+  }
+
+  img::selection {
+    background-color: transparent;
+  }
 }
