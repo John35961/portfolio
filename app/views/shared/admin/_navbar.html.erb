@@ -9,7 +9,7 @@
         <% end %>
       <small class="text-slate-800"><%= link_to 'Go to site →', root_path, target:'_blank' %></small>
     </div>
-    <%= link_to destroy_admin_session_path, data: {turbo_method: :delete} do %>
+    <%= button_to destroy_admin_session_path, method: :delete do %>
       <div class="flex items-center mx-5 group">
         <small class="mr-2 transition-opacity opacity-0 group-hover:opacity-100 text-slate-800">Log out</small>
         <%= image_tag 'icons/arrow-right-from-bracket-solid.svg', class:"opacity-25 group-hover:opacity-100 h-[20px] transition-opacity" %>
