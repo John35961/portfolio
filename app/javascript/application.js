@@ -8,10 +8,12 @@ AOS.init({
   offset: 50
 })
 
-const lightbox = new PhotoSwipeLightbox({
+const options = {
   gallery: '#gallery',
   children: 'a',
   pswpModule: () => import('https://unpkg.com/photoswipe'),
-});
+}
+
+const lightbox = new PhotoSwipeLightbox(options);
 
 lightbox.init();
