@@ -1,3 +1,6 @@
+require 'image_size'
+require 'open-uri'
+
 class Project < ApplicationRecord
   extend FriendlyId
 
@@ -18,6 +21,10 @@ class Project < ApplicationRecord
 
   def self.next(record)
     Project.where('projects.id > ?', record.id).order('created_at ASC').first || Project.first
+  end
+
+  def self.size(url)
+    URI.parse(url).open('rb') { |image| ImageSize.new(image) }
   end
 
   private
