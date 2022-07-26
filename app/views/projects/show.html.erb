@@ -51,7 +51,7 @@
             <div data-controller="parallax" data-parallax-amplitude-value=<%= idx.odd? ? '0' : '-10' %>>
               <div data-parallax-target="hero">
                 <%= link_to image, data: { pswp_width:Project.size(image.url).width, pswp_height:Project.size(image.url).height } do %>
-                  <%= image_tag image, draggable: false, class:"shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all" %>
+                  <%= cl_image_tag image.key, secure: true, draggable: false, class:"shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all" %>
                 <% end %>
               </div>
             </div>
