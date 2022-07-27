@@ -1,0 +1,13 @@
+fr:
+  views:
+    shared:
+      public:
+        navbar:
+          initials: "jg"
+          projects: "projets"
+          contact: "contact"
+    pages:
+      home:
+        projects: "projets"
+        skills: "outils"
+        see_all: "voir tout"
