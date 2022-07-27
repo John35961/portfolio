@@ -27,10 +27,7 @@
 </section>
 <section class="relative top-10 rounded-t-[35px] lg:rounded-t-[50px] bg-blue-50">
   <section class="container flex flex-col p-5 mx-auto">
-    <%= render 'partials/separator',
-        title:"<span class='mx-1 text-3xl font-black text-slate-800 font-heading'>projects</span>
-               <div class='inline-block rotate-45 text-slate-800/50'>&#8594;</div>",
-        direction: "left" %>
+    <%= render 'partials/separator', title: t_scoped(:projects), direction: 'left', color: 'text-slate-800' %>
     <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
       <% @projects.each_with_index do |project, idx| %>
         <%= link_to project_path(project) do %>
@@ -43,7 +40,7 @@
     </div>
     <div class="mx-auto mt-16 mb-20">
       <%= render 'partials/minibutton',
-          title: 'See all',
+          title: t_scoped(:see_all).capitalize,
           path: projects_path,
           color: 'text-slate-800' %>
     </div>
@@ -52,9 +49,7 @@
 <section class="relative lg:h-screen z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
   <section class="container p-5 mx-auto">
     <%= render 'partials/separator',
-        title:"<div class='inline-block rotate-[135deg] text-blue-100/50'>&#8594;</div>
-              <span class='mx-1 text-3xl font-black text-blue-100 font-heading'>skills</span>",
-        direction: "right" %>
+        title: t_scoped(:skills), direction: 'right', color: 'text-blue-100' %>
     <div data-aos="fade" data-aos-duration="800" class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
       <% @skills.each_with_index do |skill, idx| %>
         <%= render 'partials/minicard', skill: skill, delay: (idx + 1) * 50 %>
