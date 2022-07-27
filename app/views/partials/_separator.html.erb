@@ -1,11 +1,11 @@
 <div class="my-6 lg:my-12 flex <%= justify_content(direction) %>">
   <h3 class="text-2xl text-center">
     <% if direction == 'right' %>
-      <div class='inline-block rotate-[135deg] <%= color%>/50'>&#8594;</div>
+      <div class='inline-block rotate-[135deg] <%= arrow_color %>'>&#8594;</div>
     <% end %>
-    <span class='mx-1 text-3xl font-black <%= color %> font-heading'><%= title %></span>
+    <span class='mx-1 text-3xl font-black <%= text_color %> font-heading'><%= title %></span>
     <% if direction == 'left' %>
-      <div class='inline-block rotate-[45deg] <%= color%>/50'>&#8594;</div>
+      <div class='inline-block rotate-[45deg] <%= arrow_color %>'>&#8594;</div>
     <% end %>
   </h3>
 </div>

@@ -27,7 +27,7 @@
 </section>
 <section class="relative top-10 rounded-t-[35px] lg:rounded-t-[50px] bg-blue-50">
   <section class="container flex flex-col p-5 mx-auto">
-    <%= render 'partials/separator', title: t_scoped(:projects), direction: 'left', color: 'text-slate-800' %>
+    <%= render 'partials/separator', title: t_scoped(:projects), direction: 'left', text_color: 'text-slate-800', arrow_color: 'text-slate-800/50' %>
     <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
       <% @projects.each_with_index do |project, idx| %>
         <%= link_to project_path(project) do %>
@@ -48,7 +48,7 @@
 </section>
 <section class="relative lg:h-screen z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
   <section class="container p-5 mx-auto">
-    <%= render 'partials/separator', title: t_scoped(:skills), direction: 'right', color: 'text-blue-100' %>
+    <%= render 'partials/separator', title: t_scoped(:skills), direction: 'right', text_color: 'text-blue-100', arrow_color: 'text-blue-100/50' %>
     <div data-aos="fade" data-aos-duration="800" class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
       <% @skills.each_with_index do |skill, idx| %>
         <%= render 'partials/minicard', skill: skill, delay: (idx + 1) * 50 %>
