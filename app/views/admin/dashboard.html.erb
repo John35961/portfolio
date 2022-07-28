@@ -2,7 +2,7 @@
 
 <section class="container flex flex-col w-full p-5 mx-auto my-5 lg:w-1/2">
   <div class="flex items-center justify-between">
-    <h1 class="my-3 text-3xl font-heading"><%= pluralize(@projects.size, 'projects') %></h1>
+    <h1 class="my-3 text-3xl font-heading"><%= "#{@projects.size} #{t_scoped(:project).pluralize(@projects.size)}" %></h1>
     <span class="h-full px-3 py-2 mx-3 text-lg rounded-lg text-emerald-500 bg-emerald-50"><%= link_to t_scoped(:new).capitalize, new_project_path %></span>
   </div>
   <ul>

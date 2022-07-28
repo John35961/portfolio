@@ -2,6 +2,7 @@ fr:
   views:
     admin:
       dashboard:
+        project: "projet"
         new: "nouveau"
         edit: "éditer"
         delete: "supprimer"
