@@ -3,7 +3,7 @@
   <head>
     <%= render 'shared/head_tags' %>
   </head>
-  <body class="flex flex-col min-h-screen bg-gray-50" data-barba="wrapper">
+  <body class="flex flex-col min-h-screen bg-gray-50">
     <div class="fixed z-50 flex items-center justify-center w-screen h-screen bg-slate-900 wipe-transition -bottom-full">
       <span class="font-black text-[8em] text-slate-800 font-heading"><%= t_scoped(:initials).upcase %></span>
     </div>
@@ -14,7 +14,7 @@
     <% else %>
       <%= render 'shared/public/border' %>
       <%= render 'shared/public/navbar' %>
-      <main class="flex-grow" data-aos="fade" data-aos-duration="850" data-barba="container" data-barba-namespace="main">
+      <main class="flex-grow" data-aos="fade" data-aos-duration="400">
         <%= yield %>
       </main>
       <%= render 'shared/public/footer' %>
