@@ -8,7 +8,7 @@ fr:
         delete: "supprimer"
     pages:
       home:
-        projects: "projets"
+        project: "projet"
         skills: "outils"
         see_all: "voir tout"
     partials:
