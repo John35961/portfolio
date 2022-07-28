@@ -27,7 +27,7 @@
 </section>
 <section class="relative top-10 rounded-t-[35px] lg:rounded-t-[50px] bg-blue-50">
   <section class="container flex flex-col p-5 mx-auto">
-    <%= render 'partials/separator', title: t_scoped(:projects), direction: 'left', text_color: 'text-slate-800', arrow_color: 'text-slate-800/50' %>
+    <%= render 'partials/separator', title: t_scoped(:project).pluralize(@projects.size), direction: 'left', text_color: 'text-slate-800', arrow_color: 'text-slate-800/50' %>
     <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
       <% @projects.each_with_index do |project, idx| %>
         <%= link_to project_path(project) do %>

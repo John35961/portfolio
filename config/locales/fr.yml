@@ -1,13 +1,178 @@
 fr:
   views:
+    admin:
+      dashboard:
+        project: "projet"
+        new: "nouveau"
+        edit: "éditer"
+        delete: "supprimer"
+    devise:
+      registrations:
+        new:
+          back_to_site: "retour au site"
+          email: "email"
+          password: "mot de passe"
+          password_hint: "au moins %{count} caractères"
+          password_confirmation: "confirmer le mot de passe"
+          sign_up: "créer un compte"
+      sessions:
+        new:
+          back_to_site: "retour au site"
+          email: "email"
+          password: "mot de passe"
+          remember_me: "se souvenir de moi"
+          sign_in: "se connecter"
+    pages:
+      home:
+        project: "projet"
+        skills: "outils"
+        see_all: "voir tout"
+    partials:
+      project_details:
+        since: "depuis"
+      project_form:
+        edit: "éditer"
+        update: "actualiser"
+        publish: "publier"
+        name: "nom"
+        project_url: "URL du projet"
+        github_url: "URL GitHub"
+        youtube_url: "URL Youtube"
+        youtube_url_hint: "exemple: https://www.youtube.com/embed/pzXb5CVPSLM"
+        banner: "image à la une"
+        banner_remote_url: "image à la une depuis une URL"
+        banner_alt_text: "texte alternatif"
+        release_date: "date de sortie"
+        short_description: "description courte"
+        long_description: "description longue"
+        gallery: "gallerie d'images"
+        is_active: "projet actif"
+        skills: "outils associés"
+        image_hint: "privilégier le ratio 16:9 et une taille max de 1280x720"
+        blank_error: "ne peut pas être vide !"
+      project_history:
+        posted: "posté il y a"
+        edited: "édité il y a"
+        never_edited: "jamais édité"
+    projects:
+      edit:
+        admin: "admin"
+        edit: "éditer"
+        projects: "projets"
+      new:
+        admin: "admin"
+        projects: "projets"
+        new_project: "nouveau projet"
     shared:
       public:
         navbar:
           initials: "jg"
           projects: "projets"
           contact: "contact"
-    pages:
-      home:
-        projects: "projets"
-        skills: "outils"
-        see_all: "voir tout"
+      admin:
+        navbar:
+          initials: "jg"
+          visit_site: "voir le site"
+          admin: "admin"
+          log_out: "se déconnecter"
+  date:
+    abbr_day_names:
+    - dim
+    - lun
+    - mar
+    - mer
+    - jeu
+    - ven
+    - sam
+    abbr_month_names:
+    -
+    - jan.
+    - fév.
+    - mars
+    - avr.
+    - mai
+    - juin
+    - juil.
+    - août
+    - sept.
+    - oct.
+    - nov.
+    - déc.
+    day_names:
+    - dimanche
+    - lundi
+    - mardi
+    - mercredi
+    - jeudi
+    - vendredi
+    - samedi
+    formats:
+      default: "%d/%m/%Y"
+      long: "%-d %B %Y"
+      short: "%-d %b"
+    month_names:
+    -
+    - janvier
+    - février
+    - mars
+    - avril
+    - mai
+    - juin
+    - juillet
+    - août
+    - septembre
+    - octobre
+    - novembre
+    - décembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: environ une heure
+        other: environ %{count} heures
+      about_x_months:
+        one: environ un mois
+        other: environ %{count} mois
+      about_x_years:
+        one: environ un an
+        other: environ %{count} ans
+      almost_x_years:
+        one: presqu'un an
+        other: presque %{count} ans
+      half_a_minute: une demi‑minute
+      less_than_x_seconds:
+        zero: moins d'une seconde
+        one: moins d'une seconde
+        other: moins de %{count} secondes
+      less_than_x_minutes:
+        zero: moins d'une minute
+        one: moins d'une minute
+        other: moins de %{count} minutes
+      over_x_years:
+        one: plus d'un an
+        other: plus de %{count} ans
+      x_seconds:
+        one: 1 seconde
+        other: "%{count} secondes"
+      x_minutes:
+        one: 1 minute
+        other: "%{count} minutes"
+      x_days:
+        one: 1 jour
+        other: "%{count} jours"
+      x_months:
+        one: 1 mois
+        other: "%{count} mois"
+      x_years:
+        one: 1 an
+        other: "%{count} ans"
+    prompts:
+      second: Seconde
+      minute: Minute
+      hour: Heure
+      day: Jour
+      month: Mois
+      year: Année

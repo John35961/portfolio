@@ -1,9 +1,9 @@
-<% content_for :meta_title, "Admin - Dashboard" %>
+<% content_for :meta_title, "Admin - #{t_scoped(:project).pluralize(@projects.size).capitalize}" %>
 
 <section class="container flex flex-col w-full p-5 mx-auto my-5 lg:w-1/2">
   <div class="flex items-center justify-between">
-    <h1 class="my-3 text-3xl font-heading"><%= pluralize(@projects.size, 'projects') %></h1>
-    <span class="h-full px-3 py-2 mx-3 text-lg rounded-lg text-emerald-500 bg-emerald-50"><%= link_to 'New', new_project_path %></span>
+    <h1 class="my-3 text-3xl font-heading"><%= "#{@projects.size} #{t_scoped(:project).pluralize(@projects.size)}" %></h1>
+    <span class="h-full px-3 py-2 mx-3 text-lg rounded-lg text-emerald-500 bg-emerald-50"><%= link_to t_scoped(:new).capitalize, new_project_path %></span>
   </div>
   <ul>
     <% @projects.each do |project| %>
@@ -14,9 +14,9 @@
             <%= render 'partials/project_history', project: project %>
           </div>
           <div class="flex items-center">
-            <span class="px-3 py-2 mx-2 text-xs text-yellow-500 rounded-lg bg-yellow-50"><%= link_to 'Edit', edit_project_path(project) %></span>
+            <span class="px-3 py-2 mx-2 text-xs text-yellow-500 rounded-lg bg-yellow-50"><%= link_to t_scoped(:edit).capitalize, edit_project_path(project) %></span>
             <%= button_to project_path(project), method: :delete do %>
-              <span class="inline px-3 py-2 mx-2 text-xs text-red-500 rounded-lg bg-red-50">Delete</span>
+              <span class="inline px-3 py-2 mx-2 text-xs text-red-500 rounded-lg bg-red-50"><%= t_scoped(:delete).capitalize %></span>
             <% end %>
           </div>
         </div>
