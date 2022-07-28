@@ -4,7 +4,9 @@
     <%= render 'shared/head_tags' %>
   </head>
   <body class="flex flex-col min-h-screen bg-gray-50" data-barba="wrapper">
-    <div class="fixed z-50 w-screen h-screen bg-slate-900 wipe-transition -bottom-full"></div>
+    <div class="fixed z-50 flex items-center justify-center w-screen h-screen bg-slate-900 wipe-transition -bottom-full">
+      <span class="font-black text-[8em] text-slate-800 font-heading"><%= t_scoped(:initials).upcase %></span>
+    </div>
     <% if devise_controller? %>
       <main class="flex-grow">
         <%= yield %>
