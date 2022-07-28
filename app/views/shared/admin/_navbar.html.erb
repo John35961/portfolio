@@ -7,7 +7,11 @@
         <small class="relative opacity-50 -top-2"><%= t_scoped(:admin) %></small>
       </div>
         <% end %>
-      <small class="text-slate-800"><%= link_to t_scoped(:visit_site).capitalize, root_path, target:'_blank' %></small>
+      <small class="text-slate-800">
+        <%= link_to root_path, target:'_blank' do %>
+          <span><%= t_scoped(:visit_site).capitalize %> &#8594;</span>
+        <% end %>
+        </small>
     </div>
     <%= button_to destroy_admin_session_path, method: :delete do %>
       <div class="flex items-center mx-5 group">
