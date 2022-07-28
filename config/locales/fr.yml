@@ -8,6 +8,10 @@ fr:
     partials:
       project_details:
         since: "depuis"
+      project_history:
+        posted: "posté il y a"
+        edited: "édité il y a"
+        never_edited: "jamais édité"
     shared:
       public:
         navbar:
