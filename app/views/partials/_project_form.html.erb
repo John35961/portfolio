@@ -1,88 +1,92 @@
 <%= simple_form_for project do |f| %>
     <div class="flex justify-end">
       <% if project.persisted? %>
-        <%= f.submit 'Update', class:"hover:cursor-pointer font-heading font-bold rounded-lg p-3 bg-yellow-50 text-yellow-500" %>
+        <%= f.submit t_scoped(:update).capitalize, class:"hover:cursor-pointer font-body rounded-lg p-3 bg-yellow-50 text-yellow-500" %>
       <% else %>
-        <%= f.submit 'Create', class:"hover:cursor-pointer font-heading font-bold rounded-lg p-3 bg-emerald-50 text-emerald-500" %>
+        <%= f.submit t_scoped(:publish).capitalize, class:"hover:cursor-pointer font-body rounded-lg p-3 bg-emerald-50 text-emerald-500" %>
       <% end %>
     </div>
     <div class="flex flex-col my-3">
-      <%= f.input :name, wrapper_html: { class: 'flex flex-col' },
+      <%= f.input :name, label: t_scoped(:name).capitalize,
+                         wrapper_html: { class: 'flex flex-col' },
                          input_html: { class: 'rounded' },
-                         error: 'Can\'t be blank!',
+                         error: t_scoped(:blank_error).capitalize,
                          error_html: { class: 'mt-2 text-red-500' } %>
     </div>
     <div class="flex flex-col my-3">
-      <%= f.input :project_url, label: 'Project URL',
+      <%= f.input :project_url, label: t_scoped(:project_url),
                                 wrapper_html: { class: 'flex flex-col' },
                                 input_html: { class: 'rounded' } %>
     </div>
     <div class="flex flex-col my-3">
-      <%= f.input :github_url, label: 'GitHub URL',
+      <%= f.input :github_url, label: t_scoped(:github_url),
                                wrapper_html: { class: 'flex flex-col' },
                                input_html: { class: 'rounded' } %>
     </div>
     <div class="flex flex-col my-3">
-      <%= f.input :youtube_url, label: 'Youtube embedded URL',
-                                hint: 'Example: https://www.youtube.com/embed/pzXb5CVPSLM',
+      <%= f.input :youtube_url, label: t_scoped(:youtube_url),
+                                hint: t_scoped(:youtube_url_hint).capitalize,
                                 hint_html: { class:'mt-2 text-xs opacity-50' },
                                 wrapper_html: { class: 'flex flex-col' },
                                 input_html: { class: 'rounded' } %>
     </div>
     <div class="flex flex-col w-full my-3 mr-3">
       <%= f.input :banner, as: :file,
-                           label: 'Banner - upload from computer',
-                           hint: 'Favor 16:9 ratio and 1920x1080 size',
+                           label: t_scoped(:banner).capitalize,
+                           hint: t_scoped(:image_hint).capitalize,
                            hint_html: { class:'mt-2 text-xs opacity-50' },
                            wrapper_html: { class: 'flex flex-col' },
                            input_html: { class: 'rounded' } %>
     </div>
     <div class="flex flex-col lg:flex-row">
       <div class="flex flex-col w-full my-3">
-        <%= f.input :banner_remote_url, label: 'Banner - pull from remote URL',
-                                        hint: 'Favor 16:9 ratio and 1920x1080 size',
+        <%= f.input :banner_remote_url, label: t_scoped(:banner_remote_url).capitalize.gsub('url', 'URL'),
+                                        hint: t_scoped(:image_hint).capitalize,
                                         hint_html: { class:'mt-2 text-xs opacity-50' },
                                         wrapper_html: { class: 'flex flex-col mr-3' },
                                         input_html: { class: 'rounded' } %>
       </div>
       <div class="flex flex-col w-full my-3">
-        <%= f.input :banner_alt_text, wrapper_html: { class: 'flex flex-col' },
+        <%= f.input :banner_alt_text, label: t_scoped(:banner_alt_text).capitalize,
+                                      wrapper_html: { class: 'flex flex-col' },
                                       input_html: { class: 'rounded' } %>
       </div>
     </div>
     <div class="flex flex-col my-3">
-      <%= f.label :release_date %>
+      <%= f.label t_scoped(:release_date).capitalize %>
       <%= f.input :release_date, order: [:day, :month, :year],
-                                 start_year: 2015,
+                                 start_year: Project::MIN_RELEASE_YEAR,
                                  label: false,
                                  wrapper_html: { class: 'flex items-center' },
                                  input_html: { class: 'my-2 rounded w-full' },
-                                 error: 'Can\'t be blank!',
+                                 error: t_scoped(:blank_error).capitalize,
                                  error_html: { class: 'mt-2 text-red-500' } %>
     </div>
     <div class="flex flex-col my-3">
-      <%= f.input :short_description, wrapper_html: { class: 'flex flex-col' },
+      <%= f.input :short_description, label: t_scoped(:short_description).capitalize,
+                                      wrapper_html: { class: 'flex flex-col' },
                                       input_html: { class: 'rounded' },
-                                      error: 'Can\'t be blank!',
+                                      error: t_scoped(:blank_error).capitalize,
                                       error_html: { class: 'mt-2 text-red-500' } %>
     </div>
     <div class="flex flex-col my-3">
-      <%= f.input :long_description, wrapper_html: { class: 'flex flex-col' },
-                                      input_html: { class: 'rounded' },
-                                      error: 'Can\'t be blank!',
-                                      error_html: { class: 'mt-2 text-red-500' } %>
+      <%= f.input :long_description, label: t_scoped(:long_description).capitalize,
+                                     wrapper_html: { class: 'flex flex-col' },
+                                     input_html: { class: 'rounded' },
+                                     error: t_scoped(:blank_error).capitalize,
+                                     error_html: { class: 'mt-2 text-red-500' } %>
     </div>
     <div class="flex flex-col my-3">
       <%= f.input :gallery, as: :file,
-                  label: 'Gallery',
-                  hint: 'Favor 16:9 ratio and 1920x1080 size',
+                  label: t_scoped(:gallery).capitalize,
+                  hint: t_scoped(:image_hint).capitalize,
                   hint_html: { class:'mt-2 text-xs opacity-50' },
                   wrapper_html: { class: 'flex flex-col' },
                   input_html: { class: 'rounded', multiple: true } %>
     </div>
     <div class="flex items-center my-3">
       <%= f.check_box :is_active, class:"rounded mr-2" %>
-      <%= f.label 'Active project' %>
+      <%= f.label t_scoped(:is_active).capitalize %>
     </div>
     <div class="flex flex-col my-3">
       <%= f.association :skills, as: :check_boxes, item_wrapper_tag: :div, item_wrapper_class:'my-2', input_html: { class:'rounded mr-2' } %>

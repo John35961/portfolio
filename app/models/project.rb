@@ -2,6 +2,8 @@ require 'image_size'
 require 'open-uri'
 
 class Project < ApplicationRecord
+  MIN_RELEASE_YEAR = 2015
+
   extend FriendlyId
 
   has_many :project_skills, dependent: :destroy

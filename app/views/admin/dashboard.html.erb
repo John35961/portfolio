@@ -1,4 +1,4 @@
-<% content_for :meta_title, "Admin - Dashboard" %>
+<% content_for :meta_title, "Admin - #{t_scoped(:project).pluralize(@projects.size).capitalize}" %>
 
 <section class="container flex flex-col w-full p-5 mx-auto my-5 lg:w-1/2">
   <div class="flex items-center justify-between">
