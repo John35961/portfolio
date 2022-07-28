@@ -1,7 +1,5 @@
 import barba from '@barba/core'
 import { TimelineMax } from 'gsap'
-// import { lightbox } from './photoswipe'
-
 import PhotoSwipeLightbox from 'photoswipe'
 
 const options = {
