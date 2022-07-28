@@ -23,6 +23,12 @@ fr:
           initials: "jg"
           projects: "projets"
           contact: "contact"
+      admin:
+        navbar:
+          initials: "jg"
+          visit_site: "voir le site"
+          admin: "admin"
+          log_out: "se déconnecter"
   date:
     abbr_day_names:
     - dim
