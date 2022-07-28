@@ -1,5 +1,10 @@
 fr:
   views:
+    admin:
+      dashboard:
+        new: "nouveau"
+        edit: "éditer"
+        delete: "supprimer"
     pages:
       home:
         projects: "projets"
