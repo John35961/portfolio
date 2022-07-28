@@ -1,6 +1,18 @@
 import barba from '@barba/core'
 import { TimelineMax } from 'gsap'
-import { lightbox } from './photoswipe'
+// import { lightbox } from './photoswipe'
+
+import PhotoSwipeLightbox from 'photoswipe'
+
+const options = {
+  gallery: '#gallery',
+  children: 'a',
+  pswpModule: () => import('https://unpkg.com/photoswipe'),
+}
+
+const lightbox = new PhotoSwipeLightbox(options);
+
+lightbox.init();
 
 const wipe = document.querySelector('.wipe-transition')
 
