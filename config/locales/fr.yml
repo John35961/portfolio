@@ -22,6 +22,9 @@ fr:
           password: "mot de passe"
           remember_me: "se souvenir de moi"
           sign_in: "se connecter"
+    layouts:
+      application:
+        initials: "jg"
     pages:
       home:
         project: "projet"
