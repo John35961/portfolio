@@ -6,6 +6,22 @@ fr:
         new: "nouveau"
         edit: "éditer"
         delete: "supprimer"
+    devise:
+      registrations:
+        new:
+          back_to_site: "retour au site"
+          email: "email"
+          password: "mot de passe"
+          password_hint: "au moins %{count} caractères"
+          password_confirmation: "confirmer le mot de passe"
+          sign_up: "créer un compte"
+      sessions:
+        new:
+          back_to_site: "retour au site"
+          email: "email"
+          password: "mot de passe"
+          remember_me: "se souvenir de moi"
+          sign_in: "se connecter"
     pages:
       home:
         project: "projet"
