@@ -1,6 +1,6 @@
 import barba from '@barba/core'
 import { TimelineMax } from 'gsap'
-import { lightbox } from './photoswipe';
+import { lightbox } from 'photoswipe';
 
 const wipe = document.querySelector('.wipe-transition')
 
