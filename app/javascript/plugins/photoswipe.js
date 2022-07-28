@@ -9,3 +9,5 @@ const options = {
 const lightbox = new PhotoSwipeLightbox(options);
 
 lightbox.init();
+
+export { lightbox }
