@@ -4,7 +4,7 @@
       <%= link_to t_scoped(:projects).capitalize, projects_path %>
     </div>
     <%= link_to root_path do %>
-      <span data-navbar-target="title" class="mx-5 text-2xl font-black transition-colors text-slate-800 font-heading"><%= t_scoped(:initials).upcase %></span>
+      <span data-navbar-target="title" class="mx-5 text-2xl font-black transition-colors text-slate-800 font-heading"><%= PERSONAL['initials'].upcase %></span>
     <% end %>
     <div data-navbar-target="item" class="py-2 px-3 h-full mx-0 md:mx-5 lg:mx-8 <%= 'text-gray-400' unless current_page?(controller: 'pages', action: 'contact') %> <%= 'rounded-lg bg-blue-50 text-slate-800 opacity-100' if current_page?(controller: 'pages', action: 'contact') %> rounded-lg hover:bg-blue-50 hover:text-slate-800  transition-all text-sm">
       <%= link_to t_scoped(:contact).capitalize, contact_path %>
