@@ -1,54 +1,51 @@
-<section data-aos="fade" class="container sticky top-20 flex items-center h-[85vh] mx-auto -z-10 justify-evenly lg:flex-row">
-  <div data-controller="parallax" data-parallax-amplitude-value="-50" class="relative hidden lg:block">
+<section data-aos="fade" class="container sticky top-20 flex items-center h-[50vh] md:h-[40vh] mx-auto justify-evenly w-full md:w-3/4 2xl:w-1/2">
+  <div data-controller="parallax" data-parallax-amplitude-value="-50" data-parallax-force-value="true" class="justify-center hidden w-[40%] p-5 md:flex" data-aos="fade" data-aos-duration="800">
+    <section data-parallax-target="hero" oncontextmenu="return false;">
+      <%= image_tag 'home/profile.png', draggable: false %>
+    </section>
+  </div>
+  <div data-controller="parallax" data-parallax-amplitude-value="-75" data-parallax-force-value="true" class="hidden w-[60%] p-5 md:block">
     <section data-parallax-target="hero">
-      <%= image_tag 'home/profile_lg.png' %>
-      <div data-controller="parallax" data-parallax-amplitude-value="-5">
-        <%= image_tag 'home/profile_shape.svg', class:"top-0 left-0 absolute -z-20", data: { parallax_target: 'hero' } %>
+      <div class="flex flex-col items-center text-center">
+        <div class="mb-5" data-aos="fade" data-aos-delay="100" data-aos-duration="800">
+          <h1 class="text-4xl font-black font-heading text-slate-800"><%= "#{ABOUT['first_name'].capitalize} #{ABOUT['last_name'].capitalize}" %></h1>
+          <span class="text-sm text-slate-400"><%= t_scoped(:desktop_subline) %></span>
+        </div>
+        <p class="mb-5 text-slate-400 sm:hidden xl:block" data-aos="fade" data-aos-delay="200" data-aos-duration="800"><%= t_scoped(:desktop_description)%></p>
+        <div data-aos="fade" data-aos-delay="300" data-aos-duration="800">
+          <%= render 'partials/minisocials' %>
+        </div>
       </div>
     </section>
   </div>
-  <div data-controller="parallax" data-parallax-amplitude-value="-75">
-    <section data-parallax-target="hero" class="text-center lg:text-left">
-      <div class="flex flex-col">
-        <p class="inline mr-2 text-2xl opacity-50">Hey! I'm</p>
-        <h1 class="p-5 my-1 text-5xl font-black text-center rounded-lg lg:my-3 text-slate-800 lg:text-8xl font-heading bg-blue-50">Jean</h1>
-        <div class="flex items-center my-1 lg:my-3">
-          <span class="text-2xl opacity-50">I'm a</span>
-          <span class="p-3 mx-3 text-2xl font-bold text-center rounded-lg text-slate-800 grow lg:text-5xl font-heading bg-blue-50">creative &#8592;</span>
-          <span class="text-2xl opacity-50">guy with</span>
-        </div>
-        <div class="flex items-center my-1 lg:my-3">
-          <span class="p-3 mx-3 text-2xl font-bold text-center rounded-lg text-slate-800 grow lg:text-5xl font-heading bg-blue-50">&#8594; technical</span>
-          <span class="text-2xl opacity-50">skills</span>
-        </div>
+  <div data-controller="parallax" data-parallax-amplitude-value="-50" data-parallax-force-value="true" class="block p-5 md:hidden">
+    <section data-parallax-target="hero">
+      <span class="text-sm text-slate-400" data-aos="fade" data-aos-delay="100" data-aos-duration="800"><%= t_scoped(:mobile_subline) %></span>
+      <h1 class="my-3 text-2xl font-black font-heading text-slate-800" data-aos="fade" data-aos-delay="200" data-aos-duration="800"><%= t_scoped(:mobile_description) %></h1>
+      <div data-aos="fade" data-aos-delay="300" data-aos-duration="800">
+        <%= render 'partials/minisocials' %>
       </div>
-    </section>
   </div>
 </section>
-<section class="relative top-10 rounded-t-[35px] lg:rounded-t-[50px] bg-blue-50">
+<section class="relative top-10 rounded-t-[35px] lg:rounded-t-[50px] bg-blue-50" data-aos="fade" data-aos-delay="400" data-aos-duration="800">
   <section class="container flex flex-col p-5 mx-auto">
-    <%= render 'partials/separator', title: t_scoped(:project).pluralize(@projects.size), direction: 'left', text_color: 'text-slate-800', arrow_color: 'text-slate-800/50' %>
-    <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
+    <div class="grid grid-cols-1 gap-5 mt-6 lg:mt-12 lg:grid-cols-2 lg:gap-10">
       <% @projects.each_with_index do |project, idx| %>
         <%= link_to project_path(project) do %>
           <div data-aos="fade" data-aos-duration="800" data-aos-delay=<%= (idx + 1) * 100 %>>
-            <%= render 'partials/card', project: project,
-                                        idx: idx %>
+            <%= render 'partials/card', project: project, idx: idx %>
           </div>
         <% end %>
       <% end %>
     </div>
     <div class="mx-auto mt-16 mb-20">
-      <%= render 'partials/minibutton',
-          title: t_scoped(:see_all).capitalize,
-          path: projects_path,
-          color: 'text-slate-800' %>
+      <%= render 'partials/minibutton', title: t_scoped(:see_all).capitalize, path: projects_path, color: 'text-slate-800' %>
     </div>
   </section>
 </section>
 <section class="relative lg:h-screen z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
   <section class="container p-5 mx-auto">
-    <%= render 'partials/separator', title: t_scoped(:skills), direction: 'right', text_color: 'text-blue-100', arrow_color: 'text-blue-100/50' %>
+    <%= render 'partials/separator', title: t_scoped(:skills), direction: 'left', text_color: 'text-blue-50', arrow_color: 'text-blue-50' %>
     <div data-aos="fade" data-aos-duration="800" class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
       <% @skills.each_with_index do |skill, idx| %>
         <%= render 'partials/minicard', skill: skill, delay: (idx + 1) * 50 %>

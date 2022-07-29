@@ -4,10 +4,10 @@
       <%= link_to social['url'], target: social['target'], class:"text-blue-50 underline underline-offset-4 decoration-dotted decoration-blue-50" do %>
         <li class="hidden text-sm lg:block stext-blue-50"><%= social['name'] %></li>
         <p class="block text-2xl opacity-75 lg:hidden">
-          <% unless social['icon'].present? %>
+          <% unless social['svg-icon'].present? %>
             <%= fa_icon social['fa-icon'], class:"text-blue-50" %>
           <% else %>
-            <%= image_tag social['icon'], class:"relative top-[6px] w-[20px]" %>
+            <%= image_tag social['svg-icon']['light'], class:"relative top-[6px] w-[20px]" %>
           <% end %>
         </p>
       <% end %>
