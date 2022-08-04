@@ -6,7 +6,9 @@ Rails.application.routes.draw do
   get '/contact', to: 'pages#contact'
   get '/dashboard', to: 'admin#dashboard'
 
-  mount ActiveAnalytics::Engine, at: 'analytics'
+  authenticate :admin do
+    mount ActiveAnalytics::Engine, at: 'analytics'
+  end
 
   resources :projects
 end
