@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   before_action :authenticate_admin!, only: %i[dashboard]
+  before_action :record_page_view
 
   def home
     @projects = Project.all.sample(4)
@@ -7,4 +8,10 @@ class PagesController < ApplicationController
   end
 
   def contact; end
+
+  private
+
+  def record_page_view
+    ActiveAnalytics.record_request(request)
+  end
 end
