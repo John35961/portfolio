@@ -1,17 +1,24 @@
 <nav class="sticky top-0 z-10 pt-3 pb-3 bg-blue-50">
   <div class="flex items-center justify-between">
     <div class="flex items-center mx-5">
-        <%= link_to dashboard_path do %>
-      <div class="flex flex-col mr-5 text-center">
-        <span class="text-2xl font-black text-slate-800 font-heading"><%= ABOUT['initials'].upcase %></span>
-        <small class="relative opacity-50 -top-2"><%= t_scoped(:admin) %></small>
-      </div>
-        <% end %>
-      <small class="text-slate-800">
-        <%= link_to root_path, target:'_blank' do %>
-          <span><%= t_scoped(:visit_site).capitalize %> &#8594;</span>
-        <% end %>
+      <%= link_to dashboard_path do %>
+        <div class="flex flex-col mr-5 text-center">
+          <span class="text-2xl font-black text-slate-800 font-heading"><%= ABOUT['initials'].upcase %></span>
+          <small class="relative opacity-50 -top-2"><%= t_scoped(:admin) %></small>
+        </div>
+      <% end %>
+      <div class="flex flex-col lg:flex-row">
+        <small class="mx-1 lg:mx-2 text-slate-800">
+          <%= link_to '/analytics', target:'_blank' do %>
+            <span>Active Analytics &#8594;</span>
+          <% end %>
         </small>
+        <small class="mx-1 lg:mx-2 text-slate-800">
+          <%= link_to root_path, target:'_blank' do %>
+            <span><%= t_scoped(:visit_site).capitalize %> &#8594;</span>
+          <% end %>
+        </small>
+      </div>
     </div>
     <%= button_to destroy_admin_session_path, method: :delete do %>
       <div class="flex items-center mx-5 group">
