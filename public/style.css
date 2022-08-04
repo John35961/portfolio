@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  display: flex;
+  min-height: 97vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #EFF6FF;
+}
+
+section {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  font-family: 'Syne', 'sans-serif';
+  font-size: 2em;
+  color: #1E293B;
+}
+
+p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #95A3B8;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: #1E293B;
+}
+
+.minibutton {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  color: #1E293B;
+}
+
+::selection {
+  color: rgb(161, 161, 161);
+  background-color: rgba(206, 230, 238, 0.25);
+}
