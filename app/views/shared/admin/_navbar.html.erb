@@ -10,7 +10,7 @@
       <div class="flex flex-col lg:flex-row">
         <small class="mx-1 lg:mx-2 text-slate-800">
           <%= link_to '/analytics', target:'_blank' do %>
-            <span>Active Analytics &#8594;</span>
+            <span>Active analytics &#8594;</span>
           <% end %>
         </small>
         <small class="mx-1 lg:mx-2 text-slate-800">
@@ -22,7 +22,7 @@
     </div>
     <%= button_to destroy_admin_session_path, method: :delete do %>
       <div class="flex items-center mx-5 group">
-        <small class="mr-2 transition-opacity opacity-0 group-hover:opacity-100 text-slate-800"><%= t_scoped(:log_out).capitalize %></small>
+        <small class="hidden mr-2 transition-opacity opacity-0 lg:block group-hover:opacity-100 text-slate-800"><%= t_scoped(:log_out).capitalize %></small>
         <%= image_tag 'icons/arrow-right-from-bracket-solid.svg', class:"opacity-25 group-hover:opacity-100 h-[20px] transition-opacity" %>
       </div>
     <% end %>
