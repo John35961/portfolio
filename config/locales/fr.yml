@@ -51,7 +51,7 @@ fr:
         release_date: "date de sortie"
         short_description: "description courte"
         long_description: "description longue"
-        gallery: "gallerie d'images"
+        gallery: "galerie d'images"
         is_active: "projet actif"
         skills: "outils associés"
         image_hint: "privilégier le ratio 16:9 et une taille max de 1280x720"
