@@ -23,9 +23,9 @@
       </li>
     <% end %>
   </ul>
-  <div class="relative flex justify-between my-3 text-sm opacity-50">
+  <div class="relative flex flex-col items-center justify-between my-3 text-sm opacity-50 lg:flex-row">
     <%= paginate @projects %>
-    <div class="absolute last:right-0">
+    <div class="my-2 lg:absolute lg:last:right-0">
       <span><%= t_scoped(:per_page) %></span>
       <% PAGE_SIZES.each do |size| %>
         <%= link_to size, url_for(per_page: size) %>
