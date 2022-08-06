@@ -6,6 +6,7 @@ fr:
         new: "nouveau"
         edit: "éditer"
         delete: "supprimer"
+        per_page: "par page :"
     devise:
       registrations:
         new:
@@ -32,10 +33,10 @@ fr:
         skills: "outils"
         see_all: "voir tout"
     pagination:
-      first: "&laquo; Premier"
-      last: "Dernier &raquo;"
-      previous: "&lsaquo; Préc."
-      next: "Suivant &rsaquo;"
+      first: "&laquo; premier"
+      last: "dernier &raquo;"
+      previous: "&lsaquo; préc. -"
+      next: "- suivant &rsaquo;"
       truncate: "&hellip;"
     partials:
       minisocials:
