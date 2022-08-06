@@ -23,5 +23,14 @@
       </li>
     <% end %>
   </ul>
-  <%= paginate @projects %>
+  <div class="flex justify-between my-3 text-sm opacity-50">
+    <%= paginate @projects %>
+    <div>
+      <span><%= t_scoped(:per_page) %></span>
+      <% PAGE_SIZES.each do |size| %>
+        <%= link_to size, url_for(per_page: size) %>
+        <%= '|' unless size == PAGE_SIZES.last %>
+      <% end %>
+    </div>
+  </div>
 </section>
