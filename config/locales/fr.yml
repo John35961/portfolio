@@ -6,6 +6,7 @@ fr:
         new: "nouveau"
         edit: "éditer"
         delete: "supprimer"
+        per_page: "par page :"
     devise:
       registrations:
         new:
@@ -31,6 +32,12 @@ fr:
         project: "projet"
         skills: "outils"
         see_all: "voir tout"
+    pagination:
+      first: "&laquo; premier"
+      last: "dernier &raquo;"
+      previous: "&lsaquo; préc. -"
+      next: "- suivant &rsaquo;"
+      truncate: "&hellip;"
     partials:
       minisocials:
         subject: "Salut Jean !"
