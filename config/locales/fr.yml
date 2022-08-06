@@ -31,6 +31,12 @@ fr:
         project: "projet"
         skills: "outils"
         see_all: "voir tout"
+    pagination:
+      first: "&laquo; Premier"
+      last: "Dernier &raquo;"
+      previous: "&lsaquo; Préc."
+      next: "Suivant &rsaquo;"
+      truncate: "&hellip;"
     partials:
       minisocials:
         subject: "Salut Jean !"
