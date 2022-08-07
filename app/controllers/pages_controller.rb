@@ -7,7 +7,9 @@ class PagesController < ApplicationController
     @skills = Skill.all.sample(15).shuffle
   end
 
-  def contact; end
+  def contact
+    @contact = Contact.new
+  end
 
   private
 
