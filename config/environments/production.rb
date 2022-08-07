@@ -92,10 +92,10 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   ActionMailer::Base.smtp_settings = {
-    port: ENV['MAIL_PROVIDER_SMTP_PORT'],
-    address: ENV['MAIL_PROVIDER_SMTP_SERVER'],
-    user_name: ENV['MAIL_PROVIDER_SMTP_LOGIN'],
-    password: ENV['MAIL_PROVIDER_SMTP_PASSWORD'],
+    port: ENV['MAILGUN_SMTP_PORT'],
+    address: ENV['MAILGUN_SMTP_SERVER'],
+    user_name: ENV['MAILGUN_SMTP_LOGIN'],
+    password: ENV['MAILGUN_SMTP_PASSWORD'],
     domain: ENV['APEX'],
     authentication: :plain
   }
