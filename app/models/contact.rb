@@ -6,8 +6,8 @@ class Contact < MailForm::Base
 
   def headers
     {
-      subject: 'Contact Form Inquiry',
-      to: 'contact@jeanguillet.com',
+      subject: "#{I18n.t('models.contact.subject').capitalize} #{name}",
+      to: ABOUT['email'],
       from: %("#{name}" <#{email}>)
     }
   end
