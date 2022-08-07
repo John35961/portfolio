@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   end
 
   resources :projects
+
+  resources :contacts, only: %i[new create]
 end
