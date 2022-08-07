@@ -5,5 +5,5 @@
     <span>&#8592; <%= t_scoped(:projects).capitalize %></span>
   <% end %>
   <h1 class="my-3 text-3xl font-heading"><%= t_scoped(:new_project).capitalize %></h1>
-  <%= render 'partials/project_form', project: @project %>
+  <%= render 'projects/partials/form', project: @project %>
 </div>

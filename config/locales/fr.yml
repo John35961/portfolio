@@ -41,32 +41,6 @@ fr:
     partials:
       minisocials:
         subject: "Salut Jean !"
-      project_details:
-        since: "depuis"
-      project_form:
-        edit: "éditer"
-        update: "actualiser"
-        publish: "publier"
-        name: "nom"
-        project_url: "URL du projet"
-        github_url: "URL GitHub"
-        youtube_url: "URL Youtube"
-        youtube_url_hint: "exemple: https://www.youtube.com/embed/pzXb5CVPSLM"
-        banner: "image à la une"
-        banner_remote_url: "image à la une depuis une URL"
-        banner_alt_text: "texte alternatif"
-        release_date: "date de sortie"
-        short_description: "description courte"
-        long_description: "description longue"
-        gallery: "galerie d'images"
-        is_active: "projet actif"
-        skills: "outils associés"
-        image_hint: "privilégier le ratio 16:9 et une taille max de 1280x720"
-        blank_error: "ne peut pas être vide !"
-      project_history:
-        posted: "posté il y a"
-        edited: "édité il y a"
-        never_edited: "jamais édité"
     projects:
       edit:
         admin: "admin"
@@ -76,6 +50,33 @@ fr:
         admin: "admin"
         projects: "projets"
         new_project: "nouveau projet"
+      partials:
+        details:
+          since: "depuis"
+        form:
+          edit: "éditer"
+          update: "actualiser"
+          publish: "publier"
+          name: "nom"
+          project_url: "URL du projet"
+          github_url: "URL GitHub"
+          youtube_url: "URL Youtube"
+          youtube_url_hint: "exemple: https://www.youtube.com/embed/pzXb5CVPSLM"
+          banner: "image à la une"
+          banner_remote_url: "image à la une depuis une URL"
+          banner_alt_text: "texte alternatif"
+          release_date: "date de sortie"
+          short_description: "description courte"
+          long_description: "description longue"
+          gallery: "galerie d'images"
+          is_active: "projet actif"
+          skills: "outils associés"
+          image_hint: "privilégier le ratio 16:9 et une taille max de 1280x720"
+          blank_error: "ne peut pas être vide !"
+        history:
+          posted: "posté il y a"
+          edited: "édité il y a"
+          never_edited: "jamais édité"
     shared:
       public:
         navbar:
