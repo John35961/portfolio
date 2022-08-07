@@ -1,4 +1,6 @@
 class ContactsController < ApplicationController
+  skip_before_action :authenticate_admin!
+
   def new
     @contact = Contact.new
   end
@@ -10,7 +12,6 @@ class ContactsController < ApplicationController
       flash.now[:success] = 'Message sent!'
     else
       flash.now[:error] = 'Could not send message'
-      render :new
     end
   end
 end
