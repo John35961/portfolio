@@ -86,6 +86,15 @@ fr:
           visit_site: "voir le site"
           admin: "admin"
           log_out: "se déconnecter"
+    mail_form:
+      contact:
+        title: "nouveau contact 🎉"
+        name: "nom"
+        email: "email"
+        message: "message"
+        greeting: "Bonjour %{name} !"
+        admin: "admin"
+        analytics: "active analytics"
   models:
     contact:
       subject: "nouveau contact :"
