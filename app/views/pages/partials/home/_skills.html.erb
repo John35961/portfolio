@@ -1,0 +1,10 @@
+<section class="container p-5 mx-auto">
+  <%= render 'partials/separator', title: t_scoped(:skills), direction: 'left', text_color: 'text-blue-50', arrow_color: 'text-blue-50' %>
+  <div data-aos="fade"
+       data-aos-duration="800"
+       class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
+    <% @skills.each_with_index do |skill, idx| %>
+      <%= render 'partials/minicard', skill: skill, delay: (idx + 1) * 50 %>
+    <% end %>
+  </div>
+</section>
