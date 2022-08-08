@@ -62,9 +62,6 @@ fr:
       previous: "&lsaquo; préc. -"
       next: "- suivant &rsaquo;"
       truncate: "&hellip;"
-    partials:
-      minisocials:
-        subject: "Salut Jean !"
     projects:
       edit:
         admin: "admin"
@@ -113,6 +110,9 @@ fr:
           visit_site: "voir le site"
           admin: "admin"
           log_out: "se déconnecter"
+      partials:
+        minisocials:
+          subject: "Salut Jean !"
     mail_form:
       contact:
         title: "nouveau contact 🎉"
