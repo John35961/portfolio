@@ -2,7 +2,8 @@
 <% content_for :meta_description, @project.short_description %>
 <% content_for :meta_image, @project.banner.attached? ? @project.banner.url : @project.banner_remote_url %>
 
-<div data-aos="fade" data-aos-duration="800">
+<div data-aos="fade"
+     data-aos-duration="800">
   <section class="container flex flex-col lg:flex-row items-center lg:h-[90vh] mx-auto">
     <%= render 'projects/partials/show/hero' %>
   </section>
