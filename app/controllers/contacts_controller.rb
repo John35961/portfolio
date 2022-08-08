@@ -5,9 +5,10 @@ class ContactsController < ApplicationController
     @contact = Contact.new(params[:contact])
     @contact.request = request
     if @contact.deliver
-      flash.now[:success] = 'Message sent!'
+      flash[:success] = t_scoped(:success).capitalize
     else
-      flash.now[:error] = 'Could not send message'
+      flash[:error] = t_scoped(:error).capitalize
     end
+    redirect_back(fallback_location: root_path)
   end
 end
