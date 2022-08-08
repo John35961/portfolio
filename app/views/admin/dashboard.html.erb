@@ -11,7 +11,7 @@
         <div class="flex items-center justify-between">
           <div class="flex flex-col">
             <%= link_to project.name, project_path(project), target:'_blank', class:'underline underline-offset-1' %>
-            <%= render 'projects/partials/history', project: project %>
+            <%= render 'projects/partials/edit/history', project: project %>
           </div>
           <div class="flex items-center">
             <span class="px-3 py-2 mx-2 text-xs text-yellow-500 rounded-lg bg-yellow-50"><%= link_to t_scoped(:edit).capitalize, edit_project_path(project) %></span>
