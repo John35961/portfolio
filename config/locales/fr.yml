@@ -75,8 +75,9 @@ fr:
         projects: "projets"
         new_project: "nouveau projet"
       partials:
-        details:
-          since: "depuis"
+        show:
+          details:
+            since: "depuis"
         form:
           edit: "éditer"
           update: "actualiser"

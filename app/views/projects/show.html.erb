@@ -4,63 +4,12 @@
 
 <div data-aos="fade" data-aos-duration="800">
   <section class="container flex flex-col lg:flex-row items-center lg:h-[90vh] mx-auto">
-    <div data-controller="parallax" data-parallax-amplitude-value="75" class="flex items-center px-5 pt-5 lg:p-5 row lg:w-[70vw]">
-      <div data-parallax-target="hero">
-        <div class="lg:flex lg:justify-center">
-          <div class="flex justify-center relative lg:-top-12 p-3 lg:text-3xl xl:text-5xl font-black text-center bg-slate-800 rounded-t-[15px] lg:rounded-lg text-blue-50 lg:w-fit font-heading">
-            <% if @project.project_url %>
-              <%= link_to @project.project_url, target:"_blank" do %>
-                <div class="flex items-center">
-                  <h1><%= @project.name %></h1>
-                  <%= image_tag 'icons/link-solid.svg', class:'ml-3 h-[15px] lg:h-[20px]' %>
-                </div>
-              <% end %>
-            <% else %>
-              <h1><%= @project.name %></h1>
-            <% end %>
-          </div>
-        </div>
-        <%= image_tag define_banner(@project), draggable: false, class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10", alt:@project.banner_alt_text %>
-        <div class="flex justify-between lg:hidden">
-          <%= render 'projects/partials/paginator' %>
-        </div>
-      </div>
-    </div>
-    <div class="flex lg:invisible flex-col-reverse px-5 pt-5 lg:p-5 lg:w-[30vw] mb-5 lg:mb-0">
-      <%= render 'projects/partials/details', project: @project, tint:'800' %>
-    </div>
+    <%= render 'projects/partials/show/hero' %>
   </section>
   <section class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-900">
-    <div class="hidden lg:block absolute w-full bg-gradient-to-b from-slate-900 to-transparent h-[150px] rounded-t-[35px] lg:rounded-t-[50px] z-10"></div>
-    <div class="container flex flex-col items-center h-auto min-h-screen mx-auto lg:flex-row">
-      <div class="relative w-screen lg:left-[2vw] lg:w-[65.5%]">
-        <% if @project.youtube_url %>
-          <div data-aos="fade" data-aos-duration="800" class="pt-5 pl-5 pr-5 mt-5 -mb-3 lg:p-5 lg:mb-28">
-            <div class="video-container">
-              <iframe src="<%= @project.youtube_url %>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope" class="relative z-10 rounded-lg" allowfullscreen></iframe>
-            </div>
-          </div>
-        <% end %>
-        <div class="grid w-full grid-cols-1 p-5 my-5 gap-7 lg:my-20 sm:grid-cols-2" id="gallery">
-          <% @project.gallery.each_with_index do |image, idx| %>
-            <div oncontextmenu="return false;" data-aos="fade" data-aos-duration="800" data-aos-delay=<%= (idx + 1) * 100%>>
-              <div data-controller="parallax" data-parallax-amplitude-value=<%= idx.odd? ? '0' : '-10' %>>
-                <div data-parallax-target="hero">
-                  <%= link_to cl_image_path(image.key, secure: true), data: { pswp_width:Project.size(image.url).width, pswp_height:Project.size(image.url).height } do %>
-                    <%= cl_image_tag image.key, secure: true, draggable: false, class:"shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all" %>
-                  <% end %>
-                </div>
-              </div>
-            </div>
-          <% end %>
-        </div>
-      </div>
-      <div class="hidden lg:flex mix-blend-screen fixed xl:-translate-y-1/3 lg:top-[30vh] xl:top-[50vh] right-[4vw] flex-col-reverse lg:flex-col px-5 pt-5 lg:p-5 lg:w-[30vw] mb-5 lg:mb-0">
-        <%= render 'projects/partials/details', project: @project, tint:'400' %>
-      </div>
-    </div>
+    <%= render 'projects/partials/show/gallery' %>
   </section>
   <section class="sticky z-20 justify-between hidden lg:flex bottom-14">
-    <%= render 'projects/partials/paginator' %>
+    <%= render 'projects/partials/show/paginator' %>
   </section>
 </div>
