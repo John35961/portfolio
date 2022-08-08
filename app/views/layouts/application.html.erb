@@ -9,6 +9,7 @@
         <%= yield %>
       </main>
     <% else %>
+      <%= render 'admin/partials/edit_bar' %>
       <%= render 'shared/public/border' %>
       <%= render 'shared/public/navbar' %>
       <main class="flex-grow">
