@@ -96,11 +96,11 @@ fr:
           never_edited: "jamais édité"
     shared:
       public:
-        navbar:
+        header:
           projects: "projets"
           contact: "contact"
       admin:
-        navbar:
+        header:
           visit_site: "voir le site"
           admin: "admin"
           log_out: "se déconnecter"
