@@ -1,4 +1,9 @@
 fr:
+  controllers:
+    contacts:
+      create:
+        success: "message envoyé 🎉"
+        error: "impossible d'envoyer le message !"
   views:
     admin:
       dashboard:
@@ -6,6 +11,22 @@ fr:
         new: "nouveau"
         edit: "éditer"
         delete: "supprimer"
+        per_page: "par page :"
+      partials:
+        edit_bar:
+          edit: "éditer"
+    contacts:
+      partials:
+        form:
+          send: "envoyer !"
+          name_placeholder: "Noël Flantier"
+          email_placeholder: "noel.flantier@gmail.com"
+          message_placeholders:
+            - "Salut %{name} ! J'aime bien ce que tu fais..."
+            - "Hello %{name} ! Dispo pour discuter un de ces 4 ?"
+            - "Salut %{name} ! J'ai un projet à te proposer..."
+          hint: "ne pas remplir !"
+          notice: "les champs marqués d'une * sont obligatoires"
     devise:
       registrations:
         new:
@@ -22,41 +43,24 @@ fr:
           password: "mot de passe"
           remember_me: "se souvenir de moi"
           sign_in: "se connecter"
-    layouts:
-      application:
-        initials: "jg"
     pages:
       home:
+        mobile_subline: "Je suis développeur web fullstack freelance"
+        mobile_description: "Construisons ensemble votre nouveau projet web"
+        desktop_subline: "développeur web fullstack freelance"
+        desktop_description: "Touche-à-tout passionné par le graphisme, le code, les interfaces et l'image, j'ai à cœur d'apporter toutes mes compétences dans les projets auxquels je participe. Travaillons ensemble sur votre prochaine idée !"
         project: "projet"
         skills: "outils"
         see_all: "voir tout"
+    pagination:
+      first: "&laquo; premier"
+      last: "dernier &raquo;"
+      previous: "&lsaquo; préc. -"
+      next: "- suivant &rsaquo;"
+      truncate: "&hellip;"
     partials:
-      project_details:
-        since: "depuis"
-      project_form:
-        edit: "éditer"
-        update: "actualiser"
-        publish: "publier"
-        name: "nom"
-        project_url: "URL du projet"
-        github_url: "URL GitHub"
-        youtube_url: "URL Youtube"
-        youtube_url_hint: "exemple: https://www.youtube.com/embed/pzXb5CVPSLM"
-        banner: "image à la une"
-        banner_remote_url: "image à la une depuis une URL"
-        banner_alt_text: "texte alternatif"
-        release_date: "date de sortie"
-        short_description: "description courte"
-        long_description: "description longue"
-        gallery: "gallerie d'images"
-        is_active: "projet actif"
-        skills: "outils associés"
-        image_hint: "privilégier le ratio 16:9 et une taille max de 1280x720"
-        blank_error: "ne peut pas être vide !"
-      project_history:
-        posted: "posté il y a"
-        edited: "édité il y a"
-        never_edited: "jamais édité"
+      minisocials:
+        subject: "Salut Jean !"
     projects:
       edit:
         admin: "admin"
@@ -66,18 +70,61 @@ fr:
         admin: "admin"
         projects: "projets"
         new_project: "nouveau projet"
+      partials:
+        details:
+          since: "depuis"
+        form:
+          edit: "éditer"
+          update: "actualiser"
+          publish: "publier"
+          name: "nom"
+          project_url: "URL du projet"
+          github_url: "URL GitHub"
+          youtube_url: "URL Youtube"
+          youtube_url_hint: "exemple: https://www.youtube.com/embed/pzXb5CVPSLM"
+          banner: "image à la une"
+          banner_remote_url: "image à la une depuis une URL"
+          banner_alt_text: "texte alternatif"
+          release_date: "date de sortie"
+          short_description: "description courte"
+          long_description: "description longue"
+          gallery: "galerie d'images"
+          is_active: "projet actif"
+          skills: "outils associés"
+          image_hint: "privilégier le ratio 16:9 et une taille max de 1280x720"
+          blank_error: "ne peut pas être vide !"
+        history:
+          posted: "posté il y a"
+          edited: "édité il y a"
+          never_edited: "jamais édité"
     shared:
       public:
-        navbar:
-          initials: "jg"
+        header:
           projects: "projets"
           contact: "contact"
       admin:
-        navbar:
-          initials: "jg"
+        header:
           visit_site: "voir le site"
           admin: "admin"
           log_out: "se déconnecter"
+    mail_form:
+      contact:
+        title: "nouveau contact 🎉"
+        name: "nom"
+        email: "email"
+        message: "message"
+        greeting: "Bonjour %{name} !"
+        admin: "admin"
+        analytics: "active analytics"
+  mail_form:
+    attributes:
+      contact:
+        name: "Nom"
+        email: "E-mail"
+        message: "Message"
+  models:
+    contact:
+      subject: "nouveau contact :"
   date:
     abbr_day_names:
     - dim

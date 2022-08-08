@@ -49,19 +49,25 @@ gem "tailwindcss-rails"
 
 gem "font-awesome-rails"
 
-gem 'friendly_id', '~> 5.4.0'
+gem "friendly_id", "~> 5.4.0"
 
-gem 'devise'
+gem "devise"
 
-gem 'simple_form'
+gem "simple_form"
 
-gem 'cloudinary'
+gem "cloudinary"
 
-gem 'image_size', '~> 3.0'
+gem "image_size", "~> 3.0"
 
-gem 'open-uri'
+gem "open-uri"
 
-gem 'i18n_lazy_scope'
+gem "i18n_lazy_scope"
+
+gem "active_analytics"
+
+gem "kaminari"
+
+gem "mail_form"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"

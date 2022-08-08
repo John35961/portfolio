@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: %i[show edit update destroy]
+  before_action :record_page_view, only: %i[index show]
   skip_before_action :authenticate_admin!, only: %i[index show]
   layout 'admin', only: %i[new update create edit]
 
@@ -49,5 +50,9 @@ class ProjectsController < ApplicationController
                                     :banner_remote_url, :youtube_url, :release_date, :short_description,
                                     :long_description, :banner_alt_text,
                                     :is_active, :slug, skill_ids: [], gallery: [])
+  end
+
+  def record_page_view
+    ActiveAnalytics.record_request(request)
   end
 end

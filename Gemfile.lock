@@ -46,6 +46,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_analytics (0.2.1)
+      rails (>= 5.2.0)
     activejob (7.0.3)
       activesupport (= 7.0.3)
       globalid (>= 0.3.6)
@@ -129,11 +131,26 @@ GEM
     jbuilder (2.11.5)
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
+    kaminari (1.2.2)
+      activesupport (>= 4.1.0)
+      kaminari-actionview (= 1.2.2)
+      kaminari-activerecord (= 1.2.2)
+      kaminari-core (= 1.2.2)
+    kaminari-actionview (1.2.2)
+      actionview
+      kaminari-core (= 1.2.2)
+    kaminari-activerecord (1.2.2)
+      activerecord
+      kaminari-core (= 1.2.2)
+    kaminari-core (1.2.2)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
+    mail_form (1.9.0)
+      actionmailer (>= 5.2)
+      activemodel (>= 5.2)
     marcel (1.0.2)
     matrix (0.4.2)
     method_source (1.0.0)
@@ -274,6 +291,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  active_analytics
   bootsnap
   capybara
   cloudinary
@@ -286,6 +304,8 @@ DEPENDENCIES
   image_size (~> 3.0)
   importmap-rails
   jbuilder
+  kaminari
+  mail_form
   open-uri
   pg
   puma (~> 5.0)

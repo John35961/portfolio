@@ -89,6 +89,10 @@
       <%= f.label t_scoped(:is_active).capitalize %>
     </div>
     <div class="flex flex-col my-3">
-      <%= f.association :skills, as: :check_boxes, item_wrapper_tag: :div, item_wrapper_class:'my-2', input_html: { class:'rounded mr-2' } %>
+      <%= f.association :skills, as: :check_boxes,
+                        label: t_scoped(:skills).capitalize,
+                        item_wrapper_tag: :div,
+                        item_wrapper_class:'my-2',
+                        input_html: { class:'rounded mr-2' } %>
     </div>
   <% end %>

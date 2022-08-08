@@ -4,8 +4,9 @@
     <%= render 'shared/head_tags' %>
   </head>
   <body class="flex flex-col bg-gray-50">
-    <%= render 'shared/admin/navbar' %>
+    <%= render 'shared/admin/header' %>
     <main class="flex-grow">
+      <%= render 'partials/flash' %>
       <%= yield %>
     </main>
   </body>

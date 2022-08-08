@@ -2,7 +2,7 @@
 
 <section class="container flex flex-col w-full p-5 mx-auto my-5 lg:w-1/2">
   <div class="flex items-center justify-between">
-    <h1 class="my-3 text-3xl font-heading"><%= "#{@projects.size} #{t_scoped(:project).pluralize(@projects.size)}" %></h1>
+    <h1 class="my-3 text-3xl font-heading"><%= "#{Project.all.size} #{t_scoped(:project).pluralize(@projects.size)}" %></h1>
     <span class="h-full px-3 py-2 mx-3 text-lg rounded-lg text-emerald-500 bg-emerald-50"><%= link_to t_scoped(:new).capitalize, new_project_path %></span>
   </div>
   <ul>
@@ -11,7 +11,7 @@
         <div class="flex items-center justify-between">
           <div class="flex flex-col">
             <%= link_to project.name, project_path(project), target:'_blank', class:'underline underline-offset-1' %>
-            <%= render 'partials/project_history', project: project %>
+            <%= render 'projects/partials/history', project: project %>
           </div>
           <div class="flex items-center">
             <span class="px-3 py-2 mx-2 text-xs text-yellow-500 rounded-lg bg-yellow-50"><%= link_to t_scoped(:edit).capitalize, edit_project_path(project) %></span>
@@ -23,4 +23,14 @@
       </li>
     <% end %>
   </ul>
+  <div class="relative flex flex-col items-center justify-between my-3 text-sm opacity-50 lg:flex-row">
+    <%= paginate @projects %>
+    <div class="my-2 lg:absolute lg:last:right-0">
+      <span><%= t_scoped(:per_page) %></span>
+      <% PAGE_SIZES.each do |size| %>
+        <%= link_to size, url_for(per_page: size) %>
+        <%= '|' unless size == PAGE_SIZES.last %>
+      <% end %>
+    </div>
+  </div>
 </section>

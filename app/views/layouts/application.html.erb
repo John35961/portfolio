@@ -9,9 +9,11 @@
         <%= yield %>
       </main>
     <% else %>
+      <%= render 'admin/partials/edit_bar' %>
       <%= render 'shared/public/border' %>
-      <%= render 'shared/public/navbar' %>
-      <main class="flex-grow" data-aos="fade" data-aos-duration="400">
+      <%= render 'shared/public/header' %>
+      <main class="flex-grow">
+        <%= render 'partials/flash' %>
         <%= yield %>
       </main>
       <%= render 'shared/public/footer' %>
