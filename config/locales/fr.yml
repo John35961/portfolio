@@ -1,4 +1,9 @@
 fr:
+  controllers:
+    contacts:
+      create:
+        success: "message envoyé 🎉"
+        error: "impossible d'envoyer le message !"
   views:
     admin:
       dashboard:
@@ -7,6 +12,18 @@ fr:
         edit: "éditer"
         delete: "supprimer"
         per_page: "par page :"
+    contacts:
+      partials:
+        form:
+          send: "envoyer !"
+          name_placeholder: "Noël Flantier"
+          email_placeholder: "noel.flantier@gmail.com"
+          message_placeholders:
+            - "Salut %{name} ! J'aime bien ce que tu fais..."
+            - "Hello %{name} ! Dispo pour discuter un de ces 4 ?"
+            - "Salut %{name} ! J'ai un projet à te proposer..."
+          hint: "ne pas remplir !"
+          notice: "les champs marqués d'une * sont obligatoires"
     devise:
       registrations:
         new:
@@ -96,6 +113,12 @@ fr:
         greeting: "Bonjour %{name} !"
         admin: "admin"
         analytics: "active analytics"
+  mail_form:
+    attributes:
+      contact:
+        name: "Nom"
+        email: "E-mail"
+        message: "Message"
   models:
     contact:
       subject: "nouveau contact :"
