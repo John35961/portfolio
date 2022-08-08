@@ -12,6 +12,9 @@ fr:
         edit: "éditer"
         delete: "supprimer"
         per_page: "par page :"
+      partials:
+        edit_bar:
+          edit: "éditer"
     contacts:
       partials:
         form:
