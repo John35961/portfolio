@@ -1,10 +1,10 @@
 <header data-controller="navbar"
         data-action="scroll@window->navbar#updateNavbar"
-        data-navbar-active-value=<%= (current_pages?(controller: 'projects', actions: ['show', 'index']) || current_page?(controller: 'pages', action: 'contact')) ? true : false %>
+        data-navbar-active-value=<%= active_tab?(controllers: %w[projects pages], actions: %w[show index contact]) %>
         class="sticky top-0 z-30 px-5 pt-3 pb-3 transition-all select-none lg:pt-5">
   <nav class="flex items-center mx-auto justify-evenly lg:w-1/4">
     <div data-navbar-target="item"
-         class="py-2 px-3 h-full mx-0 md:mx-5 lg:mx-8 <%= 'text-gray-400' unless current_pages?(controller: 'projects', actions: ['show', 'index']) %> <%= 'rounded-lg bg-blue-50 text-slate-800 opacity-100' if current_pages?(controller: 'projects', actions: ['show', 'index']) %> rounded-lg hover:bg-blue-50 hover:text-slate-800  transition-all text-sm">
+         class="<%= conditional_tab_classes_for(controllers: 'projects', actions: %w[show index]) %>">
       <%= link_to t_scoped(:projects).capitalize, projects_path %>
     </div>
     <%= link_to root_path do %>
@@ -12,7 +12,7 @@
             class="mx-5 text-2xl font-black transition-colors text-slate-800 font-heading"><%= ABOUT['initials'].upcase %></span>
     <% end %>
     <div data-navbar-target="item"
-         class="py-2 px-3 h-full mx-0 md:mx-5 lg:mx-8 <%= 'text-gray-400' unless current_page?(controller: 'pages', action: 'contact') %> <%= 'rounded-lg bg-blue-50 text-slate-800 opacity-100' if current_page?(controller: 'pages', action: 'contact') %> rounded-lg hover:bg-blue-50 hover:text-slate-800  transition-all text-sm">
+         class="<%= conditional_tab_classes_for(controllers: 'pages', actions: 'contact') %>">
       <%= link_to t_scoped(:contact).capitalize, contact_path %>
     </div>
   </nav>
