@@ -90,11 +90,6 @@ fr:
           skills: "outils associés"
           image_hint: "privilégier le ratio 16:9 et une taille max de 1280x720"
           blank_error: "ne peut pas être vide !"
-        edit:
-          history:
-            posted: "posté il y a"
-            edited: "édité il y a"
-            never_edited: "jamais édité"
     shared:
       public:
         header:
@@ -108,6 +103,10 @@ fr:
       partials:
         minisocials:
           subject: "Salut Jean !"
+        history:
+          posted: "posté il y a"
+          edited: "édité il y a"
+          never_edited: "jamais édité"
     mail_form:
       contact:
         title: "nouveau contact 🎉"
