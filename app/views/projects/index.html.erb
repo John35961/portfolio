@@ -6,7 +6,9 @@
   <div class="grid grid-cols-1 gap-5 my-5 lg:my-14 lg:grid-cols-2 lg:gap-10">
     <% @projects.each_with_index do |project, idx| %>
       <%= link_to project_path(project) do %>
-        <%= render 'shared/partials/card', project: project, idx: idx %>
+        <%= render 'shared/partials/card',
+            project: project,
+            idx: idx %>
       <% end %>
     <% end %>
   </div>
