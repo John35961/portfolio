@@ -2,12 +2,7 @@
   <div class="flex justify-center mt-3">
     <div data-aos="fade"
          data-aos-duration="800"
-         class="z-50 w-fit px-5 py-3 my-0 mx-auto text-xs rounded-lg
-         <%= 'text-emerald-500 bg-emerald-50' if type == 'success' %>
-         <%= 'text-blue-500 bg-blue-50' if type == 'notice' %>
-         <%= 'text-red-500 bg-red-50' if type == 'error' %>
-         <%= 'text-yellow-500 bg-yellow-50' if type == 'alert' %>
-         <%= 'fixed right-4 bottom-4' if ['alert', 'notice'].include?(type) %>">
+         class="z-50 px-5 py-3 mx-auto my-0 text-xs rounded-lg w-fit <%= conditional_classes(type) %>">
       <%= msg %>
     </div>
   </div>
