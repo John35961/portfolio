@@ -9,12 +9,7 @@
       <%= link_to @project.name, project_path(@project), target:'_blank', class:'underline underline-offset-1' %>
     </h1>
     <div class="flex flex-col text-end">
-      <small class="opacity-50">
-        <%= t_scoped(:posted).capitalize %> <%= time_ago_in_words(project.created_at) %>
-      </small>
-      <small class="opacity-50">
-        <%= project.created_at != project.updated_at ? "#{t_scoped(:edited).capitalize} #{time_ago_in_words(project.updated_at)}" : t_scoped(:never_edited) %>
-      </small>
+      <%= render 'shared/partials/history', project: @project %>
     </div>
   </div>
   <%= render 'projects/partials/form', project: @project %>
