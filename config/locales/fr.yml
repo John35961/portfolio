@@ -50,17 +50,14 @@ fr:
         desktop_subline: "développeur web fullstack freelance"
         desktop_description: "Touche-à-tout passionné par le graphisme, le code, les interfaces et l'image, j'ai à cœur d'apporter toutes mes compétences dans les projets auxquels je participe. Travaillons ensemble sur votre prochaine idée !"
         project: "projet"
-        skills: "outils"
         see_all: "voir tout"
+        skills: "outils"
     pagination:
       first: "&laquo; premier"
       last: "dernier &raquo;"
       previous: "&lsaquo; préc. -"
       next: "- suivant &rsaquo;"
       truncate: "&hellip;"
-    partials:
-      minisocials:
-        subject: "Salut Jean !"
     projects:
       edit:
         admin: "admin"
@@ -93,10 +90,6 @@ fr:
           skills: "outils associés"
           image_hint: "privilégier le ratio 16:9 et une taille max de 1280x720"
           blank_error: "ne peut pas être vide !"
-        history:
-          posted: "posté il y a"
-          edited: "édité il y a"
-          never_edited: "jamais édité"
     shared:
       public:
         header:
@@ -107,6 +100,13 @@ fr:
           visit_site: "voir le site"
           admin: "admin"
           log_out: "se déconnecter"
+      partials:
+        minisocials:
+          subject: "Salut Jean !"
+        history:
+          posted: "posté il y a"
+          edited: "édité il y a"
+          never_edited: "jamais édité"
     mail_form:
       contact:
         title: "nouveau contact 🎉"

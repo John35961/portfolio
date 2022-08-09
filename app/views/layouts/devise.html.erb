@@ -4,13 +4,8 @@
     <%= render 'shared/head_tags' %>
   </head>
   <body class="flex flex-col min-h-screen bg-gray-50">
-    <%= render 'admin/partials/edit_bar' %>
-    <%= render 'shared/public/border' %>
-    <%= render 'shared/public/header' %>
     <main class="flex-grow">
-      <%= render 'shared/partials/flash' %>
       <%= yield %>
     </main>
-    <%= render 'shared/public/footer' %>
   </body>
 </html>
