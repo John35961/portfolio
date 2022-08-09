@@ -44,18 +44,14 @@ fr:
           remember_me: "se souvenir de moi"
           sign_in: "se connecter"
     pages:
-      partials:
-        home:
-          hero:
-            mobile_subline: "Je suis développeur web fullstack freelance"
-            mobile_description: "Construisons ensemble votre nouveau projet web"
-            desktop_subline: "développeur web fullstack freelance"
-            desktop_description: "Touche-à-tout passionné par le graphisme, le code, les interfaces et l'image, j'ai à cœur d'apporter toutes mes compétences dans les projets auxquels je participe. Travaillons ensemble sur votre prochaine idée !"
-          projects:
-            project: "projet"
-            see_all: "voir tout"
-          skills:
-            skills: "outils"
+      home:
+        mobile_subline: "Je suis développeur web fullstack freelance"
+        mobile_description: "Construisons ensemble votre nouveau projet web"
+        desktop_subline: "développeur web fullstack freelance"
+        desktop_description: "Touche-à-tout passionné par le graphisme, le code, les interfaces et l'image, j'ai à cœur d'apporter toutes mes compétences dans les projets auxquels je participe. Travaillons ensemble sur votre prochaine idée !"
+        project: "projet"
+        see_all: "voir tout"
+        skills: "outils"
     pagination:
       first: "&laquo; premier"
       last: "dernier &raquo;"
