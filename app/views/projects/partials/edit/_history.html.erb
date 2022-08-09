@@ -1,2 +1,0 @@
-<small class="opacity-50"><%= t_scoped(:posted).capitalize %> <%= time_ago_in_words(project.created_at) %></small>
-<small class="opacity-50"> <%= project.created_at != project.updated_at ? "#{t_scoped(:edited).capitalize} #{time_ago_in_words(project.updated_at)}" : t_scoped(:never_edited) %> </small>
