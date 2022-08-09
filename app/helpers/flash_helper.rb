@@ -1,5 +1,5 @@
 module FlashHelper
-  def conditional_flash_classes(type)
+  def conditional_flash_classes_for(type)
     lookup = {
       'success': 'text-emerald-500 bg-emerald-50',
       'notice': 'text-blue-500 bg-blue-50',

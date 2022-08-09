@@ -4,7 +4,7 @@
         class="sticky top-0 z-30 px-5 pt-3 pb-3 transition-all select-none lg:pt-5">
   <nav class="flex items-center mx-auto justify-evenly lg:w-1/4">
     <div data-navbar-target="item"
-         class="<%= conditional_tab_classes(controllers: 'projects', actions: %w[show index]) %>">
+         class="<%= conditional_tab_classes_for(controllers: 'projects', actions: %w[show index]) %>">
       <%= link_to t_scoped(:projects).capitalize, projects_path %>
     </div>
     <%= link_to root_path do %>
@@ -12,7 +12,7 @@
             class="mx-5 text-2xl font-black transition-colors text-slate-800 font-heading"><%= ABOUT['initials'].upcase %></span>
     <% end %>
     <div data-navbar-target="item"
-         class="<%= conditional_tab_classes(controllers: 'pages', actions: 'contact') %>">
+         class="<%= conditional_tab_classes_for(controllers: 'pages', actions: 'contact') %>">
       <%= link_to t_scoped(:contact).capitalize, contact_path %>
     </div>
   </nav>
