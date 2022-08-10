@@ -39,6 +39,7 @@ fr:
       sessions:
         new:
           back_to_site: "retour au site"
+          admin: "admin"
           email: "email"
           password: "mot de passe"
           remember_me: "se souvenir de moi"
