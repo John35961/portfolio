@@ -1,8 +1,8 @@
-<% content_for :meta_title, "Admin - #{t_scoped(:project).pluralize(@projects.size).capitalize}" %>
+<% content_for :meta_title, "#{t_scoped(:meta_prefix).capitalize} - #{pluralize_with_number(count: Project.all.size, object:t_scoped(:project))}" %>
 
 <section class="container flex flex-col w-full p-5 mx-auto my-5 lg:w-1/2">
   <div class="flex items-center justify-between">
-    <h1 class="my-3 text-3xl font-heading"><%= "#{Project.all.size} #{t_scoped(:project).pluralize(@projects.size)}" %></h1>
+    <h1 class="my-3 text-3xl font-heading"><%= pluralize_with_number(count: Project.all.size, object:t_scoped(:project)) %></h1>
     <span class="h-full px-3 py-2 mx-3 text-lg rounded-lg text-emerald-500 bg-emerald-50"><%= link_to t_scoped(:new).capitalize, new_project_path %></span>
   </div>
   <ul>

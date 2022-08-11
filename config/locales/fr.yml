@@ -7,6 +7,7 @@ fr:
   views:
     admin:
       dashboard:
+        meta_prefix: "admin"
         project: "projet"
         new: "nouveau"
         edit: "éditer"
