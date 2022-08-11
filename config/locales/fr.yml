@@ -31,6 +31,7 @@ fr:
       registrations:
         new:
           back_to_site: "retour au site"
+          admin: "admin"
           email: "email"
           password: "mot de passe"
           password_hint: "au moins %{count} caractères"
