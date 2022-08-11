@@ -1,5 +1,5 @@
 module ProjectsHelper
   def banner_for(object)
-    object.banner.attached? ? object.banner.url.gsub('http://', 'https://') : object.banner_remote_url
+    object.banner.attached? ? to_https(object.banner.url) : object.banner_remote_url
   end
 end
