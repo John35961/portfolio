@@ -19,13 +19,13 @@ module.exports = {
       keyframes: {
         subtle: {
           "0%": {
-            transform: "translateX(-1000px) scale(1)",
+            transform: "translateX(-2000px) scale(1)",
           },
           "50%": {
             transform: "scale(1.5)",
           },
           "100%": {
-            transform: "translateX(1000px) scale(1)",
+            transform: "translateX(2000px) scale(1)",
           }
         }
       },
