@@ -68,6 +68,8 @@ fr:
         admin: "admin"
         edit: "éditer"
         projects: "projets"
+      index:
+        meta_title: "mes projets"
       new:
         admin: "admin"
         projects: "projets"
