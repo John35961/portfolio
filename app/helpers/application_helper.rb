@@ -6,4 +6,8 @@ module ApplicationHelper
   def pluralize_with_number(args = {})
     "#{args[:count]} #{args[:object].pluralize(args[:count])}"
   end
+
+  def to_https(url)
+    url.gsub('http://', 'https://')
+  end
 end
