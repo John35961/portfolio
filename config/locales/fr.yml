@@ -7,6 +7,7 @@ fr:
   views:
     admin:
       dashboard:
+        meta_prefix: "admin"
         project: "projet"
         new: "nouveau"
         edit: "éditer"
@@ -31,6 +32,7 @@ fr:
       registrations:
         new:
           back_to_site: "retour au site"
+          admin: "admin"
           email: "email"
           password: "mot de passe"
           password_hint: "au moins %{count} caractères"
@@ -45,6 +47,8 @@ fr:
           remember_me: "se souvenir de moi"
           sign_in: "se connecter"
     pages:
+      contact:
+        meta_title: "contact"
       home:
         mobile_subline: "Je suis développeur web fullstack freelance"
         mobile_description: "Construisons ensemble votre nouveau projet web"
@@ -64,10 +68,14 @@ fr:
         admin: "admin"
         edit: "éditer"
         projects: "projets"
+      index:
+        meta_title: "mes projets"
       new:
         admin: "admin"
         projects: "projets"
         new_project: "nouveau projet"
+      show:
+        meta_title: "projet"
       partials:
         details:
           since: "depuis"
