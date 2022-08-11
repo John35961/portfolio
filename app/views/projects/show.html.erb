@@ -1,4 +1,4 @@
-<% content_for :meta_title, "Jean Guillet - Projet #{@project.name}" %>
+<% content_for :meta_title, "#{ABOUT['full_name'].titleize} - #{t_scoped(:meta_title).capitalize} #{@project.name}" %>
 <% content_for :meta_description, @project.short_description %>
 <% content_for :meta_image, @project.banner.attached? ? @project.banner.url : @project.banner_remote_url %>
 

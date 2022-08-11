@@ -74,6 +74,8 @@ fr:
         admin: "admin"
         projects: "projets"
         new_project: "nouveau projet"
+      show:
+        meta_title: "projet"
       partials:
         details:
           since: "depuis"
