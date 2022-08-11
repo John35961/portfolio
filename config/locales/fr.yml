@@ -47,6 +47,8 @@ fr:
           remember_me: "se souvenir de moi"
           sign_in: "se connecter"
     pages:
+      contact:
+        meta_suffix: "contact"
       home:
         mobile_subline: "Je suis développeur web fullstack freelance"
         mobile_description: "Construisons ensemble votre nouveau projet web"
