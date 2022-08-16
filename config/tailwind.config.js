@@ -12,7 +12,7 @@ module.exports = {
       colors: {
         'primary': '#1e293b', //primary
         'dark': '#111827', //dark
-        'blue': '#3b82f6', //blue-500
+        'blue': '#3b82f6', //blue
         'light-blue': '#eff6ff', //blue-50
         'green': '#10b981', //emerald-500
         'light-green': '#ecfdf5', //emerald-50

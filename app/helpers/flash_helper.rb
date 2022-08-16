@@ -2,7 +2,7 @@ module FlashHelper
   def conditional_flash_classes_for(type)
     lookup = {
       'success': 'text-emerald-500 bg-emerald-50',
-      'notice': 'text-blue-500 bg-blue-50',
+      'notice': 'text-blue bg-blue-50',
       'error': 'text-red-500 bg-red-50',
       'alert': 'text-yellow-500 bg-yellow-50'
     }
