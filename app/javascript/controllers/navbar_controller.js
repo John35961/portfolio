@@ -16,7 +16,7 @@ export default class extends Controller {
     if (window.scrollY >= 500) {
       title.classList.add('text-blue-50')
       title.classList.remove('text-primary')
-      background.classList.add('backdrop-blur-lg', 'bg-slate-900/90')
+      background.classList.add('backdrop-blur-lg', 'bg-dark/90')
       items.forEach((item) => {
         if (!itemIsActive) {
           item.classList.add('text-blue-50')
@@ -26,7 +26,7 @@ export default class extends Controller {
     } else {
       title.classList.remove('text-blue-50')
       title.classList.add('text-primary')
-      background.classList.remove('backdrop-blur-lg', 'bg-slate-900/90')
+      background.classList.remove('backdrop-blur-lg', 'bg-dark/90')
       items.forEach(item => {
         if (!itemIsActive) {
           item.classList.remove('text-blue-50')
