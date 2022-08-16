@@ -21,7 +21,7 @@ module.exports = {
         'red': '#ef4444',
         'light-red': '#fef2f2',
         'gray': '#9ca3af',
-        'light-gray': '#f9fafb', //gray-50
+        'light-gray': '#f9fafb',
       },
       animation: {
         subtle: "subtle 15s infinite"
