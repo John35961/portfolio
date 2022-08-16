@@ -14,7 +14,7 @@
             <%= render 'shared/partials/history', project: project %>
           </div>
           <div class="flex items-center">
-            <span class="px-3 py-2 mx-2 text-xs text-yellow rounded-lg bg-yellow-50"><%= link_to t_scoped(:edit).capitalize, edit_project_path(project) %></span>
+            <span class="px-3 py-2 mx-2 text-xs text-yellow rounded-lg bg-light-yellow"><%= link_to t_scoped(:edit).capitalize, edit_project_path(project) %></span>
             <%= button_to project_path(project), method: :delete do %>
               <span class="inline px-3 py-2 mx-2 text-xs text-red-500 rounded-lg bg-red-50"><%= t_scoped(:delete).capitalize %></span>
             <% end %>
