@@ -20,7 +20,7 @@
         </small>
       </div>
     </div>
-    <%= button_to destroy_admin_session_path, method: :delete do %>
+    <%= button_to logout_path, method: :delete do %>
       <div class="flex items-center mx-5 group">
         <small class="hidden mr-2 transition-opacity opacity-0 lg:block group-hover:opacity-100 text-primary"><%= t_scoped(:log_out).capitalize %></small>
         <%= image_tag 'icons/arrow-right-from-bracket-solid.svg', class:"opacity-25 group-hover:opacity-100 h-[20px] transition-opacity" %>

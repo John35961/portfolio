@@ -3,6 +3,11 @@ Rails.application.routes.draw do
 
   devise_for :admins, skip: :registrations
 
+  as :admin do
+    get '/login', to: 'devise/sessions#new'
+    delete '/logout', to: 'devise/sessions#destroy'
+  end
+
   get '/contact', to: 'pages#contact'
   get '/dashboard', to: 'admin#dashboard'
 
