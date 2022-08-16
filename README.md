@@ -26,13 +26,12 @@ This project started as I was looking for a way to showcase my creative and tech
 
 1. Clone the repo: `git clone git@github.com:John35961/portfolio.git`
 
-2. In `development`, the app requires the following environnement variables:
+2. In `development`, the app uses the following environnement variables:
 
 * `APEX` which resolves to the bare live domain, to generate `production` URLs in the email template used when a new contact form is submitted. Useful to test emails locally with [MailCatcher](https://mailcatcher.me/) for instance
 * `LOCALHOST`, IPV4's localhost (likely to be `127.0.0.1`) for ActionMailer to work locally
 * `CLOUDINARY_URL`, to use [Cloudinary](https://cloudinary.com/) image hosting for `Project` objects. You can get an API key by creating a free account (the key starts with `cloudinary://`)
-You can also use, but not mandatory:
-* `NGROK_HOST` if you want to forward your `localhost:3000` on the web via [ngrok](https://ngrok.com/). Make sure to exclude `https://` from the variable, and restart the `development`server after setting it
+* `NGROK_HOST` if you want to forward your `localhost:3000` on the web via [ngrok](https://ngrok.com/). Make sure to exclude `https://` from the variable, and restart the `development`server after setting it. `NGROK_HOST` is not mandatory.
 
 3. Run `bin/rails bundle` to install required gems in `development`
 
