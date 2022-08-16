@@ -9,7 +9,7 @@
     </div>
     <%= link_to root_path do %>
       <span data-navbar-target="title"
-            class="mx-5 text-2xl font-black transition-colors text-slate-800 font-heading"><%= ABOUT['initials'].upcase %></span>
+            class="mx-5 text-2xl font-black transition-colors text-primary font-heading"><%= ABOUT['initials'].upcase %></span>
     <% end %>
     <div data-navbar-target="item"
          class="<%= conditional_tab_classes_for(controllers: 'pages', actions: 'contact') %>">

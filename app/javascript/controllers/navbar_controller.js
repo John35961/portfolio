@@ -14,23 +14,23 @@ export default class extends Controller {
     let background = this.element;
 
     if (window.scrollY >= 500) {
-      title.classList.add('text-blue-50')
-      title.classList.remove('text-slate-800')
-      background.classList.add('backdrop-blur-lg', 'bg-slate-900/90')
+      title.classList.add('text-light-blue')
+      title.classList.remove('text-primary')
+      background.classList.add('backdrop-blur-lg', 'bg-dark/90')
       items.forEach((item) => {
         if (!itemIsActive) {
-          item.classList.add('text-blue-50')
-          item.classList.remove('text-gray-400', 'text-slate-800')
+          item.classList.add('text-light-blue')
+          item.classList.remove('text-gray', 'text-primary')
         }
       })
     } else {
-      title.classList.remove('text-blue-50')
-      title.classList.add('text-slate-800')
-      background.classList.remove('backdrop-blur-lg', 'bg-slate-900/90')
+      title.classList.remove('text-light-blue')
+      title.classList.add('text-primary')
+      background.classList.remove('backdrop-blur-lg', 'bg-dark/90')
       items.forEach(item => {
         if (!itemIsActive) {
-          item.classList.remove('text-blue-50')
-          item.classList.add('text-gray-400', 'text-slate-800')
+          item.classList.remove('text-light-blue')
+          item.classList.add('text-gray', 'text-primary')
         }
       });
     }

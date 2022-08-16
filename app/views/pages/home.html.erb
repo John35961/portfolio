@@ -3,7 +3,7 @@
   <% unless browser.firefox? %>
     <%= image_tag 'home/profile_shape.png',
         draggable: false,
-        class:'hidden md:block fixed -z-10 animate-subtle opacity-50' %>
+        class:'hidden md:block fixed -z-10 animate-subtle opacity-75' %>
   <% end %>
   <div data-aos="fade"
        data-aos-duration="800"
@@ -27,7 +27,7 @@
              data-aos-delay="100"
              data-aos-duration="800"
              class="mb-5">
-          <h1 class="text-4xl font-black font-heading text-slate-800">
+          <h1 class="text-4xl font-black font-heading text-primary">
             <%= "#{ABOUT['first_name'].capitalize} #{ABOUT['last_name'].capitalize}" %>
           </h1>
           <span class="text-sm text-slate-400">
@@ -62,7 +62,7 @@
       <h1 data-aos="fade"
           data-aos-delay="200"
           data-aos-duration="800"
-          class="my-3 text-2xl font-black font-heading text-slate-800">
+          class="my-3 text-2xl font-black font-heading text-primary">
         <%= t_scoped(:mobile_description) %>
       </h1>
       <div data-aos="fade"
@@ -75,7 +75,7 @@
 <section data-aos="fade"
          data-aos-delay="400"
          data-aos-duration="800"
-         class="relative top-10 rounded-t-[35px] lg:rounded-t-[50px] bg-blue-50">
+         class="relative top-10 rounded-t-[35px] lg:rounded-t-[50px] bg-light-blue">
   <div class="container flex flex-col p-5 mx-auto">
     <div class="grid grid-cols-1 gap-5 mt-6 lg:mt-12 lg:grid-cols-2 lg:gap-10">
       <% @projects.each_with_index do |project, idx| %>
@@ -94,17 +94,17 @@
       <%= render 'shared/partials/minibutton',
           title: t_scoped(:see_all).capitalize,
           path: projects_path,
-          color: 'text-slate-800' %>
+          color: 'text-primary' %>
     </div>
   </div>
 </section>
-<section class="relative lg:h-screen z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
+<section class="relative lg:h-screen z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-primary">
   <div class="container p-5 mx-auto">
     <%= render 'shared/partials/separator',
         title: t_scoped(:skills),
         direction: 'left',
-        text_color: 'text-blue-50',
-        arrow_color: 'text-blue-50' %>
+        text_color: 'text-light-blue',
+        arrow_color: 'text-light-blue' %>
     <div data-aos="fade"
          data-aos-duration="800"
          class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">

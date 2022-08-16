@@ -2,7 +2,7 @@
   <% if idx.even? %>
     <small class="text-sm text-slate-400"><%= project.release_date.year %></small>
   <% end %>
-  <h2 class="mx-3 font-bold font-heading text-slate-800"><%= project.name %></h2>
+  <h2 class="mx-3 font-bold font-heading text-primary"><%= project.name %></h2>
   <% if idx.odd? %>
     <small class="text-sm text-slate-400"><%= project.release_date.year %></small>
   <% end %>
@@ -10,8 +10,8 @@
 <div class="transition-transform border border-transparent rounded-lg group hover:-translate-y-1 hover:cursor-pointer">
   <div class="h-48 bg-center bg-cover rounded-lg md:h-80 lg:h-96"
        style="background-image:url(<%= banner_for(project) %>)">
-    <div class="flex flex-col items-center justify-center w-full h-full text-center transition-all rounded-lg opacity-0 bg-slate-800/95 backdrop-blur group-hover:lg:opacity-100">
-      <h2 class="text-2xl font-bold transition-all text-blue-50 group-hover:translate-y-0 font-heading md:text-3xl lg:text-5xl"><%= project.name %></h2>
+    <div class="flex flex-col items-center justify-center w-full h-full text-center transition-all rounded-lg opacity-0 bg-primary/95 backdrop-blur group-hover:lg:opacity-100">
+      <h2 class="text-2xl font-bold transition-all text-light-blue group-hover:translate-y-0 font-heading md:text-3xl lg:text-5xl"><%= project.name %></h2>
       <div class="my-3 lg:my-5">
         <% project.skills.first(5).each do |skill| %>
           <small class="inline-block p-1 rounded text-slate-300 bg-slate-700"><%= skill.name %></small>

@@ -1,6 +1,6 @@
 <% if [admin_signed_in?, params[:controller] == 'projects', params[:action] == 'show'].all? %>
   <div class="flex justify-center">
-    <div class="fixed z-50 px-5 py-3 text-xs text-yellow-500 rounded-lg w-fit bottom-12 bg-yellow-50">
+    <div class="fixed z-50 px-5 py-3 text-xs text-yellow rounded-lg w-fit bottom-12 bg-light-yellow">
     <%= link_to edit_project_path(@project) do %>
       <span>
         <%= t_scoped(:edit).capitalize %>
