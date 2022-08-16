@@ -40,7 +40,7 @@ You can also use, but not mandatory:
 
 5. Create database and run migrations with `bin/rails db:setup`
 
-6. Finally, run the server with `bin/rails s`
+6. Finally, run the server with `bin/dev`
 
 7. Then visit: <http://localhost:3000>
 
