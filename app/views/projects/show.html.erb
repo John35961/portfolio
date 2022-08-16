@@ -10,7 +10,7 @@
          class="flex items-center px-5 pt-5 lg:p-5 lg:w-[70vw]">
       <div data-parallax-target="hero">
         <div class="lg:flex lg:justify-center">
-          <div class="flex justify-center relative lg:-top-12 p-3 lg:text-3xl xl:text-5xl font-black text-center bg-primary rounded-t-[15px] lg:rounded-lg text-light-blue lg:w-fit font-heading">
+          <div class="flex justify-center relative lg:-top-12 p-3 lg:text-3xl xl:text-5xl font-black text-center bg-primary-800 rounded-t-[15px] lg:rounded-lg text-light-blue lg:w-fit font-heading">
             <% if @project.project_url %>
               <%= link_to @project.project_url, target:"_blank" do %>
                 <div class="flex items-center">
@@ -38,8 +38,8 @@
           tint:'800' %>
     </div>
   </section>
-  <section class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-dark">
-    <div class="hidden lg:block absolute w-full bg-gradient-to-b from-dark to-transparent h-[150px] rounded-t-[35px] lg:rounded-t-[50px] z-10"></div>
+  <section class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-primary-900">
+    <div class="hidden lg:block absolute w-full bg-gradient-to-b from-primary-900 to-transparent h-[150px] rounded-t-[35px] lg:rounded-t-[50px] z-10"></div>
     <div class="container flex flex-col items-center h-auto min-h-screen mx-auto lg:flex-row">
       <div class="relative w-screen lg:left-[2vw] lg:w-[65.5%]">
         <% if @project.youtube_url %>
