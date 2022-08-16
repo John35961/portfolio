@@ -20,7 +20,7 @@ export default class extends Controller {
       items.forEach((item) => {
         if (!itemIsActive) {
           item.classList.add('text-light-blue')
-          item.classList.remove('text-gray-400', 'text-primary')
+          item.classList.remove('text-gray', 'text-primary')
         }
       })
     } else {
@@ -30,7 +30,7 @@ export default class extends Controller {
       items.forEach(item => {
         if (!itemIsActive) {
           item.classList.remove('text-light-blue')
-          item.classList.add('text-gray-400', 'text-primary')
+          item.classList.add('text-gray', 'text-primary')
         }
       });
     }

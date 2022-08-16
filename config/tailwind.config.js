@@ -19,8 +19,8 @@ module.exports = {
         'yellow': '#eab308',
         'light-yellow': '#fefce8',
         'red': '#ef4444',
-        'light-red': '#fef2f2', //light-red
-        'gray': '#9ca3af', //gray-400
+        'light-red': '#fef2f2',
+        'gray': '#9ca3af',
         'light-gray': '#f9fafb', //gray-50
       },
       animation: {

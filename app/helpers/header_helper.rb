@@ -8,7 +8,7 @@ module HeaderHelper
     classes += if current_pages?(controllers: args[:controllers], actions: args[:actions])
                  ' rounded-lg bg-light-blue text-primary opacity-100'
                else
-                 ' text-gray-400'
+                 ' text-gray'
                end
     classes
   end
