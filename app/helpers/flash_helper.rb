@@ -3,7 +3,7 @@ module FlashHelper
     lookup = {
       'success': 'text-green bg-light-green',
       'notice': 'text-blue bg-light-blue',
-      'error': 'text-red-500 bg-red-50',
+      'error': 'text-red bg-red-50',
       'alert': 'text-yellow bg-light-yellow'
     }
     classes = lookup[type.to_sym]
