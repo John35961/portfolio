@@ -15,22 +15,22 @@ export default class extends Controller {
 
     if (window.scrollY >= 500) {
       title.classList.add('text-light-blue')
-      title.classList.remove('text-primary')
-      background.classList.add('backdrop-blur-lg', 'bg-dark/90')
+      title.classList.remove('text-primary-800')
+      background.classList.add('backdrop-blur-lg', 'bg-primary-900/90')
       items.forEach((item) => {
         if (!itemIsActive) {
           item.classList.add('text-light-blue')
-          item.classList.remove('text-gray', 'text-primary')
+          item.classList.remove('text-gray', 'text-primary-800')
         }
       })
     } else {
       title.classList.remove('text-light-blue')
-      title.classList.add('text-primary')
-      background.classList.remove('backdrop-blur-lg', 'bg-dark/90')
+      title.classList.add('text-primary-800')
+      background.classList.remove('backdrop-blur-lg', 'bg-primary-900/90')
       items.forEach(item => {
         if (!itemIsActive) {
           item.classList.remove('text-light-blue')
-          item.classList.add('text-gray', 'text-primary')
+          item.classList.add('text-gray', 'text-primary-800')
         }
       });
     }
