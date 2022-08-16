@@ -2,7 +2,7 @@
     <div class="flex justify-end">
       <% if project.persisted? %>
         <%= f.submit t_scoped(:update).capitalize,
-            class:"hover:cursor-pointer font-body rounded-lg p-3 bg-yellow-50 text-yellow-500" %>
+            class:"hover:cursor-pointer font-body rounded-lg p-3 bg-yellow-50 text-yellow" %>
       <% else %>
         <%= f.submit t_scoped(:publish).capitalize,
             class:"hover:cursor-pointer font-body rounded-lg p-3 bg-light-green text-green" %>
