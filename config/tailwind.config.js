@@ -9,6 +9,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'primary': '#1e293b', //primary
+        'dark': '#111827', //slate-900
+        'blue': '#3b82f6', //blue-500
+        'light-blue': '#eff6ff', //blue-50
+        'green': '#10b981', //emerald-500
+        'light-green': '#ecfdf5', //emerald-50
+        'yellow': '#eab308', //yellow-500
+        'light-yellow': '#fefce8', //yellow-50
+        'red': '#ef4444', //red-500
+        'light-red': '#fef2f2', //red-50
+        'gray': '#9ca3af', //gray-400
+        'light-gray': '#f9fafb', //gray-50
+      },
       animation: {
         subtle: "subtle 15s infinite"
       },

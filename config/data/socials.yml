@@ -12,6 +12,6 @@ malt:
   name: Malt
   svg-icon:
     light: 'icons/malt-blue-50.svg'
-    dark: 'icons/malt-slate-800.svg'
+    dark: 'icons/malt-primary.svg'
   url: https://www.malt.fr/profile/jeanguillet
   target: _blank

@@ -27,7 +27,7 @@
              data-aos-delay="100"
              data-aos-duration="800"
              class="mb-5">
-          <h1 class="text-4xl font-black font-heading text-slate-800">
+          <h1 class="text-4xl font-black font-heading text-primary">
             <%= "#{ABOUT['first_name'].capitalize} #{ABOUT['last_name'].capitalize}" %>
           </h1>
           <span class="text-sm text-slate-400">
@@ -62,7 +62,7 @@
       <h1 data-aos="fade"
           data-aos-delay="200"
           data-aos-duration="800"
-          class="my-3 text-2xl font-black font-heading text-slate-800">
+          class="my-3 text-2xl font-black font-heading text-primary">
         <%= t_scoped(:mobile_description) %>
       </h1>
       <div data-aos="fade"
@@ -94,11 +94,11 @@
       <%= render 'shared/partials/minibutton',
           title: t_scoped(:see_all).capitalize,
           path: projects_path,
-          color: 'text-slate-800' %>
+          color: 'text-primary' %>
     </div>
   </div>
 </section>
-<section class="relative lg:h-screen z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-slate-800">
+<section class="relative lg:h-screen z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-primary">
   <div class="container p-5 mx-auto">
     <%= render 'shared/partials/separator',
         title: t_scoped(:skills),
