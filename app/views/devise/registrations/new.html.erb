@@ -15,7 +15,7 @@
       <div class="flex items-center">
         <%= f.label t_scoped(:password), class:"text-primary mr-2" %>
         <% if @minimum_password_length %>
-          <span class="text-slate-400">(<%= t_scoped(:password_hint, count: @minimum_password_length) %>)</span>
+          <span class="text-primary-light">(<%= t_scoped(:password_hint, count: @minimum_password_length) %>)</span>
         <% end %>
       </div>
       <%= f.password_field :password, autocomplete: "new-password", class:"rounded" %>

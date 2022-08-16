@@ -1,10 +1,10 @@
 <div class="flex items-center lg:hidden my-3 text-2xl <%= 'justify-end' if idx.even? %>">
   <% if idx.even? %>
-    <small class="text-sm text-slate-400"><%= project.release_date.year %></small>
+    <small class="text-sm text-primary-light"><%= project.release_date.year %></small>
   <% end %>
   <h2 class="mx-3 font-bold font-heading text-primary"><%= project.name %></h2>
   <% if idx.odd? %>
-    <small class="text-sm text-slate-400"><%= project.release_date.year %></small>
+    <small class="text-sm text-primary-light"><%= project.release_date.year %></small>
   <% end %>
 </div>
 <div class="transition-transform border border-transparent rounded-lg group hover:-translate-y-1 hover:cursor-pointer">
