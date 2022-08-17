@@ -29,7 +29,8 @@ module.exports = {
         'light-gray': '#f9fafb',
       },
       animation: {
-        subtle: "subtle 15s infinite"
+        subtle: "subtle 15s infinite",
+        slidein: "slidein 0.5s"
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
@@ -46,7 +47,17 @@ module.exports = {
           "100%": {
             transform: "translateX(2000px) scale(1)",
           }
-        }
+        },
+        slidein: {
+          "0%": {
+            opacity: "0%",
+            transform: "translateY(10px)",
+          },
+          "100%": {
+            opacity: "100%",
+            transform: "translateY(0px)",
+          },
+        },
       },
     },
   },
