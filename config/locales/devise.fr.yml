@@ -6,5 +6,5 @@ fr:
       already_signed_out: "Déconnecté 👋"
     failure:
       admin:
-        unauthenticated: "Connectez-vous pour continuer."
+        unauthenticated: "Connectez-vous pour continuer ⚠️"
         already_authenticated: "Déjà connecté ⚠️"
