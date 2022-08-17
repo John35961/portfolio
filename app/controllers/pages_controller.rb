@@ -11,6 +11,8 @@ class PagesController < ApplicationController
     @contact = Contact.new
   end
 
+  def legal; end
+
   private
 
   def record_page_view
