@@ -1,9 +1,9 @@
 <% content_for :meta_title, "#{ABOUT['full_name'].titleize} - #{t_scoped(:meta_title).capitalize}" %>
 
-<section class="container flex flex-col p-5 mx-auto"
+<section class="container flex flex-col p-5 mx-auto lg:mb-14"
          data-aos="fade"
          data-aos-duration="800">
-  <div class="grid grid-cols-1 gap-5 my-5 lg:my-14 lg:grid-cols-2 lg:gap-10">
+  <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
     <% @projects.each_with_index do |project, idx| %>
       <%= link_to project_path(project) do %>
         <%= render 'shared/partials/card',
