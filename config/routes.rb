@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
 
   get '/contact', to: 'pages#contact'
+  get '/legal', to: 'pages#legal'
   get '/dashboard', to: 'admin#dashboard'
 
   authenticate :admin do
