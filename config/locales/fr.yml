@@ -57,6 +57,26 @@ fr:
         project: "projet"
         see_all: "voir tout"
         skills: "outils"
+      legal:
+        meta_title: "mentions légales"
+        title: "mentions légales"
+        publication_director: "directeur de la publication"
+        email: "adresse de contact"
+        company_type: "Entreprise individuelle (EI)"
+        company_details: "dénomination sociale et forme"
+        company_location: "domiciliation"
+        company_postal_address_html:
+          "4, rue Carnot <br />
+          35700 Rennes <br />
+          France"
+        siren: "SIREN"
+        siret: "SIRET"
+        vat_intracom: "TVA intracommunautaire"
+        hosting_service: "hébergeur"
+        hosting_service_postal_address_html:
+          "415 Mission Street <br />
+          Suite 300 <br />
+          San Francisco, CA 94105"
     pagination:
       first: "&laquo; premier"
       last: "dernier &raquo;"
