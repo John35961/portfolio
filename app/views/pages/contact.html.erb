@@ -1,6 +1,10 @@
 <% content_for :meta_title, "#{ABOUT['full_name'].titleize} - #{t_scoped(:meta_title).capitalize}" %>
 
-<div data-aos="fade" data-aos-duration="800">
-  <%= render 'contacts/partials/form',
-      contact: @contact %>
+<div data-aos="fade"
+     data-aos-duration="800"
+     class="flex flex-col items-center p-5">
+  <div class="flex flex-col w-full p-5 rounded-lg md:w-1/2 bg-light-blue">
+    <%= render 'contacts/partials/form',
+        contact: @contact %>
+  </div>
 </div>
