@@ -90,7 +90,7 @@
         <% end %>
       <% end %>
     </div>
-    <div class="mx-auto mt-16 mb-20">
+    <div class="inline-block mx-auto mt-14 mb-28">
       <%= render 'shared/partials/minibutton',
           title: t_scoped(:see_all).capitalize,
           path: projects_path,
@@ -98,16 +98,14 @@
     </div>
   </div>
 </section>
-<section class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-primary-900">
-  <div class="container px-5 pb-24 mx-auto pt-14">
-    <div data-aos="fade"
-        data-aos-duration="800">
-      <%= render 'shared/partials/separator',
-          title: t_scoped(:skills),
-          direction: 'left',
-          text_color: 'text-light-blue',
-          arrow_color: 'text-light-blue' %>
-    </div>
+<section class="relative z-10 bg-primary-900">
+  <div class="absolute -top-10 w-full h-[50px] rounded-t-[35px] lg:rounded-t-[50px] z-10 bg-primary-900"></div>
+  <div class="container relative z-30 px-5 pb-24 mx-auto">
+    <%= render 'shared/partials/separator',
+        title: t_scoped(:skills),
+        direction: 'left',
+        text_color: 'text-light-blue',
+        arrow_color: 'text-light-blue' %>
     <div data-aos="fade"
          data-aos-duration="800"
          class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
@@ -119,8 +117,9 @@
     </div>
   </div>
 </section>
-<section class="lg:h-screen relative -top-10 z-20 rounded-t-[35px] lg:rounded-t-[50px] bg-light-blue">
-  <div class="container flex flex-col px-5 mx-auto py-14">
+<section class="relative z-20 h-screen bg-light-blue">
+  <div class="absolute -top-10 w-full h-[50px] rounded-t-[35px] lg:rounded-t-[50px] z-20 bg-light-blue"></div>
+  <div class="container relative z-30 flex flex-col px-5 mx-auto">
     <div data-aos="fade"
         data-aos-duration="800">
       <%= render 'shared/partials/separator',
@@ -129,5 +128,13 @@
           text_color: 'text-primary-900',
           arrow_color: 'text-primary-900' %>
     </div>
+    <div data-aos="fade"
+        data-aos-duration="800">
+      <%= render 'contacts/partials/form',
+          contact: @contact %>
+    </div>
+  </div>
+  <div class="absolute flex justify-center w-full text-sm underline bottom-20 text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800">
+    <%= link_to t_scoped(:legal).capitalize, legal_path  %>
   </div>
 </section>
