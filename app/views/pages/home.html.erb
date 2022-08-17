@@ -128,12 +128,12 @@
           text_color: 'text-primary-900',
           arrow_color: 'text-primary-900' %>
     </div>
+  </div>
     <div data-aos="fade"
         data-aos-duration="800">
       <%= render 'contacts/partials/form',
           contact: @contact %>
     </div>
-  </div>
   <div class="absolute flex justify-center w-full text-sm underline bottom-20 text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800">
     <%= link_to t_scoped(:legal).capitalize, legal_path  %>
   </div>
