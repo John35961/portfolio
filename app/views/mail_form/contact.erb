@@ -1,79 +1,32 @@
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&family=Syne:wght@400;500;600;700;800&display=swap');
-  * {
-    margin: 0;
-    padding: 0;
-  }
-  html {
-    font-family: 'Manrope', sans-serif;
-    color: rgb(30, 41, 59);
-    background-color: rgb(239, 246, 255);
-  }
-  h1, .attribute {
-    font-family: 'Syne', sans-serif;
-  }
-  a:visited {
-    color: rgb(30, 41, 59);
-  }
-  .flex {
-    display: flex;
-  }
-  .flex-col {
-    flex-direction: column;
-  }
-  .p-5 {
-    padding: 1.25rem;
-  }
-  .my-2 {
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-  }
-  .my-3 {
-    margin-top: 0.75rem;
-    margin-bottom: 0.75rem;
-  }
-  .my-5 {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-  }
-  .mx-2 {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-  }
-  .text-center {
-    text-align: center;
-  }
-  .opacity-50 {
-    opacity: 0.5;
-  }
-  .no-underline {
-    text-decoration: none;
-  }
-</style>
-
-<div class="p-5">
-  <div class="my-3 text-center">
-    <h1><%= t_scoped(:title).capitalize %></h1>
-    <small>
-      <%= link_to ENV['APEX'], root_url, class:"opacity-50 no-underline" %>
-    </small>
-  </div>
-  <div class="my-5">
-    <div class="flex flex-col my-2">
-      <small class="opacity-50 attribute"><%= t_scoped(:name).capitalize %></small>
-      <p><%= @resource.name %></p>
+<body style="background-color: rgb(239, 246, 255);">
+  <div style="@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;500;700&family=Syne:wght@400;500;600;700;800&display=swap'); padding: 1.25rem; font-family: 'Manrope', sans-serif; color: rgb(30, 41, 59);">
+    <div style="margin-top: 0.75rem; margin-bottom: 0.75rem; text-align: center;">
+      <h1 style="font-size: 1.5rem; font-family: 'Syne', sans-serif; margin: 0 0;"><%= t_scoped(:title).capitalize %></h1>
+      <small>
+        <%= link_to ENV['APEX'], root_url, style:'opacity: 0.5; text-decoration:none;' %>
+      </small>
     </div>
-    <div class="flex flex-col my-2">
-      <small class="opacity-50 attribute"><%= t_scoped(:email).capitalize %></small>
-      <a href="mailto:<%= @resource.email %>?subject=<%= "#{t_scoped(:greeting, name: @resource.name)}" %>"><%= @resource.email %></a>
+    <div style="margin-top: 1.25rem; margin-bottom: 1.25rem;">
+      <div style="display: flex; flex-direction: column; margin: 1rem 0 1rem 0;">
+        <small style="opacity: 0.5" style="font-family: 'Syne', sans-serif;"><%= t_scoped(:name).capitalize %></small>
+        <p style="margin: 0 0;"><%= @resource.name %></p>
+      </div>
+      <div style="display: flex; flex-direction: column; margin: 1rem 0 1rem 0;">
+        <small style="opacity: 0.5" style="font-family: 'Syne', sans-serif;"><%= t_scoped(:email).capitalize %></small>
+        <a href="mailto:<%= @resource.email %>?subject=<%= "#{t_scoped(:greeting, name: @resource.name)}" %>"><%= @resource.email %></a>
+      </div>
+      <div style="display: flex; flex-direction: column; margin: 1rem 0 1rem 0;">
+        <small style="opacity: 0.5" style="font-family: 'Syne', sans-serif;"><%= t_scoped(:message).capitalize %></small>
+        <p style="margin: 0 0;"><%= @resource.message %></p>
+      </div>
     </div>
-    <div class="flex flex-col my-2">
-      <small class="opacity-50 attribute"><%= t_scoped(:message).capitalize %></small>
-      <p><%= @resource.message %></p>
+    <div style="margin-top: 0.75rem; margin-bottom: 0.75rem; text-align: center; opacity: 0.5">
+      <small style="margin-left: 0.5rem; margin-right: 0.5rem;">
+        <%= link_to t_scoped(:admin).capitalize, dashboard_url, style:'text-decoration:none' %> &#8594;
+      </small>
+      <small style="margin-left: 0.5rem; margin-right: 0.5rem;">
+        <%= link_to t_scoped(:analytics).capitalize, active_analytics_url, style:'text-decoration:none' %> &#8594;
+      </small>
     </div>
   </div>
-  <div class="my-3 text-center opacity-50">
-    <small class="mx-2"><%= link_to t_scoped(:admin).capitalize, dashboard_url, class:"no-underline" %>&#8594;</small>
-    <small class="mx-2"><%= link_to t_scoped(:analytics).capitalize, active_analytics_url, class:"no-underline" %>&#8594;</small>
-  </div>
-</div>
+</body>
