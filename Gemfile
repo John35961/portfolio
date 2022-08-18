@@ -69,6 +69,8 @@ gem "kaminari"
 
 gem "mail_form"
 
+gem 'premailer-rails'
+
 gem "browser"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
