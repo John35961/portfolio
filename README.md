@@ -10,6 +10,8 @@ This project started as I was looking for a way to showcase my creative and tech
 
 * [TailwindCSS](https://tailwindcss.com/) for styling
 
+* [StimulusJS](https://stimulus.hotwired.dev/) for front-end JS interactions
+
 * [PostgreSQL](https://www.postgresql.org/) for database operations
 
 * [Cloudinary](https://cloudinary.com/) for images hosting
