@@ -1,22 +1,41 @@
 <%= simple_form_for contact do |f| %>
   <div class="flex flex-col my-3">
-    <%= f.label :name %>
-    <%= f.text_field :name, required: true, placeholder: t_scoped(:name_placeholder), class:'rounded border-light-blue focus:border-primary-400 focus:ring-0 placeholder:text-primary-300' %>
+    <%= f.label :name,
+                class: "#{conditional_form_classes_for(mode: mode, type: 'label')}" %>
+    <%= f.text_field :name,
+                     required: true,
+                     placeholder: t_scoped(:name_placeholder),
+                     class:"rounded focus:ring-0 #{conditional_form_classes_for(mode: mode, type: 'input')}" %>
   </div>
   <div class="flex flex-col my-3">
-    <%= f.label :email %>
-    <%= f.text_field :email, required: true, placeholder: t_scoped(:email_placeholder), class:'rounded border-light-blue focus:border-primary-400 focus:ring-0 placeholder:text-primary-300' %>
+    <%= f.label :email,
+                class: "#{conditional_form_classes_for(mode: mode, type: 'label')}" %>
+    <%= f.text_field :email,
+                     required: true,
+                     placeholder: t_scoped(:email_placeholder),
+                     class:"rounded focus:ring-0 #{conditional_form_classes_for(mode: mode, type: 'input')}" %>
   </div>
   <div class="flex flex-col my-3">
-    <%= f.label :message %>
-    <%= f.text_area :message, rows: 4, cols: 40, required: true, placeholder: t_scoped(:message_placeholders, name: ABOUT['first_name'].capitalize).sample, class:'rounded border-light-blue focus:border-primary-400 focus:ring-0 placeholder:text-primary-300' %>
+    <%= f.label :message,
+                class: "#{conditional_form_classes_for(mode: mode, type: 'label')}" %>
+    <%= f.text_area :message,
+                    rows: 4,
+                    cols: 40,
+                    required: true,
+                    placeholder: t_scoped(:message_placeholders,
+                    name: ABOUT['first_name'].capitalize).sample,
+                    class:"rounded focus:ring-0 #{conditional_form_classes_for(mode: mode, type: 'input')}" %>
   </div>
   <div class= "hidden">
     <%= f.label :nickname %>
-    <%= f.text_field :nickname, hint: t_scoped(:hint) %>
+    <%= f.text_field :nickname,
+                     hint: t_scoped(:hint) %>
   </div>
-  <div class="flex justify-center">
-    <%= f.submit t_scoped(:send).capitalize, class:'relative hover:cursor-pointer my-3 font-body rounded-lg p-3 bg-primary-800 text-light-blue w-full xl:w-1/2' %>
+  <div class="flex justify-center text-xl">
+    <%= f.submit t_scoped(:send).capitalize,
+        class:"relative hover:cursor-pointer font-body rounded-lg p-3 w-full xl:w-1/2 #{conditional_form_classes_for(mode: mode, type: 'button')}" %>
   </div>
-  <small class="flex justify-center my-2 opacity-50"><%= t_scoped(:notice).capitalize %></small>
+  <small class="flex justify-center opacity-50 <%= conditional_form_classes_for(mode: mode, type: 'notice') %>">
+    <%= t_scoped(:notice).capitalize %>
+  </small>
 <% end %>
