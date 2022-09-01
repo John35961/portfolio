@@ -52,7 +52,7 @@ fr:
       home:
         mobile_subline: "Salut ! Je suis dev fullstack Ruby on Rails, et aussi..."
         mobile_description: "Touche-à-tout passionné par le graphisme, le code et l'image"
-        desktop_subline: "Fullstack Ruby on Rails (mais pas que)"
+        desktop_subline: "fullstack Ruby on Rails (mais pas que)"
         desktop_description: "Touche-à-tout passionné par le graphisme, le code, les interfaces et l'image, je me suis tourné programmation web en suivant Le Wagon début 2022. Ce site rassemble divers projets dont je suis fier."
         see_all: "voir tout"
         skills: "outils"
