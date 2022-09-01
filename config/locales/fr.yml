@@ -50,10 +50,10 @@ fr:
       contact:
         meta_title: "contact"
       home:
-        mobile_subline: "Je suis développeur web fullstack freelance"
-        mobile_description: "Construisons ensemble votre nouveau projet web"
-        desktop_subline: "développeur web fullstack freelance"
-        desktop_description: "Touche-à-tout passionné par le graphisme, le code, les interfaces et l'image, j'ai à cœur d'apporter toutes mes compétences dans les projets auxquels je participe. Travaillons ensemble sur votre prochaine idée !"
+        mobile_subline: "Salut ! Je suis dev fullstack Ruby on Rails, et aussi..."
+        mobile_description: "Touche-à-tout passionné par le graphisme, le code et l'image"
+        desktop_subline: "Fullstack Ruby on Rails (mais pas que)"
+        desktop_description: "Touche-à-tout passionné par le graphisme, le code, les interfaces et l'image, je me suis tourné programmation web en suivant Le Wagon début 2022. Ce site rassemble divers projets dont je suis fier."
         see_all: "voir tout"
         skills: "outils"
         contact: "contact"
