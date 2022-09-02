@@ -19,7 +19,7 @@ fr:
     contacts:
       partials:
         form:
-          send: "envoyer !"
+          send: "envoyer"
           name_placeholder: "Noël Flantier"
           email_placeholder: "noel.flantier@gmail.com"
           message_placeholders:
