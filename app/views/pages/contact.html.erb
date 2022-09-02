@@ -9,13 +9,13 @@
       <span class="text-xl font-black font-heading text-primary-900">
         <%= ABOUT['full_name'].titleize %>
       </span>
-      <p class="my-3 text-primary-400"><%= t_scoped(:long_description) %></p>
+      <p class="my-3 text-primary-400"><%= t('views.pages.home.long_description') %></p>
       <div class="hidden my-2 lg:block">
         <%= render 'shared/partials/minisocials',
             mode: 'light' %>
       </div>
       <div class="text-xs underline opacity-50 text-primary-700 underline-offset-4 decoration-dotted decoration-primary-700">
-        <%= link_to t_scoped(:legal).capitalize, legal_path  %>
+        <%= link_to t('views.pages.home.legal').capitalize, legal_path  %>
       </div>
     </div>
     <div data-aos="fade" data-aos-delay="400" data-aos-duration="800" class="mb-6 lg:mb-0 flex flex-col lg:w-[40%] bg-light-blue rounded-lg p-5">
