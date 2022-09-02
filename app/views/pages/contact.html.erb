@@ -6,7 +6,7 @@
      class="flex flex-col items-center lg:h-[90vh] justify-center">
   <div class="container flex flex-col-reverse justify-around px-5 py-12 mx-auto lg:pb-24 lg:flex-row">
     <div data-aos="fade" data-aos-delay="300" data-aos-duration="800" class="mt-6 lg:mt-0 flex flex-col w-[90%] lg:w-[40%] text-center lg:text-left self-center">
-      <span class="text-xl font-black font-heading text-primary-900">
+      <span class="text-xl font-black font-heading text-primary-800">
         <%= ABOUT['full_name'].titleize %>
       </span>
       <p class="my-3 text-primary-400"><%= t('views.pages.home.long_description') %></p>
@@ -18,10 +18,13 @@
         <%= link_to t('views.pages.home.legal').capitalize, legal_path  %>
       </div>
     </div>
-    <div data-aos="fade" data-aos-delay="400" data-aos-duration="800" class="mb-6 lg:mb-0 flex flex-col lg:w-[40%] bg-light-blue rounded-lg p-5">
-      <%= render 'contacts/partials/form',
-          contact: @contact,
-          mode: 'light' %>
+    <div data-aos="fade" data-aos-delay="400" data-aos-duration="800" class="mb-6 lg:mb-0 flex flex-col lg:w-[40%]">
+      <h1 class="mb-6 text-2xl font-black text-center font-heading text-primary-800"><%= t_scoped(:catch_phrase) %></h1>
+      <div class="p-5 rounded-lg bg-light-blue">
+        <%= render 'contacts/partials/form',
+            contact: @contact,
+            mode: 'light' %>
+      </div>
     </div>
   </div>
 </div>

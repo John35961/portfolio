@@ -49,6 +49,7 @@ fr:
       contact:
         meta_title: "contact"
         meta_description: "On discute ? Vous pouvez m'envoyer un mail sur contact@jeanguillet.com, je réponds normalement en quelques heures !"
+        catch_phrase: "on discute ?"
       home:
         mobile_subline: "Salut ! Je suis dev fullstack Ruby on Rails, et aussi..."
         mobile_description: "Touche-à-tout passionné par le graphisme, le code et l'image"
