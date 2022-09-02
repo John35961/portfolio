@@ -27,7 +27,6 @@ fr:
             - "Hello %{name} ! Dispo pour discuter un de ces 4 ?"
             - "Salut %{name} ! J'ai un projet à te proposer..."
           hint: "ne pas remplir !"
-          notice: "les champs marqués d'une * sont obligatoires"
     devise:
       registrations:
         new:
