@@ -55,6 +55,7 @@ fr:
         mobile_description: "Touche-à-tout passionné par le graphisme, le code et l'image"
         desktop_subline: "fullstack Ruby on Rails (mais pas que)"
         desktop_description: "Touche-à-tout passionné par le graphisme, le code, les interfaces et l'image, je me suis tourné programmation web en suivant Le Wagon début 2022. Ce site rassemble divers projets dont je suis fier."
+        long_description: "Issu d'une formation commerciale, j'ai toujours été passionné par l'art et la technique sous toutes leurs formes. Graphisme, vidéo, photo, motion-design, code, communication : ce site (codé en Rails, merci Le Wagon) met en lumière mes principaux projets persos de ces dernières années. Enjoy ;)"
         see_all: "voir tout"
         skills: "outils"
         contact: "contact"
