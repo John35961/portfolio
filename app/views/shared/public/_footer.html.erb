@@ -10,7 +10,7 @@
             <% unless social['svg-icon'].present? %>
               <%= fa_icon social['fa-icon'], class:"text-light-blue" %>
             <% else %>
-              <%= image_tag social['svg-icon']['light'], class:"relative top-[6px] w-[20px]" %>
+              <%= image_tag social['svg-icon'][mode], class:"relative top-[6px] w-[20px]" %>
             <% end %>
           </p>
         <% end %>
