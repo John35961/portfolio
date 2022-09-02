@@ -11,7 +11,7 @@ linkedin:
 malt:
   name: Malt
   svg-icon:
-    light: 'icons/malt-light-blue.svg'
-    dark: 'icons/malt-primary.svg'
+    dark: 'icons/malt-light-blue.svg'
+    light: 'icons/malt-primary.svg'
   url: https://www.malt.fr/profile/jeanguillet
   target: _blank
