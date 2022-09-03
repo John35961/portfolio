@@ -134,7 +134,9 @@
     </div>
   </div>
   <div class="container flex flex-col-reverse justify-around px-5 pb-12 mx-auto lg:pb-32 lg:flex-row">
-    <div data-aos="fade" data-aos-delay="300" data-aos-duration="800" class="mt-6 lg:mt-0 flex flex-col w-[90%] lg:w-[40%] text-center lg:text-left self-center">
+    <div data-aos="fade" data-aos-delay="400"
+         data-aos-duration="800"
+         class="mt-6 lg:mt-0 flex flex-col w-[90%] lg:w-[40%] text-center lg:text-left self-center">
       <span class="text-xl font-black font-heading text-light-blue">
         <%= ABOUT['full_name'].titleize %>
       </span>
@@ -147,7 +149,10 @@
         <%= link_to t_scoped(:legal).capitalize, legal_path %>
       </div>
     </div>
-    <div data-aos="fade" data-aos-delay="400" data-aos-duration="800" class="mb-6 lg:mb-0 flex flex-col lg:w-[40%]">
+    <div data-aos="fade"
+         data-aos-delay="600"
+         data-aos-duration="800"
+         class="mb-6 lg:mb-0 flex flex-col lg:w-[40%]">
       <%= render 'contacts/partials/form',
           contact: @contact,
           mode: 'dark' %>
