@@ -1,0 +1,11 @@
+<% projects.each_with_index do |project, idx| %>
+  <%= link_to project_path(project) do %>
+    <div data-aos="fade"
+         data-aos-duration="800"
+         data-aos-delay=<%= (idx + 1) * 50 %>>
+      <%= render 'shared/partials/card',
+          project: project,
+          idx: idx %>
+    </div>
+  <% end %>
+<% end %>
