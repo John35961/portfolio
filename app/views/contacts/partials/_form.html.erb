@@ -36,4 +36,7 @@
         class:"relative hover:cursor-pointer font-body rounded-lg p-3" %>
     <p class="transition-transform group-hover:translate-x-3">&#8594;</p>
   </div>
+  <div class="flex justify-center my-3">
+    <small class="w-3/4 text-center <%=conditional_form_classes_for(mode: mode, type: 'notice')%>"><%= t_scoped(:data_collection_consent_notice) %></small>
+  </div>
 <% end %>
