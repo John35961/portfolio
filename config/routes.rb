@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/contact', to: 'pages#contact'
   get '/legal', to: 'pages#legal'
   get '/dashboard', to: 'admin#dashboard'
+  get '/sitemap.xml', to: redirect("https://#{ENV['S3_BUCKET_NAME']}.s3.#{ENV['S3_REGION']}.amazonaws.com/sitemap.xml")
 
   authenticate :admin do
     mount ActiveAnalytics::Engine, at: 'analytics'
