@@ -24,6 +24,8 @@ This project started as I was looking for a way to showcase my creative and tech
 
 * [Cloudflare](https://www.cloudflare.com) for DNS config and SSL certificate
 
+* [AWS S3](https://aws.amazon.com/s3) to host sitemap.xml
+
 ## Run locally
 
 1. Clone the repo: `git clone git@github.com:John35961/portfolio.git`
