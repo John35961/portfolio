@@ -8,9 +8,13 @@
             <p class="hidden text-sm lg:block stext-light-blue"><%= social['name'] %></p>
             <p class="block text-2xl opacity-75 lg:hidden">
               <% unless social['svg-icon'].present? %>
-                <%= fa_icon social['fa-icon'], class:"text-light-blue" %>
+                <%= fa_icon social['fa-icon'],
+                    class:"text-light-blue",
+                    alt: "#{social['name']} icon" %>
               <% else %>
-                <%= image_tag social['svg-icon'][mode], class:"relative top-[6px] w-[20px]" %>
+                <%= image_tag social['svg-icon'][mode],
+                    class:"relative top-[6px] w-[20px]",
+                    alt: "#{social['name']} icon" %>
               <% end %>
             </p>
           <% end %>
