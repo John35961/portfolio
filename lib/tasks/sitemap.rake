@@ -1,4 +1,4 @@
-require 'Time'
+require 'time'
 
 desc 'This task generates an updated sitemap every monday'
 
