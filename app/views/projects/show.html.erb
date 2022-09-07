@@ -71,7 +71,8 @@
                     <%= cl_image_tag image.key,
                         secure: true,
                         draggable: false,
-                        class:"shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all" %>
+                        class: "shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all",
+                        alt: "#{@project.name} - image #{idx + 1}" %>
                   <% end %>
                 </div>
               </div>
