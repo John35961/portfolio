@@ -69,7 +69,7 @@ gem "kaminari"
 
 gem "mail_form"
 
-gem 'premailer-rails'
+gem "premailer-rails"
 
 gem "browser"
 
