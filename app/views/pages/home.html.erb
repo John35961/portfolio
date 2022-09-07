@@ -9,13 +9,15 @@
     <section data-parallax-target="hero"
              oncontextmenu="return false;">
       <%= image_tag 'home/profile.png',
-          draggable: false %>
+          draggable: false,
+          alt: 'Profile image' %>
     </section>
   </div>
   <% unless browser.firefox? %>
     <%= image_tag 'home/profile_shape.png',
         draggable: false,
-        class:'hidden md:block fixed -z-10 animate-subtle opacity-75' %>
+        class: 'hidden md:block fixed -z-10 animate-subtle opacity-75',
+        alt: 'Background decorative profile shape' %>
   <% end %>
   <div data-controller="parallax"
        data-parallax-amplitude-value="-75"

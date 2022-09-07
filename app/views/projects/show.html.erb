@@ -15,7 +15,9 @@
               <%= link_to @project.project_url, target:"_blank" do %>
                 <div class="flex items-center">
                   <h1><%= @project.name %></h1>
-                  <%= image_tag 'icons/link-solid.svg', class:'ml-3 h-[15px] lg:h-[20px]' %>
+                  <%= image_tag 'icons/link-solid.svg',
+                      class: 'ml-3 h-[15px] lg:h-[20px]',
+                      alt: 'Link icon' %>
                 </div>
               <% end %>
             <% else %>
@@ -71,7 +73,8 @@
                     <%= cl_image_tag image.key,
                         secure: true,
                         draggable: false,
-                        class:"shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all" %>
+                        class: "shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all",
+                        alt: "#{@project.name} - image #{idx + 1}" %>
                   <% end %>
                 </div>
               </div>
