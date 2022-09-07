@@ -15,7 +15,9 @@
               <%= link_to @project.project_url, target:"_blank" do %>
                 <div class="flex items-center">
                   <h1><%= @project.name %></h1>
-                  <%= image_tag 'icons/link-solid.svg', class:'ml-3 h-[15px] lg:h-[20px]' %>
+                  <%= image_tag 'icons/link-solid.svg',
+                      class: 'ml-3 h-[15px] lg:h-[20px]',
+                      alt: 'Link icon' %>
                 </div>
               <% end %>
             <% else %>
