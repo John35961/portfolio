@@ -8,13 +8,13 @@
        class="justify-center hidden w-[35%] p-5 md:flex">
     <section data-parallax-target="hero"
              oncontextmenu="return false;">
-      <%= image_tag 'home/profile.png',
+      <%= image_tag 'home/profile.webp',
           draggable: false,
           alt: 'Profile image' %>
     </section>
   </div>
   <% unless browser.firefox? %>
-    <%= image_tag 'home/profile_shape.png',
+    <%= image_tag 'home/profile_shape.webp',
         draggable: false,
         class: 'hidden md:block fixed -z-10 animate-subtle opacity-75',
         alt: 'Background decorative profile shape' %>
