@@ -4,12 +4,18 @@
 <section data-aos="fade"
          data-aos-duration="800"
          class="container flex flex-col p-5 mx-auto lg:mb-14">
-  <h1 class="text-3xl font-bold font-heading text-primary-800"><%= t_scoped(:title).capitalize %></h1>
+  <h1 class="text-3xl font-bold font-heading text-primary-800">
+    <%= t_scoped(:title).capitalize %>
+  </h1>
   <ul class="my-5">
     <li class="mb-3">
       <div class="flex flex-col">
-        <span class="text-primary-800"><%= ABOUT['full_name'].titleize %></span>
-        <span class="text-sm font-bold text-primary-400 font-heading"><%= t_scoped(:publication_director).capitalize %></span>
+        <span class="text-primary-800">
+          <%= ABOUT['full_name'].titleize %>
+        </span>
+        <span class="text-sm font-bold text-primary-400 font-heading">
+          <%= t_scoped(:publication_director).capitalize %>
+        </span>
       </div>
     </li>
     <li class="my-3">
@@ -17,76 +23,124 @@
         <span class="underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800">
           <%= link_to ABOUT['email'], "mailto:#{ABOUT['email']}" %>
         </span>
-        <span class="text-sm font-bold text-primary-400 font-heading"><%= t_scoped(:email).capitalize %></span>
+        <span class="text-sm font-bold text-primary-400 font-heading">
+          <%= t_scoped(:email).capitalize %>
+        </span>
       </div>
     </li>
     <li class="my-3">
       <div class="flex flex-col">
-        <span class="text-primary-800"><%= ABOUT['phone'] %></span>
-        <span class="text-sm font-bold text-primary-400 font-heading"><%= t_scoped(:phone).capitalize %></span>
+        <span class="text-primary-800">
+          <%= ABOUT['phone'] %>
+        </span>
+        <span class="text-sm font-bold text-primary-400 font-heading">
+          <%= t_scoped(:phone).capitalize %>
+        </span>
       </div>
     </li>
     <li class="my-3">
       <div class="flex flex-col">
-        <span class="text-primary-800"><%= t_scoped(:company_postal_address_html) %></span>
-        <span class="text-sm font-bold text-primary-400 font-heading"><%= t_scoped(:company_location).capitalize %></span>
+        <span class="text-primary-800">
+          <%= t_scoped(:company_postal_address_html) %>
+        </span>
+        <span class="text-sm font-bold text-primary-400 font-heading">
+          <%= t_scoped(:company_location).capitalize %>
+        </span>
       </div>
     </li>
     <li class="my-3">
       <div class="flex flex-col">
-        <span class="text-primary-800"><%= "#{ABOUT['last_name'].upcase} #{ABOUT['first_name'].upcase} - #{t_scoped(:company_type)}" %></span>
-        <span class="text-sm font-bold text-primary-400 font-heading"><%= t_scoped(:company_details).capitalize %></span>
+        <span class="text-primary-800">
+          <%= "#{ABOUT['last_name'].upcase} #{ABOUT['first_name'].upcase} - #{t_scoped(:company_type)}" %>
+        </span>
+        <span class="text-sm font-bold text-primary-400 font-heading">
+          <%= t_scoped(:company_details).capitalize %>
+        </span>
       </div>
     </li>
     <li class="my-3">
       <div class="flex flex-col">
-        <span class="text-primary-800"><%= LEGAL['siren'] %></span>
-        <span class="text-sm font-bold text-primary-400 font-heading"><%= t_scoped(:siren) %></span>
+        <span class="text-primary-800">
+          <%= LEGAL['siren'] %>
+        </span>
+        <span class="text-sm font-bold text-primary-400 font-heading">
+          <%= t_scoped(:siren) %>
+        </span>
       </div>
     </li>
     <li class="my-3">
       <div class="flex flex-col">
-        <span class="text-primary-800"><%= LEGAL['siret'] %></span>
-        <span class="text-sm font-bold text-primary-400 font-heading"><%= t_scoped(:siret) %></span>
+        <span class="text-primary-800">
+          <%= LEGAL['siret'] %>
+        </span>
+        <span class="text-sm font-bold text-primary-400 font-heading">
+          <%= t_scoped(:siret) %>
+        </span>
       </div>
     </li>
     <li class="my-3">
       <div class="flex flex-col">
-        <span class="text-primary-800"><%= LEGAL['vat_intracom'] %></span>
-        <span class="text-sm font-bold text-primary-400 font-heading"><%= t_scoped(:vat_intracom) %></span>
+        <span class="text-primary-800">
+          <%= LEGAL['vat_intracom'] %>
+        </span>
+        <span class="text-sm font-bold text-primary-400 font-heading">
+          <%= t_scoped(:vat_intracom) %>
+        </span>
       </div>
     </li>
     <li class="my-3">
       <div class="flex flex-col">
         <span class="underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800">
-          <%= link_to LEGAL['hosting_service']['name'].capitalize, LEGAL['hosting_service']['website'], target:'_blank'  %>
+          <%= link_to LEGAL['hosting_service']['name'].capitalize,
+                LEGAL['hosting_service']['website'],
+                target: '_blank'  %>
         </span>
-        <span><%= t_scoped(:hosting_service_postal_address_html) %></span>
-        <span class="text-sm font-bold text-primary-400 font-heading"><%= t_scoped(:hosting_service).capitalize %></span>
+        <span>
+          <%= t_scoped(:hosting_service_postal_address_html) %>
+        </span>
+        <span class="text-sm font-bold text-primary-400 font-heading">
+          <%= t_scoped(:hosting_service).capitalize %>
+        </span>
       </div>
     </li>
     <li class="my-3">
       <div class="flex flex-col">
-        <span class="text-primary-800"><%= t_scoped(:use_conditions_html) %></span>
-        <span class="text-sm font-bold text-primary-400 font-heading"><%= t_scoped(:use_conditions).capitalize %></span>
+        <span class="text-primary-800">
+          <%= t_scoped(:use_conditions_html) %>
+        </span>
+        <span class="text-sm font-bold text-primary-400 font-heading">
+          <%= t_scoped(:use_conditions).capitalize %>
+        </span>
       </div>
     </li>
     <li class="my-3">
       <div class="flex flex-col">
-        <span class="text-primary-800"><%= t_scoped(:responsability_limitation_html) %></span>
-        <span class="text-sm font-bold text-primary-400 font-heading"><%= t_scoped(:responsability_limitation).capitalize %></span>
+        <span class="text-primary-800">
+          <%= t_scoped(:responsability_limitation_html) %>
+        </span>
+        <span class="text-sm font-bold text-primary-400 font-heading">
+          <%= t_scoped(:responsability_limitation).capitalize %>
+        </span>
       </div>
     </li>
     <li class="my-3">
       <div class="flex flex-col">
-        <span class="text-primary-800"><%= t_scoped(:intellectual_property_html) %></span>
-        <span class="text-sm font-bold text-primary-400 font-heading"><%= t_scoped(:intellectual_property).capitalize %></span>
+        <span class="text-primary-800">
+          <%= t_scoped(:intellectual_property_html) %>
+        </span>
+        <span class="text-sm font-bold text-primary-400 font-heading">
+          <%= t_scoped(:intellectual_property).capitalize %>
+        </span>
       </div>
     </li>
     <li class="my-3">
       <div class="flex flex-col">
-        <span class="text-primary-800"><%= t_scoped(:data_collection_policy_html) %></span>
-        <span class="text-sm font-bold text-primary-400 font-heading"><%= t_scoped(:data_collection_policy).capitalize %></span>
+        <span class="text-primary-800">
+          <%= t_scoped(:data_collection_policy_html) %>
+        </span>
+        <span class="text-sm font-bold text-primary-400 font-heading">
+          <%= t_scoped(:data_collection_policy).capitalize %>
+        </span>
       </div>
     </li>
   </ul>

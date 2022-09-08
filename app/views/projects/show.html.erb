@@ -2,6 +2,7 @@
 <% content_for :meta_description, @project.short_description %>
 <% content_for :meta_image, banner_for(@project) %>
 
+<%= render 'admin/partials/edit_bar' if admin_signed_in? %>
 <div data-aos="fade"
      data-aos-duration="800">
   <section class="container flex flex-col lg:flex-row items-center lg:h-[90vh] mx-auto">
@@ -12,12 +13,13 @@
         <div class="lg:flex lg:justify-center">
           <div class="flex justify-center relative lg:-top-12 p-3 lg:text-3xl xl:text-5xl font-black text-center bg-primary-900 rounded-t-[15px] lg:rounded-lg text-light-blue lg:w-fit font-heading">
             <% if @project.project_url %>
-              <%= link_to @project.project_url, target:"_blank" do %>
+              <%= link_to @project.project_url,
+                    target: '_blank' do %>
                 <div class="flex items-center">
                   <h1><%= @project.name %></h1>
                   <%= image_tag 'icons/link-solid.svg',
-                      class: 'ml-3 h-[15px] lg:h-[20px]',
-                      alt: 'Link icon' %>
+                        class: 'ml-3 h-[15px] lg:h-[20px]',
+                        alt: 'Link icon' %>
                 </div>
               <% end %>
             <% else %>
@@ -26,9 +28,9 @@
           </div>
         </div>
         <%= image_tag banner_for(@project),
-            draggable: false,
-            class:"lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10",
-            alt:@project.banner_alt_text %>
+              draggable: false,
+              class: 'lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10',
+              alt: @project.banner_alt_text %>
         <div class="flex justify-between lg:hidden">
           <%= render 'projects/partials/paginator' %>
         </div>
@@ -36,8 +38,8 @@
     </div>
     <div class="flex lg:invisible flex-col-reverse px-5 pt-5 lg:p-5 lg:w-[30vw] mb-5 lg:mb-0">
       <%= render 'projects/partials/details',
-          project: @project,
-          tint:'800' %>
+            project: @project,
+            tint: '800' %>
     </div>
   </section>
   <section class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-primary-900">
@@ -69,12 +71,12 @@
                    data-parallax-amplitude-value=<%= idx.odd? ? '0' : '-10' %>>
                 <div data-parallax-target="hero">
                   <%= link_to cl_image_path(image.key, secure: true),
-                      data: { pswp_width:Project.size(image.url).width, pswp_height:Project.size(image.url).height } do %>
+                        data: { pswp_width: Project.size(image.url).width, pswp_height: Project.size(image.url).height } do %>
                     <%= cl_image_tag image.key,
-                        secure: true,
-                        draggable: false,
-                        class: "shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all",
-                        alt: "#{@project.name} - image #{idx + 1}" %>
+                          secure: true,
+                          draggable: false,
+                          class: 'shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all',
+                          alt: "#{@project.name} - image #{idx + 1}" %>
                   <% end %>
                 </div>
               </div>
@@ -84,8 +86,8 @@
       </div>
       <div class="hidden lg:flex mix-blend-screen fixed xl:-translate-y-1/3 lg:top-[30vh] xl:top-[50vh] right-[4vw] flex-col-reverse lg:flex-col px-5 pt-5 lg:p-5 lg:w-[30vw] mb-5 lg:mb-0">
         <%= render 'projects/partials/details',
-            project: @project,
-            tint:'400' %>
+              project: @project,
+              tint: '400' %>
       </div>
     </div>
   </section>

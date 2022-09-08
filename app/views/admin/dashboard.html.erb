@@ -2,21 +2,36 @@
 
 <section class="container flex flex-col w-full p-5 mx-auto my-5 lg:w-1/2">
   <div class="flex items-center justify-between">
-    <h1 class="my-3 text-3xl font-heading"><%= pluralize_with_number(count: Project.all.size, object:t_scoped(:project)) %></h1>
-    <span class="h-full px-3 py-2 mx-3 text-lg rounded-lg text-green bg-light-green"><%= link_to t_scoped(:new).capitalize, new_project_path %></span>
+    <h1 class="my-3 text-3xl font-heading">
+      <%= pluralize_with_number count: Project.all.size, object:t_scoped(:project) %>
+    </h1>
+    <span class="h-full px-3 py-2 mx-3 text-lg rounded-lg text-green bg-light-green">
+      <%= link_to t_scoped(:new).capitalize,
+           new_project_path %>
+    </span>
   </div>
   <ul>
     <% @projects.each do |project| %>
       <li class="pb-3 mt-3 border-b border-gray/20">
         <div class="flex items-center justify-between">
           <div class="flex flex-col">
-            <%= link_to project.name, project_path(project), target:'_blank', class:'underline underline-offset-1' %>
-            <%= render 'shared/partials/history', project: project %>
+            <%= link_to project.name,
+                  project_path(project),
+                  target: '_blank',
+                  class: 'underline underline-offset-1' %>
+            <%= render 'shared/partials/history',
+                  project: project %>
           </div>
           <div class="flex items-center">
-            <span class="px-3 py-2 mx-2 text-xs rounded-lg text-yellow bg-light-yellow"><%= link_to t_scoped(:edit).capitalize, edit_project_path(project) %></span>
-            <%= button_to project_path(project), method: :delete do %>
-              <span class="inline px-3 py-2 mx-2 text-xs rounded-lg text-red bg-light-red"><%= t_scoped(:delete).capitalize %></span>
+            <span class="px-3 py-2 mx-2 text-xs rounded-lg text-yellow bg-light-yellow">
+              <%= link_to t_scoped(:edit).capitalize,
+                    edit_project_path(project) %>
+            </span>
+            <%= button_to project_path(project),
+                  method: :delete do %>
+              <span class="inline px-3 py-2 mx-2 text-xs rounded-lg text-red bg-light-red">
+                <%= t_scoped(:delete).capitalize %>
+              </span>
             <% end %>
           </div>
         </div>

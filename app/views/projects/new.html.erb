@@ -4,6 +4,9 @@
   <%= link_to dashboard_path do %>
     <span>&#8592; <%= t_scoped(:projects).capitalize %></span>
   <% end %>
-  <h1 class="my-3 text-3xl font-heading"><%= t_scoped(:new_project).capitalize %></h1>
-  <%= render 'projects/partials/form', project: @project %>
+  <h1 class="my-3 text-3xl font-heading">
+    <%= t_scoped(:new_project).capitalize %>
+  </h1>
+  <%= render 'projects/partials/form',
+        project: @project %>
 </div>

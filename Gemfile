@@ -30,55 +30,71 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 gem "redis", "~> 4.0"
 
-# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
-# gem "kredis"
-
-# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
-# gem "bcrypt", "~> 3.1.7"
-
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-# Use Sass to process CSS
-# gem "sassc-rails"
-
+# Use TailwindCSS framework with Rails [https://github.com/rails/tailwindcss-rails]
 gem "tailwindcss-rails"
 
+# Font-Awesome font bundled as an asset for the rails asset pipeline [https://github.com/bokmann/font-awesome-rails]
 gem "font-awesome-rails"
 
+# Slugging and permalink plugins for ActiveRecord, allows to generate human-friendly URLs [https://github.com/norman/friendly_id]
 gem "friendly_id", "~> 5.4.0"
 
+# Flexible authentication solution for Rails with Warden [https://github.com/heartcombo/devise]
 gem "devise"
 
+# Forms made easy for Rails! It's tied to a simple DSL, with no opinion on markup [https://github.com/heartcombo/simple_form]
 gem "simple_form"
 
+# Cloudinary GEM for Ruby on Rails integration [https://github.com/cloudinary/cloudinary_gem]
 gem "cloudinary"
 
+# Measure image size using pure Ruby [https://github.com/toy/image_size]
 gem "image_size", "~> 3.0"
 
+# Wrapper for Net::HTTP [https://github.com/ruby/open-uri]
 gem "open-uri"
 
+# Use lazy lookup with custom i18n scopes [https://github.com/abitdodgy/i18n_lazy_scope]
 gem "i18n_lazy_scope"
 
+# First-party, privacy-focused traffic analytics for Rails [https://github.com/BaseSecrete/active_analytics]
 gem "active_analytics"
 
+# Scope & Engine-based, clean and powerful paginator for Ruby apps [https://github.com/kaminari/kaminari]
 gem "kaminari"
 
+# Send e-mail straight from forms in Rails [https://github.com/heartcombo/mail_form]
 gem "mail_form"
 
+# CSS inliner for email templates [https://github.com/fphilipe/premailer-rails]
 gem "premailer-rails"
 
+# Do some browser detection with Ruby [https://github.com/fnando/browser]
 gem "browser"
 
+# Framework-agnostic XML Sitemap generator with automatic Rails integration [https://github.com/kjvarga/sitemap_generator]
 gem "sitemap_generator"
 
+# Module for the 'fog' gem to support Amazon Web Services [https://github.com/fog/fog]
 gem "fog-aws"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
+
+# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
+# gem "kredis"
+
+# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
+# gem "bcrypt", "~> 3.1.7"
+
+# Use Sass to process CSS
+# gem "sassc-rails"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

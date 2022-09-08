@@ -1,10 +1,10 @@
 <% content_for :meta_title, "#{ABOUT['full_name'].titleize} - #{t_scoped(:meta_title).capitalize}" %>
 
-<section class="container flex flex-col p-5 mx-auto lg:mb-14"
-         data-aos="fade"
-         data-aos-duration="800">
+<section data-aos="fade"
+         data-aos-duration="800"
+         class="container flex flex-col p-5 mx-auto lg:mb-14">
   <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
     <%= render 'shared/partials/index',
-        projects: @projects %>
+          projects: @projects %>
   </div>
 </section>
