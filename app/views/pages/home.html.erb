@@ -9,15 +9,15 @@
     <section data-parallax-target="hero"
              oncontextmenu="return false;">
       <%= image_tag 'home/profile.webp',
-          draggable: false,
-          alt: 'Profile image' %>
+            draggable: false,
+            alt: 'Profile image' %>
     </section>
   </div>
   <% unless browser.firefox? %>
     <%= image_tag 'home/profile_shape.webp',
-        draggable: false,
-        class: 'hidden md:block fixed -z-10 animate-subtle opacity-75',
-        alt: 'Background decorative profile shape' %>
+          draggable: false,
+          class: 'hidden md:block fixed -z-10 animate-subtle opacity-75',
+          alt: 'Background decorative profile shape' %>
   <% end %>
   <div data-controller="parallax"
        data-parallax-amplitude-value="-75"
@@ -46,7 +46,7 @@
              data-aos-delay="300"
              data-aos-duration="800">
           <%= render 'shared/partials/minisocials',
-          mode: 'light' %>
+                mode: 'light' %>
         </div>
       </div>
     </section>
@@ -72,7 +72,7 @@
            data-aos-delay="300"
            data-aos-duration="800">
         <%= render 'shared/partials/minisocials',
-        mode: 'light' %>
+              mode: 'light' %>
       </div>
   </div>
 </section>
@@ -83,13 +83,13 @@
   <div class="container flex flex-col p-5 mx-auto">
     <div class="grid grid-cols-1 gap-5 mt-6 lg:mt-12 lg:grid-cols-2 lg:gap-10">
       <%= render 'shared/partials/index',
-          projects: @projects %>
+            projects: @projects %>
     </div>
     <div class="flex items-center justify-center mb-[3.7rem] h-28 x-auto">
       <%= render 'shared/partials/minibutton',
-          title: t_scoped(:see_all).capitalize,
-          path: projects_path,
-          color: 'text-primary' %>
+            title: t_scoped(:see_all).capitalize,
+            path: projects_path,
+            color: 'text-primary' %>
     </div>
   </div>
 </section>
@@ -99,18 +99,18 @@
   <div data-aos="fade"
       data-aos-duration="800">
     <%= render 'shared/partials/separator',
-        title: t_scoped(:skills),
-        direction: 'left',
-        text_color: 'text-light-blue',
-        arrow_color: 'text-light-blue' %>
+          title: t_scoped(:skills),
+          direction: 'left',
+          text_color: 'text-light-blue',
+          arrow_color: 'text-light-blue' %>
   </div>
     <div data-aos="fade"
          data-aos-duration="800"
          class="grid grid-cols-2 gap-4 md:grid-cols-4 lg:grid-cols-5">
       <% @skills.each_with_index do |skill, idx| %>
         <%= render 'shared/partials/minicard',
-            skill: skill,
-            delay: (idx + 1) * 50 %>
+              skill: skill,
+              delay: (idx + 1) * 50 %>
       <% end %>
     </div>
   </div>
@@ -120,23 +120,26 @@
     <div data-aos="fade"
         data-aos-duration="800">
       <%= render 'shared/partials/separator',
-          title: t_scoped(:contact),
-          direction: 'right',
-          text_color: 'text-light-blue',
-          arrow_color: 'text-light-blue' %>
+            title: t_scoped(:contact),
+            direction: 'right',
+            text_color: 'text-light-blue',
+            arrow_color: 'text-light-blue' %>
     </div>
   </div>
   <div class="container flex flex-col-reverse justify-around px-5 pb-12 mx-auto lg:pb-32 lg:flex-row">
-    <div data-aos="fade" data-aos-delay="400"
+    <div data-aos="fade"
+         data-aos-delay="400"
          data-aos-duration="800"
          class="mt-6 lg:mt-0 flex flex-col w-[90%] lg:w-[40%] text-center lg:text-left self-center">
       <span class="text-xl font-black font-heading text-light-blue">
         <%= ABOUT['full_name'].titleize %>
       </span>
-      <p class="my-3 text-light-blue/50"><%= t_scoped(:long_description) %></p>
+      <p class="my-3 text-light-blue/50">
+        <%= t_scoped(:long_description) %>
+      </p>
       <div class="hidden my-2 lg:block">
         <%= render 'shared/partials/minisocials',
-            mode: 'dark' %>
+              mode: 'dark' %>
       </div>
       <div class="text-xs underline opacity-50 text-light-blue underline-offset-4 decoration-dotted decoration-light-blue">
         <%= link_to t_scoped(:legal).capitalize, legal_path %>
@@ -147,8 +150,8 @@
          data-aos-duration="800"
          class="mb-6 lg:mb-0 flex flex-col lg:w-[40%]">
       <%= render 'contacts/partials/form',
-          contact: @contact,
-          mode: 'dark' %>
+            contact: @contact,
+            mode: 'dark' %>
     </div>
   </div>
 </section>
