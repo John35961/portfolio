@@ -1,28 +1,42 @@
 <% content_for :meta_title, "#{ABOUT['full_name'].titleize} - #{t_scoped(:sign_in).capitalize}" %>
 
 <div class="container flex flex-col w-full p-5 mx-auto my-5 lg:w-1/4">
-  <%= render 'devise/shared/back_to_site', title: t_scoped(:back_to_site) %>
+  <%= render 'devise/shared/back_to_site',
+        title: t_scoped(:back_to_site) %>
   <div class="flex items-center justify-between">
-    <%= image_tag 'apple-touch-icon-76x76.png', class:"mr-2 rounded w-12" %>
-    <h1 class="text-3xl font-bold font-heading text-primary-800"><%= t_scoped(:admin).capitalize %></h1>
+    <%= image_tag 'apple-touch-icon-76x76.png',
+          class: 'mr-2 rounded w-12' %>
+    <h1 class="text-3xl font-bold font-heading text-primary-800">
+      <%= t_scoped(:admin).capitalize %>
+    </h1>
   </div>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="flex flex-col my-3 field">
-      <%= f.label t_scoped(:email), class:"text-primary-800 mr-2" %>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"rounded" %>
+      <%= f.label t_scoped(:email),
+            class: 'text-primary-800 mr-2' %>
+      <%= f.email_field :email,
+            autofocus: true,
+            autocomplete: 'email',
+            class: 'rounded' %>
     </div>
     <div class="flex flex-col my-3 field">
-      <%= f.label t_scoped(:password), class:"text-primary-800 mr-2" %>
-      <%= f.password_field :password, autocomplete: "current-password", class:"rounded" %>
+      <%= f.label t_scoped(:password),
+            class: 'text-primary-800 mr-2' %>
+      <%= f.password_field :password,
+            autocomplete: 'current-password',
+            class: 'rounded' %>
     </div>
     <% if devise_mapping.rememberable? %>
       <div class="flex items-center my-3 field">
-        <%= f.check_box :remember_me, class:"rounded mr-2" %>
-        <%= f.label t_scoped(:remember_me), class:"text-primary" %>
+        <%= f.check_box :remember_me,
+              class: 'rounded mr-2' %>
+        <%= f.label t_scoped(:remember_me),
+              class: 'text-primary' %>
       </div>
     <% end %>
     <div class="flex text-primary-800 group actions">
-      <%= f.submit t_scoped(:sign_in).capitalize, class:"hover:cursor-pointer" %>
+      <%= f.submit t_scoped(:sign_in).capitalize,
+            class: 'hover:cursor-pointer' %>
       <p class="ml-2 transition-transform group-hover:translate-x-3">&#8594;</p>
     </div>
   <% end %>

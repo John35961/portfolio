@@ -55,25 +55,44 @@
   <div class="my-3 text-center">
     <h1><%= t_scoped(:title).capitalize %></h1>
     <small>
-      <%= link_to ENV['APEX'], root_url, class:"opacity-50 no-underline" %>
+      <%= link_to ENV['APEX'], root_url,
+            class: 'opacity-50 no-underline' %>
     </small>
   </div>
   <div class="my-5">
     <div class="flex flex-col my-2">
-      <small class="opacity-50 attribute"><%= t_scoped(:name).capitalize %></small>
+      <small class="opacity-50 attribute">
+        <%= t_scoped(:name).capitalize %>
+      </small>
       <p><%= @resource.name %></p>
     </div>
     <div class="flex flex-col my-2">
-      <small class="opacity-50 attribute"><%= t_scoped(:email).capitalize %></small>
-      <a href="mailto:<%= @resource.email %>?subject=<%= "#{t_scoped(:greeting, name: @resource.name)}" %>"><%= @resource.email %></a>
+      <small class="opacity-50 attribute">
+        <%= t_scoped(:email).capitalize %>
+      </small>
+      <a href="mailto:<%= @resource.email %>?subject=<%= "#{t_scoped(:greeting, name: @resource.name)}" %>">
+        <%= @resource.email %>
+      </a>
     </div>
     <div class="flex flex-col my-2">
-      <small class="opacity-50 attribute"><%= t_scoped(:message).capitalize %></small>
+      <small class="opacity-50 attribute">
+        <%= t_scoped(:message).capitalize %>
+      </small>
       <p><%= @resource.message %></p>
     </div>
   </div>
   <div class="my-3 text-center opacity-50">
-    <small class="mx-2"><%= link_to t_scoped(:admin).capitalize, dashboard_url, class:"no-underline" %>&#8594;</small>
-    <small class="mx-2"><%= link_to t_scoped(:analytics).capitalize, active_analytics_url, class:"no-underline" %>&#8594;</small>
+    <small class="mx-2">
+      <%= link_to t_scoped(:admin).capitalize,
+            dashboard_url,
+            class: 'no-underline' %>
+      &#8594;
+    </small>
+    <small class="mx-2">
+      <%= link_to t_scoped(:analytics).capitalize,
+            active_analytics_url,
+            class: 'no-underline' %>
+      &#8594;
+    </small>
   </div>
 </div>
