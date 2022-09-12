@@ -17,10 +17,9 @@
         <%= render 'shared/partials/minisocials',
               mode: 'light' %>
       </div>
-      <div class="text-xs underline opacity-50 text-primary-700 underline-offset-4 decoration-dotted decoration-primary-700">
-        <%= link_to t('views.pages.home.legal').capitalize,
-              legal_path  %>
-      </div>
+      <%= link_to t('views.pages.home.legal').capitalize,
+            legal_path,
+            class: 'text-sm underline opacity-50 text-primary-700 underline-offset-4 decoration-dotted decoration-primary-700'  %>
     </div>
     <div data-aos="fade"
          data-aos-delay="400"
