@@ -20,9 +20,9 @@
     </li>
     <li class="my-3">
       <div class="flex flex-col">
-        <span class="underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800">
-          <%= link_to ABOUT['email'], "mailto:#{ABOUT['email']}" %>
-        </span>
+        <%= link_to ABOUT['email'],
+              "mailto:#{ABOUT['email']}",
+              class: 'underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800' %>
         <span class="text-sm font-bold text-primary-400 font-heading">
           <%= t_scoped(:email).capitalize %>
         </span>
@@ -90,11 +90,10 @@
     </li>
     <li class="my-3">
       <div class="flex flex-col">
-        <span class="underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800">
-          <%= link_to LEGAL['hosting_service']['name'].capitalize,
-                LEGAL['hosting_service']['website'],
-                target: '_blank'  %>
-        </span>
+        <%= link_to LEGAL['hosting_service']['name'].capitalize,
+              LEGAL['hosting_service']['website'],
+              class: 'underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800',
+              target: '_blank'  %>
         <span>
           <%= t_scoped(:hosting_service_postal_address_html) %>
         </span>
