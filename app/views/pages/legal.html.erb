@@ -109,7 +109,7 @@
           <%= t_scoped(:use_conditions).capitalize %>
         </span>
         <span class="text-primary-800">
-          <%= t_scoped(:use_conditions_html) %>
+          <%= t_scoped(:use_conditions_html, url: ENV['WWW'], name: ABOUT['full_name'].titleize) %>
         </span>
       </div>
     </li>
@@ -119,7 +119,7 @@
           <%= t_scoped(:responsability_limitation).capitalize %>
         </span>
         <span class="text-primary-800">
-          <%= t_scoped(:responsability_limitation_html) %>
+          <%= t_scoped(:responsability_limitation_html, name: ABOUT['full_name'].titleize) %>
         </span>
       </div>
     </li>
@@ -129,7 +129,7 @@
           <%= t_scoped(:intellectual_property).capitalize %>
         </span>
         <span class="text-primary-800">
-          <%= t_scoped(:intellectual_property_html) %>
+          <%= t_scoped(:intellectual_property_html, name: ABOUT['full_name'].titleize) %>
         </span>
       </div>
     </li>
@@ -139,7 +139,7 @@
           <%= t_scoped(:data_collection_policy).capitalize %>
         </span>
         <span class="text-primary-800">
-          <%= t_scoped(:data_collection_policy_html) %>
+          <%= t_scoped(:data_collection_policy_html, name: ABOUT['full_name'].titleize, email: ABOUT['email']) %>
         </span>
       </div>
     </li>

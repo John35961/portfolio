@@ -1,5 +1,5 @@
 <% content_for :meta_title, "#{ABOUT['full_name'].titleize} - #{t_scoped(:meta_title).capitalize}" %>
-<% content_for :meta_description, t_scoped(:meta_description) %>
+<% content_for :meta_description, t_scoped(:meta_description, email: ABOUT['email']) %>
 
 <div data-aos="fade"
      data-aos-duration="800"

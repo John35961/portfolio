@@ -49,7 +49,7 @@ fr:
     pages:
       contact:
         meta_title: "contact"
-        meta_description: "On discute ? Vous pouvez m'envoyer un mail sur contact@jeanguillet.com, je réponds normalement en quelques heures !"
+        meta_description: "On discute ? Vous pouvez m'envoyer un mail sur %{email}, je réponds normalement en quelques heures !"
         catch_phrase: "on discute ?"
       home:
         mobile_subline: "Salut ! Je suis dev fullstack Ruby on Rails, et aussi..."
@@ -85,23 +85,23 @@ fr:
           San Francisco, CA 94105"
         use_conditions: "conditions d'utilisation"
         use_conditions_html:
-          "Le site accessible via l'URL suivante : www.jeanguillet.com est exploité dans le respect de la législation française. L'utilisation de ce site est régie par les présentes conditions d'utilisation. En utilisant le site, vous reconnaissez avoir pris connaissance de, et accepté ces conditions. Celles-ci pourront êtres modifiées à tout moment et sans préavis par Jean Guillet. Jean Guillet ne saurait être tenu pour responsable en aucune manière d’une mauvaise utilisation du service."
+          "Le site accessible via l'URL suivante : %{url} est exploité dans le respect de la législation française. L'utilisation de ce site est régie par les présentes conditions d'utilisation. En utilisant le site, vous reconnaissez avoir pris connaissance de, et accepté ces conditions. Celles-ci pourront êtres modifiées à tout moment et sans préavis par %{name}. %{name} ne saurait être tenu pour responsable en aucune manière d’une mauvaise utilisation du service."
         responsability_limitation: "limitation de responsabilité"
         responsability_limitation_html:
           "Les informations contenues sur ce site sont aussi exactes que possibles, et le site fait l'objet de mises à jour périodiques. Le site peut néanmoins contenir des inexactitudes, omissions ou lacunes. Si l'internaute constate une lacune, erreur ou ce qui peut passer pour un dysfonctionnement, il est prié de le signaler par e-mail en décrivant précisément le problème (page, action déclenchante, terminal et navigateur utilisés). <br />
-          Tout contenu téléchargé se fait aux risques et périls de l'internaute et sous sa seule responsabilité. En conséquence, Jean Guillet ne saurait être tenu responsable d'un quelconque dommage subi par l'ordinateur de l'internaute ou d'une quelconque perte de données consécutives au téléchargement. <br />
-          Les liens hypertextes en direction d'autres ressources présentes sur Internet ne sauraient engager la responsabilité de Jean Guillet."
+          Tout contenu téléchargé se fait aux risques et périls de l'internaute et sous sa seule responsabilité. En conséquence, %{name} ne saurait être tenu responsable d'un quelconque dommage subi par l'ordinateur de l'internaute ou d'une quelconque perte de données consécutives au téléchargement. <br />
+          Les liens hypertextes en direction d'autres ressources présentes sur Internet ne sauraient engager la responsabilité de %{name}."
         data_collection_policy: "politique de collecte des données"
         intellectual_property: "propriété intellectuelle"
         intellectual_property_html:
-          "Tout le contenu du présent site, incluant, de façon non limitative, les graphismes, images, textes, vidéos, animations, sons, logos, gifs et icônes ainsi que leur mise en forme sont la propriété exclusive de Jean Guillet à l'exception des marques, logos ou contenus appartenant à d'autres auteurs. <br />
+          "Tout le contenu du présent site, incluant, de façon non limitative, les graphismes, images, textes, vidéos, animations, sons, logos, gifs et icônes ainsi que leur mise en forme sont la propriété exclusive de %{name} à l'exception des marques, logos ou contenus appartenant à d'autres auteurs. <br />
           Le code source du présent site est accessible à l'addresse suivante : <a href='https://github.com/John35961/portfolio' target='_blank' class='underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800'>John35961/portfolio</a>. <br />
           Il est fait usage des polices de caractères suivantes : <i>Manrope</i> par <a href='https://github.com/sharanda' target='_blank' class='underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800'>Mikhail Sharanda</a>, <i>Syne</i> par <a href='http://bonjourmonde.net/en' target='_blank' class='underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800'>Bonjour Monde, Lucas Decroix et Arman Mohtadji</a>. <br />
           Certaines icônes utilisées sur ce site proviennent de la librairie d'icônes <a href='https://fontawesome.com/' target='_blank' class='underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800'>Font Awesome</a>."
         data_collection_policy_html:
           "Conformément à l’<a href='https://www.legifrance.gouv.fr/loda/article_lc/LEGIARTI000024506226/2011-08-27' target='_blank' class='underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800'>article 32 de la loi n°78-17 du 6 janvier 1978</a>, la récolte des données personnelles sur le formulaire de contact (nom, adresse e-mail), enregistrées dans un fichier informatisé de type e-mail, est nécessairement faite à des fins de prospection commerciale. Les données recueillies ne sauraient être utilisées à d'autres fins sans le consentement de l'internaute. Après leur collecte, les données recueillies ne sont ni traitées, ni transformées, ni stockées dans un quelconque dispositif spécial (tableur, base de données...). <br />
-          La base légale du traitement est le consentement de l'internaute, accordé au moment de la soumission du formulaire. Les données recueillies seront communiquées au seul destinataire suivant : Jean Guillet. Les données sont conservées pendant 30 jours. <br />
-          Vous pouvez accéder aux données vous concernant, les rectifier, demander leur effacement ou exercer votre droit à la limitation du traitement de vos données. Pour exercer ces droits ou pour toute question sur le traitement de vos données dans ce dispositif, vous pouvez écrire à l'adresse suivante : <a class='underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800' href='mailto:contact@jeanguillet.com'>contact@jeanguillet.com</a>. Consultez le site <a href='https://www.cnil.fr', target='_blank' class='underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800'>www.cnil.fr</a> pour plus d’informations sur vos droits."
+          La base légale du traitement est le consentement de l'internaute, accordé au moment de la soumission du formulaire. Les données recueillies seront communiquées au seul destinataire suivant : %{name}. Les données sont conservées pendant 30 jours. <br />
+          Vous pouvez accéder aux données vous concernant, les rectifier, demander leur effacement ou exercer votre droit à la limitation du traitement de vos données. Pour exercer ces droits ou pour toute question sur le traitement de vos données dans ce dispositif, vous pouvez écrire à l'adresse suivante : <a class='underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800' href='mailto:%{email}'>%{email}</a>. Consultez le site <a href='https://www.cnil.fr', target='_blank' class='underline text-primary-800 underline-offset-4 decoration-dotted decoration-primary-800'>www.cnil.fr</a> pour plus d’informations sur vos droits."
     pagination:
       first: "&laquo; premier"
       last: "dernier &raquo;"
