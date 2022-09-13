@@ -52,10 +52,12 @@ fr:
         meta_description: "On discute ? Vous pouvez m'envoyer un mail sur %{email}, je réponds normalement en quelques heures !"
         catch_phrase: "on discute ?"
       home:
+        profile_alt_text: "Image de profil"
+        profile_shape_alt_text: "Image de décoration en fond"
         mobile_subline: "Salut ! Je suis dev fullstack Ruby on Rails, et aussi..."
         mobile_description: "Touche-à-tout passionné par le graphisme, le code et l'image"
         desktop_subline: "fullstack Ruby on Rails (mais pas que)"
-        desktop_description: "Touche-à-tout passionné par le graphisme, le code, les interfaces et l'image, je me suis tourné programmation web en suivant Le Wagon début 2022. Ce site rassemble divers projets dont je suis fier."
+        desktop_description: "Touche-à-tout passionné par le graphisme, le code, les interfaces et l'image, je me suis tourné vers la programmation web en suivant Le Wagon début 2022. Ce site rassemble divers projets dont je suis fier."
         long_description: "Issu d'une formation commerciale, j'ai toujours été passionné par l'art et la technique sous toutes leurs formes. Graphisme, vidéo, photo, motion-design, code, communication : ce site (codé en Rails, merci Le Wagon) met en lumière mes principaux projets persos de ces dernières années. Enjoy ;)"
         see_all: "voir tout"
         skills: "outils"
