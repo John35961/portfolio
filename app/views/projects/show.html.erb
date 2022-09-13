@@ -18,6 +18,8 @@
                 <div class="flex items-center">
                   <h1><%= @project.name %></h1>
                   <%= image_tag 'icons/link-solid.svg',
+                        width: 20,
+                        height: 20,
                         class: 'ml-3 h-[15px] lg:h-[20px]',
                         alt: 'Link icon' %>
                 </div>
@@ -28,6 +30,8 @@
           </div>
         </div>
         <%= image_tag banner_for(@project),
+              width: 1280,
+              height: 720,
               draggable: false,
               class: 'lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10',
               alt: @project.banner_alt_text %>
@@ -73,6 +77,8 @@
                   <%= link_to cl_image_path(image.key, secure: true),
                         data: { pswp_width: Project.size(image.url).width, pswp_height: Project.size(image.url).height } do %>
                     <%= cl_image_tag image.key,
+                          width: 1280,
+                          height: 720,
                           secure: true,
                           draggable: false,
                           class: 'shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all',
