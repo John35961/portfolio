@@ -12,14 +12,14 @@
             width: 200,
             height: 200,
             draggable: false,
-            alt: 'Profile image' %>
+            alt: t_scoped(:profile_alt_text) %>
     </section>
   </div>
   <% unless browser.firefox? %>
     <%= image_tag 'home/profile_shape.webp',
           draggable: false,
           class: 'hidden md:block fixed -z-10 animate-subtle opacity-75',
-          alt: 'Background decorative profile shape' %>
+          alt: t_scoped(:profile_shape_alt_text) %>
   <% end %>
   <div data-controller="parallax"
        data-parallax-amplitude-value="-75"
