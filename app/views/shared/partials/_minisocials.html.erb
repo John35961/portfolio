@@ -5,7 +5,7 @@
         <p class="text-2xl">
           <% unless social['svg-icon'].present? %>
             <%= fa_icon social['fa-icon'],
-                class: "#{conditional_minisocials_classes_for(mode)}",
+                class: conditional_minisocials_classes_for(mode),
                 alt: "#{social['name']} icon" %>
           <% else %>
             <%= image_tag social['svg-icon'][mode],
@@ -20,7 +20,7 @@
     <%= link_to "mailto:#{ABOUT['email']}?subject=#{t_scoped(:subject)}" do %>
       <p class="text-2xl">
         <%= fa_icon 'envelope',
-            class: "#{conditional_minisocials_classes_for(mode)}",
+            class: conditional_minisocials_classes_for(mode),
             alt: "Envelope icon" %>
       </p>
     <% end %>
