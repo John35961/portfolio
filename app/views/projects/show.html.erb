@@ -48,10 +48,10 @@
     </div>
   </section>
   <section data-controller="scroll-to-gallery">
-    <button data-action="click->scroll-to-gallery#scroll"
-            class="fixed justify-center hidden w-full mx-auto text-2xl -rotate-90 lg:flex text-primary-400 bottom-14">
+    <span data-action="click->scroll-to-gallery#scroll"
+            class="fixed justify-center hidden w-full mx-auto text-2xl -rotate-90 cursor-pointer lg:flex text-primary-400 bottom-14">
       &#8592;
-    </button>
+    </span>
     <div data-scroll-to-gallery-target="gallery"
          class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-primary-900">
       <div class="hidden lg:block absolute w-full bg-gradient-to-b from-primary-900 to-transparent h-[150px] rounded-t-[35px] lg:rounded-t-[50px] z-10"></div>
