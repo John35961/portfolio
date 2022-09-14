@@ -36,7 +36,8 @@
               class: 'lg:scale-125 mb-3 relative lg:-top-14 xl:-top-10 m-auto rounded-b-[15px] lg:rounded-[15px] xl:rounded-[35px] lg:w-3/4 -z-10',
               alt: @project.banner_alt_text %>
         <div class="flex justify-between lg:hidden">
-          <%= render 'projects/partials/paginator' %>
+          <%= render 'projects/partials/previous' %>
+          <%= render 'projects/partials/next' %>
         </div>
       </div>
     </div>
@@ -46,58 +47,68 @@
             tint: '800' %>
     </div>
   </section>
-  <section class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-primary-900">
-    <div class="hidden lg:block absolute w-full bg-gradient-to-b from-primary-900 to-transparent h-[150px] rounded-t-[35px] lg:rounded-t-[50px] z-10"></div>
-    <div class="container flex flex-col items-center h-auto min-h-screen mx-auto lg:flex-row">
-      <div class="relative w-screen lg:left-[2vw] lg:w-[65.5%]">
-        <% if @project.youtube_url %>
-          <div data-aos="fade"
-               data-aos-duration="800"
-               class="pt-5 pl-5 pr-5 mt-5 -mb-3 lg:p-5 lg:mb-28">
-            <div class="video-container">
-              <iframe src="<%= @project.youtube_url %>"
-                      title="YouTube video player"
-                      frameborder="0"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
-                      class="relative z-10 rounded-lg"
-                      allowfullscreen>
-              </iframe>
-            </div>
-          </div>
-        <% end %>
-        <div class="grid w-full grid-cols-1 p-5 my-5 gap-7 lg:my-20 lg:grid-cols-2" id="gallery">
-          <% @project.gallery.each_with_index do |image, idx| %>
-            <div oncontextmenu="return false;"
-                 data-aos="fade"
-                 data-aos-duration="800"
-                 data-aos-delay=<%= (idx + 1) * 100%>>
-              <div data-controller="parallax"
-                   data-parallax-amplitude-value=<%= idx.odd? ? '0' : '-10' %>>
-                <div data-parallax-target="hero">
-                  <%= link_to cl_image_path(image.key, secure: true),
-                        data: { pswp_width: Project.size(image.url).width, pswp_height: Project.size(image.url).height } do %>
-                    <%= cl_image_tag image.key,
-                          width: 1280,
-                          height: 720,
-                          secure: true,
-                          draggable: false,
-                          class: 'shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all',
-                          alt: "#{@project.name} - image #{idx + 1}" %>
-                  <% end %>
-                </div>
+  <section data-controller="scroll-to-gallery">
+    <span data-action="click->scroll-to-gallery#scroll"
+            class="fixed justify-center hidden w-full mx-auto text-2xl -rotate-90 cursor-pointer lg:flex text-primary-400 bottom-14">
+      &#8592;
+    </span>
+    <div data-scroll-to-gallery-target="gallery"
+         class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-primary-900">
+      <div class="hidden lg:block absolute w-full bg-gradient-to-b from-primary-900 to-transparent h-[150px] rounded-t-[35px] lg:rounded-t-[50px] z-10"></div>
+      <div class="container flex flex-col items-center h-auto min-h-screen mx-auto lg:flex-row">
+        <div class="relative w-screen lg:left-[2vw] lg:w-[65.5%]">
+          <% if @project.youtube_url %>
+            <div data-aos="fade"
+                data-aos-duration="800"
+                class="pt-5 pl-5 pr-5 -mb-3 mt-14 lg:p-5 lg:mb-28">
+              <div class="video-container">
+                <iframe src="<%= @project.youtube_url %>"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope"
+                        class="relative z-10 rounded-lg"
+                        allowfullscreen>
+                </iframe>
               </div>
             </div>
           <% end %>
+          <div class="grid w-full grid-cols-1 p-5 my-5 gap-7 lg:grid-cols-2 lg:my-36" id="gallery">
+            <% @project.gallery.each_with_index do |image, idx| %>
+              <div oncontextmenu="return false;"
+                  data-aos="fade"
+                  data-aos-duration="800"
+                  data-aos-delay=<%= (idx + 1) * 100%>>
+                <div data-controller="parallax"
+                    data-parallax-amplitude-value=<%= idx.odd? ? '0' : '-10' %>>
+                  <div data-parallax-target="hero">
+                    <%= link_to cl_image_path(image.key, secure: true),
+                          data: { pswp_width: Project.size(image.url).width, pswp_height: Project.size(image.url).height } do %>
+                      <%= cl_image_tag image.key,
+                            width: 1280,
+                            height: 720,
+                            secure: true,
+                            draggable: false,
+                            class: 'shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all',
+                            alt: "#{@project.name} - image #{idx + 1}" %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            <% end %>
+          </div>
         </div>
-      </div>
-      <div class="hidden lg:flex mix-blend-screen fixed xl:-translate-y-1/3 lg:top-[30vh] xl:top-[50vh] right-[4vw] flex-col-reverse lg:flex-col px-5 pt-5 lg:p-5 lg:w-[30vw] mb-5 lg:mb-0">
-        <%= render 'projects/partials/details',
-              project: @project,
-              tint: '400' %>
+        <div class="hidden lg:flex mix-blend-screen fixed xl:-translate-y-1/3 lg:top-[30vh] xl:top-[50vh] right-[4vw] flex-col-reverse lg:flex-col px-5 pt-5 lg:p-5 lg:w-[30vw] mb-5 lg:mb-0">
+          <%= render 'projects/partials/details',
+                project: @project,
+                tint: '400' %>
+        </div>
       </div>
     </div>
   </section>
-  <section class="sticky z-20 justify-between hidden lg:flex bottom-14">
-    <%= render 'projects/partials/paginator' %>
-  </section>
+  <div class="fixed left-0 z-20 hidden lg:block bottom-14">
+    <%= render 'projects/partials/previous' %>
+  </div>
+  <div class="fixed right-0 z-20 hidden lg:block bottom-14">
+    <%= render 'projects/partials/next' %>
+  </div>
 </div>
