@@ -12,7 +12,7 @@ export default class extends Controller {
 
   scroll() {
     const gallery = this.galleryTarget;
-    
+
     const options = {
       duration: 1,
       scrollTo: gallery,
