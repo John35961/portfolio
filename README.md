@@ -1,4 +1,4 @@
-# [Personal portfolio](https://www.jeanguillet.com)
+# [Personal portfolio](https://jeanguillet.com)
 
 ## About
 
@@ -24,7 +24,7 @@ This project started as I was looking for a way to showcase my creative and tech
 
 * [Cloudflare](https://www.cloudflare.com) for DNS config and SSL certificate
 
-* [AWS S3](https://aws.amazon.com/s3) to host sitemap.xml
+* [AWS S3](https://aws.amazon.com/s3) to host `sitemap.xml`
 
 ## Run locally
 
