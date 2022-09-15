@@ -49,8 +49,8 @@
   </section>
   <section data-controller="scroll-to-gallery">
     <span data-action="click->scroll-to-gallery#scroll"
-            class="fixed justify-center hidden w-full mx-auto text-2xl -rotate-90 cursor-pointer lg:flex text-primary-400 bottom-14">
-      &#8592;
+            class="fixed hidden text-2xl cursor-pointer text-primary-400 bottom-14 left-[50%] lg:flex -rotate-90">
+        &#8592;
     </span>
     <div data-scroll-to-gallery-target="gallery"
          class="relative z-10 rounded-t-[35px] lg:rounded-t-[50px] bg-primary-900">
@@ -105,10 +105,10 @@
       </div>
     </div>
   </section>
-  <div class="fixed left-0 z-20 hidden lg:block bottom-14">
+  <span class="fixed left-0 z-20 hidden lg:block bottom-14">
     <%= render 'projects/partials/previous' %>
-  </div>
-  <div class="fixed right-0 z-20 hidden lg:block bottom-14">
+  </span>
+  <span class="fixed right-0 z-20 hidden lg:block bottom-14">
     <%= render 'projects/partials/next' %>
-  </div>
+  </span>
 </div>
