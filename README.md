@@ -1,4 +1,4 @@
-# [Personal portfolio](https://www.jeanguillet.com)
+# [Personal portfolio](https://jeanguillet.com)
 
 ## About
 
