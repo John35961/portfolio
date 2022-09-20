@@ -3,10 +3,12 @@
   <head>
     <%= render 'shared/head_tags' %>
   </head>
-  <body class="flex flex-col min-h-screen">
+  <body data-controller="transition"
+        class="flex flex-col min-h-screen">
     <%= render 'shared/public/border' %>
     <%= render 'shared/public/header' %>
-    <main class="flex-grow">
+    <main data-transition-target="container"
+          class="flex-grow">
       <%= render 'shared/partials/flash' %>
       <%= yield %>
     </main>
