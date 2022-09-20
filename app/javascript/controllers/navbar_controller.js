@@ -9,7 +9,6 @@ export default class extends Controller {
   }
 
   updateNavbar() {
-
     let title = this.titleTarget;
     let items = this.itemTargets;
     let itemIsActive = this.activeValue;
