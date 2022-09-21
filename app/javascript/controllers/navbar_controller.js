@@ -28,7 +28,6 @@ export default class extends Controller {
   };
 
   #activateDarkMode() {
-    console.log(fooValue);
     this.titleTarget.classList.add('text-light-blue');
     this.titleTarget.classList.remove('text-primary-800');
     this.element.classList.add('backdrop-blur-lg', 'bg-primary-900/90');
