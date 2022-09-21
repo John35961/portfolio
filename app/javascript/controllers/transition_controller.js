@@ -6,8 +6,8 @@ export default class extends Controller {
 
   connect() {
     const container = this.containerTarget;
-    const links = Array.prototype.slice.call(document.querySelectorAll('a'));
-    const internalLinks = links.filter(link => link.hostname === window.location.hostname);
+    const internalLinks = Array.prototype.slice.call(document.querySelectorAll('a'))
+      .filter(link => link.hostname === window.location.hostname);
 
     internalLinks.forEach((link) => {
       link.addEventListener('click', (event) => {

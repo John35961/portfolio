@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 import { gsap } from 'gsap'
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin'
 
-// Connects to data-controller="scroll-to-gallery"
+// Connects to data-controller="gallery"
 export default class extends Controller {
   static targets = ["gallery"]
 
@@ -10,12 +10,10 @@ export default class extends Controller {
     gsap.registerPlugin(ScrollToPlugin);
   }
 
-  scroll() {
-    const gallery = this.galleryTarget;
-
+  scrollToTop() {
     const options = {
       duration: 1,
-      scrollTo: gallery,
+      scrollTo: this.galleryTarget,
       ease: 'power2.inOut'
     };
 
