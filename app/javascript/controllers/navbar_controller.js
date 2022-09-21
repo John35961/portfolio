@@ -8,32 +8,47 @@ export default class extends Controller {
     active: Boolean,
   }
 
-  updateNavbar() {
-    let title = this.titleTarget;
-    let items = this.itemTargets;
-    let itemIsActive = this.activeValue;
-    let background = this.element;
+  connect() {
+    const internalLinks = Array.prototype.slice.call(document.querySelectorAll('a'))
+      .filter(link => link.hostname === window.location.hostname);
 
-    if (window.scrollY >= 500) {
-      title.classList.add('text-light-blue')
-      title.classList.remove('text-primary-800')
-      background.classList.add('backdrop-blur-lg', 'bg-primary-900/90')
-      items.forEach((item) => {
-        if (!itemIsActive) {
-          item.classList.add('text-light-blue')
-          item.classList.remove('text-gray', 'text-primary-800')
-        }
+    internalLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        this.#deactivateDarkMode();
       })
-    } else {
-      title.classList.remove('text-light-blue')
-      title.classList.add('text-primary-800')
-      background.classList.remove('backdrop-blur-lg', 'bg-primary-900/90')
-      items.forEach(item => {
-        if (!itemIsActive) {
-          item.classList.remove('text-light-blue')
-          item.classList.add('text-gray', 'text-primary-800')
-        }
-      });
-    }
+    });
   }
+
+  updateNavbar() {
+    if (window.scrollY >= 500) {
+      this.#activateDarkMode();
+    } else {
+      this.#deactivateDarkMode();
+    };
+  };
+
+  #activateDarkMode() {
+    console.log(fooValue);
+    this.titleTarget.classList.add('text-light-blue');
+    this.titleTarget.classList.remove('text-primary-800');
+    this.element.classList.add('backdrop-blur-lg', 'bg-primary-900/90');
+    this.itemTargets.forEach((item) => {
+      if (!this.activeValue) {
+        item.classList.add('text-light-blue')
+        item.classList.remove('text-gray', 'text-primary-800')
+      };
+    });
+  };
+
+  #deactivateDarkMode() {
+    this.titleTarget.classList.remove('text-light-blue');
+    this.titleTarget.classList.add('text-primary-800');
+    this.element.classList.remove('backdrop-blur-lg', 'bg-primary-900/90');
+    this.itemTargets.forEach(item => {
+      if (!this.activeValue) {
+        item.classList.remove('text-light-blue')
+        item.classList.add('text-gray', 'text-primary-800')
+      };
+    });
+  };
 }
