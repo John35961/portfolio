@@ -1,6 +1,6 @@
 import { Controller } from "@hotwired/stimulus"
 
-// Connects to data-controller="navbar"
+// Connects to data-controller="header"
 export default class extends Controller {
   static targets = ["title", "item"]
 
@@ -19,7 +19,7 @@ export default class extends Controller {
     });
   }
 
-  updateNavbar() {
+  toggleDarkMode() {
     if (window.scrollY >= 500) {
       this.#activateDarkMode();
     } else {
