@@ -12,10 +12,10 @@ export default class extends Controller {
     internalLinks.forEach((link) => {
       link.addEventListener('click', (event) => {
         event.preventDefault();
-        container.classList.add('opacity-0', 'transition-opacity', 'duration-300');
+        container.classList.add('opacity-0', 'transition-opacity', 'duration-150');
         setTimeout(() => {
           window.location = link.href;
-        }, 400);
+        }, 200);
       })
     });
 
