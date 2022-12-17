@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
 
-  devise_for :admins, skip: :registrations
+  devise_for :admins
 
   as :admin do
     get '/login', to: 'devise/sessions#new'
