@@ -84,6 +84,9 @@ gem "sitemap_generator"
 # Module for the 'fog' gem to support Amazon Web Services [https://github.com/fog/fog]
 gem "fog-aws"
 
+# New Relic RPM Ruby Agent [https://github.com/newrelic/newrelic-ruby-agent]
+gem "newrelic_rpm"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 

@@ -198,6 +198,7 @@ GEM
       net-protocol
       timeout
     netrc (0.11.0)
+    newrelic_rpm (8.14.0)
     nio4r (2.5.8)
     nokogiri (1.13.6-x86_64-darwin)
       racc (~> 1.4)
@@ -347,6 +348,7 @@ DEPENDENCIES
   jbuilder
   kaminari
   mail_form
+  newrelic_rpm
   open-uri
   pg
   premailer-rails
