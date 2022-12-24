@@ -22,6 +22,8 @@ This project started as I was looking for a way to showcase my creative and tech
 
 * [Heroku](https://www.heroku.com) to host the app
 
+* [New Relic](https://newrelic.com/) to monitor the app
+
 * [Cloudflare](https://www.cloudflare.com) for DNS config and SSL certificate
 
 * [AWS S3](https://aws.amazon.com/s3) to host `sitemap.xml`
