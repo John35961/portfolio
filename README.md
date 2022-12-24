@@ -8,15 +8,13 @@ This project started as I was looking for a way to showcase my creative and tech
 
 * [Ruby 3](https://www.ruby-lang.org/en/) and [Rails 7](https://rubyonrails.org/) for the back-end
 
-* [TailwindCSS](https://tailwindcss.com/) for styling
+* [TailwindCSS](https://tailwindcss.com/) and [StimulusJS](https://stimulus.hotwired.dev/) for front-end
 
-* [StimulusJS](https://stimulus.hotwired.dev/) for front-end JS interactions
-
-* [PostgreSQL](https://www.postgresql.org/) for database operations
+* [PostgreSQL](https://www.postgresql.org/) for the database
 
 * [Cloudinary](https://cloudinary.com/) for images hosting
 
-* [Mailgun](https://www.mailgun.com/) for the contact form
+* [Mailgun](https://www.mailgun.com/) for the mail server
 
 * [Active analytics](https://github.com/BaseSecrete/active_analytics) for cookie-less traffic analytics
 
