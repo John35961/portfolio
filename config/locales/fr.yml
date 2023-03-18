@@ -54,9 +54,9 @@ fr:
       home:
         profile_alt_text: "Image de profil"
         profile_shape_alt_text: "Image de décoration en fond"
-        mobile_subline_html: "Salut ! Je suis dev fullstack Rails chez <a href='https://www.acasi.io/' target='_blank' class='underline underline-offset-4 decoration-dotted'>acasi.io</a>, et aussi..."
+        mobile_subline_html: "Salut ! Je suis dev fullstack Rails chez <a href=%{url} target='_blank' class='underline underline-offset-4 decoration-dotted'>acasi.io</a>, et aussi..."
         mobile_description: "Touche-à-tout passionné par le graphisme, le code et l'image"
-        desktop_subline_html: "développeur fullstack Rails @ <a href='https://www.acasi.io/' target='_blank' class='underline underline-offset-4 decoration-dotted'>acasi.io</a>"
+        desktop_subline_html: "développeur fullstack Rails @ <a href=%{url} target='_blank' class='underline underline-offset-4 decoration-dotted'>acasi.io</a>"
         desktop_description: "Touche-à-tout passionné par le graphisme, le code, les interfaces et l'image, je me suis tourné vers la programmation web en suivant Le Wagon début 2022. Ce site rassemble divers projets dont je suis fier."
         long_description: "Issu d'une formation commerciale, j'ai toujours été passionné par l'art et la technique sous toutes leurs formes. Graphisme, vidéo, photo, motion-design, code, communication : ce site (codé en Rails, merci Le Wagon) met en lumière mes principaux projets persos de ces dernières années. Enjoy ;)"
         see_all: "voir tout"
