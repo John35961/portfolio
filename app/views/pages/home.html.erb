@@ -35,7 +35,7 @@
             <%= ABOUT['full_name'].titleize %>
           </h1>
           <span class="text-sm text-primary-400">
-            <%= t_scoped(:desktop_subline) %>
+            <%= t_scoped(:desktop_subline_html, url: ENV['ACASI_URL']) %>
           </span>
         </div>
         <p data-aos="fade"
@@ -62,13 +62,13 @@
             data-aos-delay="100"
             data-aos-duration="800"
             class="text-sm text-primary-400">
-        <%= t_scoped(:mobile_subline) %>
+        <%= t_scoped(:mobile_subline_html, url: ENV['ACASI_URL']) %>
       </span>
       <h1 data-aos="fade"
           data-aos-delay="200"
           data-aos-duration="800"
           class="my-3 text-2xl font-black font-heading text-primary-900">
-        <%= t_scoped(:mobile_description) %>
+        <%= t_scoped(:mobile_descriptions).sample %>
       </h1>
       <div data-aos="fade"
            data-aos-delay="300"
