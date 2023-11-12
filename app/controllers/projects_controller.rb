@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.all
+    @projects = Project.order('RANDOM()')
   end
 
   def destroy
