@@ -3,7 +3,7 @@
 ARG RUBY_VERSION=3.2.3
 FROM docker.io/library/ruby:$RUBY_VERSION-slim AS base
 
-WORKDIR /app
+WORKDIR /rails
 
 RUN apt-get update -qq && apt-get install --no-install-recommends -y \
   curl \
