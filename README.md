@@ -10,17 +10,11 @@ This project started as I was looking for a way to showcase my creative and tech
 
 * [TailwindCSS](https://tailwindcss.com/) and [StimulusJS](https://stimulus.hotwired.dev/) for front-end
 
-* [PostgreSQL](https://www.postgresql.org/) for the database
-
-* [Cloudinary](https://cloudinary.com/) for images hosting
-
-* [Mailgun](https://www.mailgun.com/) for the mail server
-
 * [Active analytics](https://github.com/BaseSecrete/active_analytics) for cookie-less traffic analytics
 
-* [Heroku](https://www.heroku.com) to host the app
+* [Coolify](https://coolify.io/) running on a [Hetzner](https://www.hetzner.com/) instance to deploy and host the app
 
-* [New Relic](https://newrelic.com/) to monitor the app
+* [Sentry](https://sentry.io/) for app errors management
 
 * [Cloudflare](https://www.cloudflare.com) for DNS config and SSL certificate
 
