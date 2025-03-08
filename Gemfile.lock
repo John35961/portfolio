@@ -308,6 +308,9 @@ GEM
     time (0.2.0)
       date
     timeout (0.3.0)
+    turbo-rails (2.0.12)
+      actionpack (>= 6.0.0)
+      railties (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     unf (0.1.4)
@@ -372,6 +375,7 @@ DEPENDENCIES
   sprockets-rails
   stimulus-rails
   tailwindcss-rails
+  turbo-rails
   tzinfo-data
   web-console
   webdrivers

@@ -10,3 +10,4 @@ pin '@hotwired/stimulus', to: 'https://ga.jspm.io/npm:@hotwired/stimulus@3.0.1/d
 pin 'photoswipe', to: 'https://unpkg.com/photoswipe/dist/photoswipe-lightbox.esm.js'
 pin 'gsap', to: 'https://ga.jspm.io/npm:gsap@3.11.1/index.js'
 pin 'gsap/ScrollToPlugin', to: 'https://ga.jspm.io/npm:gsap@3.11.1/ScrollToPlugin.js'
+pin "@hotwired/turbo-rails", to: "turbo.min.js"
