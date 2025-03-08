@@ -8,12 +8,11 @@ This project started as I was looking for a way to showcase my creative and tech
 
 * [Ruby 3](https://www.ruby-lang.org/en/) and [Rails 7](https://rubyonrails.org/) for the back-end
 
-* [TailwindCSS](https://tailwindcss.com/) and [StimulusJS](https://stimulus.hotwired.dev/) for front-end
+* [TailwindCSS](https://tailwindcss.com/), [Turbo](StimulusJS](https://turbo.hotwired.dev/)) and [StimulusJS](https://stimulus.hotwired.dev/) for front-end
 
 * [Coolify](https://coolify.io/) running on a [Hetzner](https://www.hetzner.com/) instance to deploy and host the app
 
 * [Sentry](https://sentry.io/) and [New Relic](https://newrelic.com/) for app monitoring
-
 
 ## Run locally
 
