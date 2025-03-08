@@ -100,6 +100,7 @@ gem "newrelic_rpm"
 # gem "sassc-rails"
 
 group :production do
+  gem "sentry-ruby"
   gem "sentry-rails"
 end
 

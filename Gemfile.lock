@@ -366,6 +366,7 @@ DEPENDENCIES
   redis (~> 4.0)
   selenium-webdriver
   sentry-rails
+  sentry-ruby
   simple_form
   sitemap_generator
   sprockets-rails
