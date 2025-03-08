@@ -2,6 +2,7 @@
 <html lang=<%= I18n.locale %>>
   <head>
     <%= render 'shared/head_tags' %>
+    <%= Sentry.get_trace_propagation_meta.html_safe %>
   </head>
   <body data-controller="transition"
         class="flex flex-col min-h-screen">
