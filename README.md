@@ -10,15 +10,10 @@ This project started as I was looking for a way to showcase my creative and tech
 
 * [TailwindCSS](https://tailwindcss.com/) and [StimulusJS](https://stimulus.hotwired.dev/) for front-end
 
-* [Active analytics](https://github.com/BaseSecrete/active_analytics) for cookie-less traffic analytics
-
 * [Coolify](https://coolify.io/) running on a [Hetzner](https://www.hetzner.com/) instance to deploy and host the app
 
-* [Sentry](https://sentry.io/) for app errors management
+* [Sentry](https://sentry.io/) and [New Relic](https://newrelic.com/) for app monitoring
 
-* [Cloudflare](https://www.cloudflare.com) for DNS config and SSL certificate
-
-* [AWS S3](https://aws.amazon.com/s3) to host `sitemap.xml`
 
 ## Run locally
 
