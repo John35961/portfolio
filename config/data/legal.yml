@@ -2,5 +2,5 @@ siren: "910268259"
 siret: "91026825900017"
 vat_intracom: "FR67910268259"
 hosting_service:
-  name: "heroku"
-  website: "https://www.heroku.com/"
+  name: "hetzner"
+  website: "https://www.hetzner.com/"

@@ -87,9 +87,8 @@ fr:
         vat_intracom: "TVA intracommunautaire"
         hosting_service: "hébergeur"
         hosting_service_postal_address_html:
-          "415 Mission Street <br />
-          Suite 300 <br />
-          San Francisco, CA 94105"
+          "Industriestr. 25 <br />
+          91710 Gunzenhausen, Allemagne"
         use_conditions: "conditions d'utilisation"
         use_conditions_html:
           "Le site accessible via l'URL suivante : %{url} est exploité dans le respect de la législation française. L'utilisation de ce site est régie par les présentes conditions d'utilisation. En utilisant le site, vous reconnaissez avoir pris connaissance de, et accepté ces conditions. Celles-ci pourront êtres modifiées à tout moment et sans préavis par %{name}. %{name} ne saurait être tenu pour responsable en aucune manière d’une mauvaise utilisation du service."
