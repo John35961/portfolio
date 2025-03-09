@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.order('RANDOM()')
+    @projects = Project.includes(:skills, :banner_attachment, :banner_blob).order('RANDOM()')
   end
 
   def destroy

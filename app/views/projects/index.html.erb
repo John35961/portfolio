@@ -4,7 +4,16 @@
          data-aos-duration="800"
          class="container flex flex-col p-5 mx-auto lg:mb-14">
   <div class="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10">
-    <%= render 'shared/partials/index',
-          projects: @projects %>
+  <% @projects.each_with_index do |project, idx| %>
+    <%= link_to project_path(project) do %>
+      <div data-aos="fade"
+          data-aos-duration="800"
+          data-aos-delay=<%= (idx + 1) * 50 %>>
+        <%= render 'shared/partials/card',
+            project: project,
+            idx: idx %>
+      </div>
+    <% end %>
+  <% end %>
   </div>
 </section>
