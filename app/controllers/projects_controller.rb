@@ -42,7 +42,7 @@ class ProjectsController < ApplicationController
   private
 
   def set_project
-    @project = Project.friendly.find(params[:id])
+    @project = Project.includes(gallery_attachments: :blob).friendly.find(params[:id])
   end
 
   def project_params
