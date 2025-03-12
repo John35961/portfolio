@@ -81,11 +81,12 @@
                 <div data-controller="parallax"
                     data-parallax-amplitude-value=<%= idx.odd? ? '0' : '-10' %>>
                   <div data-parallax-target="hero">
-                    <%= link_to cl_image_path(image.key, secure: true),
-                          data: { pswp_width: Project.size(image.url).width, pswp_height: Project.size(image.url).height } do %>
+                    <%= link_to cl_image_path(image.key, secure: true), data: { controller: 'gallery-image' } do %>
                       <%= cl_image_tag image.key,
-                            width: 1280,
-                            height: 720,
+                            width: 1000,
+                            height: 1000,
+                            fetch_format: :auto,
+                            quality: "auto",
                             secure: true,
                             draggable: false,
                             class: 'shadow-xl rounded-lg lg:opacity-75 lg:hover:opacity-100 lg:hover:scale-105 transition-all',
