@@ -4,7 +4,7 @@ class PagesController < ApplicationController
   before_action :record_page_view
 
   def home
-    @projects = Project.includes(:skills).order('RANDOM()').limit(4)
+    @projects = Project.includes(:skills, :banner_attachment, :banner_blob).order('RANDOM()').limit(4)
     @skills = Skill.order('RANDOM()').limit(15)
   end
 
