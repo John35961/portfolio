@@ -2,7 +2,7 @@
 
 ## About
 
-This project started as I was looking for a way to showcase my creative and tech projects, while still building on the coding skills I had acquired during spring 2022 [Le Wagon](https://github.com/lewagon)'s bootcamp. Instead of going with a CMS or a static site generator, I went with a blank Rails app, and built a simple custom CMS on it, to CRUD objects. I believe this stack gives a lot of flexibility, and is a great way to practice my Rails skills.
+This project started as I was looking for a way to showcase my creative and tech projects, while still building on the coding skills I acquired during spring 2022 [Le Wagon](https://github.com/lewagon)'s bootcamp. Instead of going with a CMS or a static site generator, I went with a blank Rails app, and built a simple custom CMS from it. I believe this stack gives a lot of flexibility, and is a great way to practice my Rails skills.
 
 ## Tools
 
