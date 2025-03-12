@@ -144,7 +144,6 @@ GEM
     i18n (1.10.0)
       concurrent-ruby (~> 1.0)
     i18n_lazy_scope (1.0.0)
-    image_size (3.0.2)
     importmap-rails (1.1.2)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
@@ -354,7 +353,6 @@ DEPENDENCIES
   font-awesome-rails
   friendly_id (~> 5.4.0)
   i18n_lazy_scope
-  image_size (~> 3.0)
   importmap-rails
   jbuilder
   kaminari

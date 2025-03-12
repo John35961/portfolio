@@ -25,10 +25,6 @@ class Project < ApplicationRecord
     Project.where('projects.id > ?', record.id).order('created_at ASC').first || Project.first
   end
 
-  def self.size(url)
-    URI.parse(url).open('rb') { |image| ImageSize.new(image) }
-  end
-
   private
 
   def nil_if_blank

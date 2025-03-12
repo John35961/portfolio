@@ -55,7 +55,6 @@ gem "simple_form"
 gem "cloudinary"
 
 # Measure image size using pure Ruby [https://github.com/toy/image_size]
-gem "image_size", "~> 3.0"
 
 # Wrapper for Net::HTTP [https://github.com/ruby/open-uri]
 gem "open-uri"
