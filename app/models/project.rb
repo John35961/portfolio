@@ -1,4 +1,3 @@
-require 'image_size'
 require 'open-uri'
 
 class Project < ApplicationRecord
