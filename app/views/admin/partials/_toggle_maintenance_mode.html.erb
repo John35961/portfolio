@@ -1,0 +1,16 @@
+<%= simple_form_for(Setting.instance,
+                    url: toggle_maintenance_mode_path,
+                    method: :patch,
+                    remote: true,
+                    data: {controller: 'toggle-maintenance-mode'}) do |form| %>
+  <%= form.input :maintenance_mode,
+                 as: :boolean,
+                 label: 'Maintenance',
+                 input_html: {
+                  class: 'rounded mr-2',
+                  data: {
+                    'toggle-maintenance-mode-target': 'checkbox',
+                    action: 'toggle-maintenance-mode#onSubmit'
+                    }
+                 } %>
+<% end %>
