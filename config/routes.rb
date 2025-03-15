@@ -20,4 +20,7 @@ Rails.application.routes.draw do
   resources :projects
 
   resources :contacts, only: %i[new create]
+
+  get '/maintenance', to: 'maintenance#show'
+  patch :toggle_maintenance_mode, to: 'maintenance#toggle_maintenance_mode'
 end
