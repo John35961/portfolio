@@ -86,9 +86,6 @@ gem "fog-aws"
 # New Relic RPM Ruby Agent [https://github.com/newrelic/newrelic-ruby-agent]
 gem "newrelic_rpm"
 
-# Mailgun service integration [https://github.com/mailgun/mailgun-ruby]
-gem 'mailgun-ruby', require: 'mailgun-ruby'
-
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
