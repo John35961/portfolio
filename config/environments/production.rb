@@ -95,7 +95,7 @@ Rails.application.configure do
 
   config.action_mailer.smtp_settings = {
     address:              ENV['MG_ADDRESS'],
-    port:                 587,
+    port:                 ENV['MG_PORT'],
     domain:               ENV['MG_DOMAIN'],
     user_name:            ENV['MG_USER_NAME'],
     password:             ENV['MG_SMTP_PASSWORD'],

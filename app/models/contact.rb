@@ -7,7 +7,7 @@ class Contact < MailForm::Base
   def headers
     {
       subject: "#{I18n.t('models.contact.subject').capitalize} #{name}",
-      to: ABOUT['email'],
+      to: [ABOUT['email'], ENV['FALLBACK_EMAIL']],
       from: ENV['MG_USER_NAME'],
       reply_to: email
     }
