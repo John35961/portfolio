@@ -8,7 +8,8 @@ class Contact < MailForm::Base
     {
       subject: "#{I18n.t('models.contact.subject').capitalize} #{name}",
       to: ABOUT['email'],
-      from: %("#{name}" <#{email}>)
+      from: ENV['MG_USER_NAME'],
+      reply_to: email
     }
   end
 end
