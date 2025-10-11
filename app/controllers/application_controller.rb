@@ -10,18 +10,11 @@ class ApplicationController < ActionController::Base
     dashboard_path
   end
 
-  def display_maintenance_mode
-    redirect_to maintenance_path if subject_to_maintenance_mode? && Setting.instance.maintenance_mode?
-  end
-
   private
 
-  def subject_to_maintenance_mode?
-    return false if devise_controller? || admin_signed_in?
-    return false if controller_name == "maintenance" && action_name == "show"
-    return false if controller_name == "admin" && action_name == "dashboard"
-    return false if controller_name == "projects" && action_name.in?(["new", "create", "edit", "update", "destroy"])
+  def display_maintenance_mode
+    return if current_admin
 
-    true
+    render template: 'maintenance/show', layout: false if Setting.instance.maintenance_mode?
   end
 end
