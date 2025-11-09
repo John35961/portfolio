@@ -12,6 +12,8 @@ class PagesController < ApplicationController
 
   def legal; end
 
+  def discogs_wantlist_helper_privacy_policy; end
+
   private
 
   def set_contact
