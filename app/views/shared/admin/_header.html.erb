@@ -18,6 +18,11 @@
           <% end %>
         </small>
         <small class="mx-1 lg:mx-2 text-primary">
+          <%= link_to ENV['OPEN_SHORT_LINKS_URL'], target: '_blank' do %>
+            <span>Openshort.link &#8594;</span>
+          <% end %>
+        </small>
+        <small class="mx-1 lg:mx-2 text-primary">
           <%= link_to '/analytics', target: '_blank' do %>
             <span>Active analytics &#8594;</span>
           <% end %>
